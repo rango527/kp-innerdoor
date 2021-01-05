@@ -1,0 +1,23 @@
+{
+  "name": "kp-innerdoor",
+  "version": "1.0.0",
+  "description": "Template based components built for KP by YML",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build 'src/index.pug'",
+    "export:components": "pug src/components -P --out dist/components",
+    "export:css": "sass src/assets/sass/yml.scss dist/components/kp-yml.css",
+    "export": "rm -rf dist && npm run export:components && npm run export:css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "sass": "^1.32.0"
+  },
+  "dependencies": {
+    "pug": "^3.0.0"
+  }
+}

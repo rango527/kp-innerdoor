@@ -1,0 +1,9 @@
+h1 {
+  &.greeting {
+    font-family: $font-family-md;
+    font-size: $font-size-h1;
+    font-weight: 500;
+    line-height: 3.25rem; // 52px
+    margin: 0 0 3rem;
+  }
+}

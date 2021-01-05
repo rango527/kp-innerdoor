@@ -1,0 +1,17 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+@-moz-document url-prefix() {
+}
+
+/* neutral-icon-circle-lg mixin */
+@-moz-document url-prefix() {
+}
+
+/* neutral-icon-circle-lg mixin */
+input::-ms-clear {
+  display: none;
+}

@@ -1,0 +1,1563 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+   * Remove default margin.
+   */
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+     ========================================================================== */
+/**
+   * Correct `block` display not defined for any HTML5 element in IE 8/9.
+   * Correct `block` display not defined for `details` or `summary` in IE 10/11
+   * and Firefox.
+   * Correct `block` display not defined for `main` in IE 11.
+   */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+   * 1. Correct `inline-block` display not defined in IE 8/9.
+   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+   */
+audio,
+canvas,
+progress,
+video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */
+}
+
+/**
+   * Prevent modern browsers from displaying `audio` without controls.
+   * Remove excess height in iOS 5 devices.
+   */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+   * Address `[hidden]` styling not present in IE 8/9/10.
+   * Hide the `template` element in IE 8/9/10/11, Safari, and Firefox < 22.
+   */
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+     ========================================================================== */
+/**
+   * Remove the gray background color from active links in IE 10.
+   */
+a {
+  background-color: transparent;
+}
+
+/**
+   * Improve readability of focused elements when they are also in an
+   * active/hover state.
+   */
+/* Text-level semantics
+     ========================================================================== */
+/**
+   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+   */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+   */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+   * Address styling not present in Safari and Chrome.
+   */
+dfn {
+  font-style: italic;
+}
+
+/**
+   * Address variable `h1` font-size and margin within `section` and `article`
+   * contexts in Firefox 4+, Safari, and Chrome.
+   */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+   * Address styling not present in IE 8/9.
+   */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+   * Address inconsistent and variable font size in all browsers.
+   */
+small {
+  font-size: 80%;
+}
+
+/**
+   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+   */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+     ========================================================================== */
+/**
+   * Remove border when inside `a` element in IE 8/9/10.
+   */
+img {
+  border: 0;
+}
+
+/**
+   * Correct overflow not hidden in IE 9/10/11.
+   */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+     ========================================================================== */
+/**
+   * Address margin not present in IE 8/9 and Safari.
+   */
+figure {
+  margin: 1em 40px;
+}
+
+/**
+   * Address differences between Firefox and other browsers.
+   */
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+   * Contain overflow in all browsers.
+   */
+pre {
+  overflow: auto;
+}
+
+/**
+   * Address odd `em`-unit font size rendering in all browsers.
+   */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+     ========================================================================== */
+/**
+   * Known limitation: by default, Chrome and Safari on OS X allow very limited
+   * styling of `select`, unless a `border` property is set.
+   */
+/**
+   * 1. Correct color not being inherited.
+   *    Known issue: affects color of disabled elements.
+   * 2. Correct font properties not being inherited.
+   * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+   */
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+   * Address `overflow` set to `hidden` in IE 8/9/10/11.
+   */
+button {
+  overflow: visible;
+}
+
+/**
+   * Address inconsistent `text-transform` inheritance for `button` and `select`.
+   * All other form control elements do not inherit `text-transform` values.
+   * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+   * Correct `select` style inheritance in Firefox.
+   */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+   * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+   *    and `video` controls.
+   * 2. Correct inability to style clickable `input` types in iOS.
+   * 3. Improve usability and consistency of cursor style between image-type
+   *    `input` and others.
+   */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+   * Re-set default cursor for disabled elements.
+   */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+   * Remove inner padding and border in Firefox 4+.
+   */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+   * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+   * the UA stylesheet.
+   */
+input {
+  line-height: normal;
+}
+
+/**
+   * It's recommended that you don't attempt to style these elements.
+   * Firefox's implementation doesn't respect box-sizing, padding, or width.
+   *
+   * 1. Address box sizing set to `content-box` in IE 8/9/10.
+   * 2. Remove excess padding in IE 8/9/10.
+   */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+   * `font-size` values of the `input`, it causes the cursor style of the
+   * decrement button to change from `default` to `text`.
+   */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+   * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+   * 2. Address `box-sizing` set to `border-box` in Safari and Chrome.
+   */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  box-sizing: content-box;
+  /* 2 */
+}
+
+/**
+   * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+   * Safari (but not Chrome) clips the cancel button when the search input has
+   * padding (and `textfield` appearance).
+   */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+   * Define consistent border, margin, and padding.
+   */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+   * 1. Correct `color` not being inherited in IE 8/9/10/11.
+   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+   */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+   * Remove default vertical scrollbar in IE 8/9/10/11.
+   */
+textarea {
+  overflow: auto;
+}
+
+/**
+   * Don't inherit the `font-weight` (applied by a rule above).
+   * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+   */
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+     ========================================================================== */
+/**
+   * Remove most spacing between table cells.
+   */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.inverted-link,
+.inverted-link:visited {
+  color: #677083;
+}
+
+.inverted-link:hover,
+.inverted-link:focus {
+  color: #0078b3;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+.inverted-link,
+.inverted-link:visited {
+  color: #677083;
+}
+
+.inverted-link:hover,
+.inverted-link:focus {
+  color: #0078b3;
+}
+
+.inverted-link,
+.inverted-link:visited {
+  color: #677083;
+}
+
+.inverted-link:hover,
+.inverted-link:focus {
+  color: #0078b3;
+}
+
+* .styling-1,
+* .styling-1-marketing {
+  font-family: "Gotham 3r";
+  font-weight: normal;
+  font-size: 3.75rem;
+  font-weight: normal;
+  line-height: 72px;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .styling-1,
+  * .styling-1-marketing:not(.-locked) {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+
+* .hero-heading {
+  font-family: "Gotham 3r";
+  font-weight: normal;
+  font-size: 3.75rem;
+  font-weight: normal;
+  line-height: 72px;
+  letter-spacing: -1px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .hero-heading:not(.-locked) {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+
+* .styling-2,
+* .styling-2-marketing {
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 48px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .styling-2,
+  * .styling-2-marketing:not(.-locked) {
+    font-size: 1.75rem;
+    line-height: 36px;
+  }
+}
+
+* .page-heading {
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 48px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .page-heading:not(.-locked) {
+    font-size: 1.75rem;
+    line-height: 36px;
+  }
+}
+
+* .styling-3,
+* .styling-3-marketing {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 36px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .styling-3,
+  * .styling-3-marketing:not(.-locked) {
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+}
+
+* .section-heading {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 36px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .section-heading:not(.-locked) {
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+}
+
+* .styling-4,
+* .styling-4-marketing {
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 28px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .styling-4,
+  * .styling-4-marketing:not(.-locked) {
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+}
+
+* .item-heading {
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 28px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .item-heading:not(.-locked) {
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+}
+
+* .styling-5,
+* .styling-5-marketing {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+* .item-tag {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 24px;
+}
+
+* .styling-6,
+* .styling-6-marketing {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .styling-6,
+  * .styling-6-marketing:not(.-locked) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+* .auxiliary-text {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) * .auxiliary-text:not(.-locked) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+* .styling-7,
+* .styling-7-marketing {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+}
+@media screen and (max-width: 600px) {
+  * .styling-7,
+  * .styling-7-marketing {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+* .styling-8,
+* .styling-8-marketing {
+  font-size: 0.8125rem;
+  font-weight: normal;
+  line-height: 16px;
+}
+* .styling-8.\-caps,
+* .styling-8.\--caps,
+* .styling-8-marketing.\-caps,
+* .styling-8-marketing.\--caps {
+  text-transform: uppercase;
+}
+
+* .styling-9,
+* .styling-9-marketing {
+  font-size: 0.75rem;
+  font-weight: normal;
+  line-height: 16px;
+}
+* .styling-9.\-caps,
+* .styling-9.\--caps,
+* .styling-9-marketing.\-caps,
+* .styling-9-marketing.\--caps {
+  text-transform: uppercase;
+}
+
+* h1 {
+  font-size: 2.25rem;
+}
+
+* h2 {
+  font-size: 28px;
+}
+
+* h3 {
+  font-size: 1.25rem;
+}
+
+* h4 {
+  font-size: 1.125rem;
+}
+
+* h5 {
+  font-size: 1.125rem;
+}
+
+* h6 {
+  font-size: 1.125rem;
+}
+
+.kp-theme-ds2 .styling-1,
+.kp-theme-ds2 .styling-1-marketing {
+  font-size: 48px;
+  font-weight: normal;
+  line-height: 54px;
+  letter-spacing: -0.02em;
+}
+
+.kp-theme-ds2 .styling-2,
+.kp-theme-ds2 .styling-2-marketing {
+  font-size: 32px;
+  font-weight: normal;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.kp-theme-ds2 .styling-3,
+.kp-theme-ds2 .styling-3-marketing {
+  font-size: 26px;
+  font-weight: normal;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.kp-theme-ds2 .styling-4,
+.kp-theme-ds2 .styling-4-marketing {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+
+.kp-theme-ds2 .styling-5,
+.kp-theme-ds2 .styling-5-marketing {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .styling-6,
+.kp-theme-ds2 .styling-6-marketing {
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .styling-7,
+.kp-theme-ds2 .styling-7-marketing {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 .p1 {
+  font-size: 20px;
+  font-weight: normal;
+  line-height: 28px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 .styling-8,
+.kp-theme-ds2 .styling-8-marketing {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .p2 {
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .styling-9,
+.kp-theme-ds2 .styling-9-marketing {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .p3 {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 22px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 .styling-10,
+.kp-theme-ds2 .styling-10-marketing {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 .p4 {
+  font-size: 13px;
+  font-weight: normal;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 .styling-11,
+.kp-theme-ds2 .styling-11-marketing {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 .p5 {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+  letter-spacing: 0;
+}
+
+.kp-theme-ds2 h1 {
+  font-size: 48px;
+  line-height: 54px;
+  letter-spacing: -0.02em;
+}
+
+.kp-theme-ds2 h2 {
+  font-size: 32px;
+  line-height: 40px;
+  letter-spacing: -0.02em;
+}
+
+.kp-theme-ds2 h3 {
+  font-size: 26px;
+  line-height: 32px;
+  letter-spacing: -0.01em;
+}
+
+.kp-theme-ds2 h4 {
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: -0.01em;
+}
+
+.kp-theme-ds2 h5 {
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.kp-theme-ds2 h6 {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.01em;
+}
+
+.-inky-blue,
+.\--inky-blue {
+  color: #0d1c3d;
+}
+
+.-dolphin,
+.\--dolphin {
+  color: #677083;
+}
+
+.-white,
+.\--white {
+  color: #fff;
+}
+
+.-book,
+.\--book {
+  font-family: "Gotham 4r";
+}
+
+.-light,
+.\--light {
+  font-family: "Gotham 3r";
+}
+
+.-medium,
+.\--medium {
+  font-family: "Gotham 5r";
+}
+
+.-bold,
+.\--bold {
+  font-family: "Gotham 5r";
+}
+
+.muted {
+  color: #9aa1af;
+}
+
+.kp-org-styles h1 {
+  font-family: "Gotham 3r";
+  font-weight: normal;
+  font-size: 3.75rem;
+  font-weight: normal;
+  line-height: 72px;
+  letter-spacing: -1px;
+  font-family: "Gotham 4r";
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .kp-org-styles h1:not(.-locked) {
+    font-size: 2.25rem;
+    line-height: 48px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h1 {
+    font-family: "Gotham 3r";
+  }
+}
+
+.kp-org-styles h2 {
+  font-size: 2.25rem;
+  font-weight: normal;
+  line-height: 48px;
+  font-family: "Gotham 4r";
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .kp-org-styles h2:not(.-locked) {
+    font-size: 1.75rem;
+    line-height: 36px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h2 {
+    font-family: "Gotham 3r";
+  }
+}
+
+.kp-org-styles h3 {
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 36px;
+  font-family: "Gotham 4r";
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .kp-org-styles h3:not(.-locked) {
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h3 {
+    font-family: "Gotham 3r";
+  }
+}
+
+.kp-org-styles h4 {
+  font-size: 1.125rem;
+  font-weight: normal;
+  line-height: 24px;
+  font-family: "Gotham 5r";
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h4 {
+    font-size: 1.25rem;
+    font-weight: normal;
+    line-height: 28px;
+    font-family: "Gotham 4r";
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 600px) {
+  body:not(.-locked) .kp-org-styles h4:not(.-locked) {
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+}
+
+.kp-org-styles h5 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  font-family: "Gotham 5r";
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h5 {
+    font-size: 1.125rem;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
+
+.kp-org-styles h6 {
+  font-size: 15px;
+  font-weight: normal;
+  line-height: 20px;
+  font-family: "Gotham 5r";
+}
+@media screen and (max-width: 600px) {
+  .kp-org-styles h6 {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media screen and (min-width: 601px) {
+  .kp-org-styles h6 {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+}
+@media screen and (min-width: 601px) and (max-width: 600px) {
+  body:not(.-locked) .kp-org-styles h6:not(.-locked) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+@-moz-document url-prefix() {
+}
+
+/* neutral-icon-circle-lg mixin */
+html {
+  font-size: 16px;
+}
+
+body {
+  font-size: 15px;
+  font-family: "Gotham 4r", Verdana;
+  line-height: 1.33;
+  color: #0d1c3d;
+}
+@media screen and (min-width: 601px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+.sg-spacing p {
+  margin: 28px 0;
+}
+
+.sg-spacing h1,
+.sg-spacing h2,
+.sg-spacing h3 {
+  margin: 28px 0;
+}
+
+.sg-spacing h4,
+.sg-spacing h5,
+.sg-spacing h6 {
+  margin: 20px 0;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 20px 0;
+}
+
+b,
+strong {
+  font-weight: normal;
+  font-family: "Gotham 5r";
+}
+
+a,
+a:visited {
+  color: #006ba6;
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  color: #003b71;
+}
+
+@media screen and (max-width: 768px) {
+  input:not([type="button"]):not([type="checkbox"]):not([type="radio"]),
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+.screenreader-only {
+  position: absolute;
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  border: 0;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.screenreader-only.invisible-link {
+  display: flex;
+}
+.screenreader-only.invisible-link:focus {
+  position: static;
+  clip: auto;
+  clip-path: none;
+  width: auto;
+  height: auto;
+  overflow: visible;
+  white-space: inherit;
+}
+
+@-moz-document url-prefix() {
+}
+
+/* neutral-icon-circle-lg mixin */
+.button {
+  min-width: 160px;
+  font-family: "Gotham 5r";
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 30px;
+  padding-right: 30px;
+  color: white;
+  background-color: #0078b3;
+  border: 2px solid transparent;
+}
+@media screen and (max-width: 600px) {
+  .button {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 601px) {
+  .button {
+    padding-top: 17px;
+    padding-bottom: 17px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.button:hover,
+.button:focus,
+.button:active {
+  color: white;
+  background-color: #003b71;
+}
+.button:disabled,
+.button .-disabled,
+.-disabled.button {
+  color: white;
+  background-color: #d3d6dc;
+}
+.button:disabled:hover,
+.button:disabled:focus,
+.button:disabled:active,
+.button .-disabled:hover,
+.button .-disabled:focus,
+.button .-disabled:active,
+.-disabled.button:hover,
+.-disabled.button:focus,
+.-disabled.button:active {
+  background-color: #d3d6dc;
+}
+.-secondary.button,
+.-inverted.button {
+  color: #0078b3;
+  background-color: #ffffff;
+  border: 2px solid #0078b3;
+}
+.-secondary.button:hover,
+.-secondary.button:focus,
+.-secondary.button:active,
+.-inverted.button:hover,
+.-inverted.button:focus,
+.-inverted.button:active {
+  color: #003b71;
+  background-color: white;
+  border-color: #003b71;
+}
+.-secondary.button:disabled,
+.-secondary.button .-disabled,
+.-secondary.-disabled.button,
+.-inverted.button:disabled,
+.-inverted.button .-disabled,
+.-inverted.-disabled.button {
+  color: #d3d6dc;
+  border-color: #d3d6dc;
+}
+.-secondary--white.button,
+.-inverted--white.button {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+.-secondary--white.button:hover,
+.-secondary--white.button:focus,
+.-secondary--white.button:active,
+.-inverted--white.button:hover,
+.-inverted--white.button:focus,
+.-inverted--white.button:active {
+  background-color: white;
+  color: #0078b3;
+}
+
+.button i,
+.button img {
+  color: blue;
+  font-size: 20px;
+  padding-right: 20px;
+}
+.button i.-right-icon,
+.button img.-right-icon {
+  padding-left: 20px;
+}
+
+.kp-theme-ds2 .button {
+  min-width: 0;
+  margin-top: 0;
+  font-family: "Gotham 4r";
+  font-size: 13px;
+  line-height: 13px;
+  border-radius: 100px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #003b71;
+  background-color: #f0f7fa;
+  border: 1px solid #0078b3;
+}
+@media screen and (max-width: 600px) {
+  .kp-theme-ds2 .button {
+    width: auto;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1151px) {
+  .kp-theme-ds2 .button {
+    padding-top: 9pt;
+    padding-bottom: 9pt;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+}
+@media screen and (min-width: 1152px) {
+  .kp-theme-ds2 .button {
+    font-size: 15px;
+    line-height: 15px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+.kp-theme-ds2 .button:hover,
+.kp-theme-ds2 .button:focus,
+.kp-theme-ds2 .button:active {
+  color: white;
+  background-color: #0078b3;
+  text-decoration: underline;
+}
+.kp-theme-ds2 .button:disabled,
+.kp-theme-ds2 .button .-disabled,
+.kp-theme-ds2 .-disabled.button {
+  color: white;
+  background-color: #d3d6dc;
+  border-color: transparent;
+}
+.kp-theme-ds2 .button:disabled:hover,
+.kp-theme-ds2 .button:disabled:focus,
+.kp-theme-ds2 .button:disabled:active,
+.kp-theme-ds2 .button .-disabled:hover,
+.kp-theme-ds2 .button .-disabled:focus,
+.kp-theme-ds2 .button .-disabled:active,
+.kp-theme-ds2 .-disabled.button:hover,
+.kp-theme-ds2 .-disabled.button:focus,
+.kp-theme-ds2 .-disabled.button:active {
+  background-color: #d3d6dc;
+}
+.kp-theme-ds2 .-secondary.button,
+.kp-theme-ds2 .-inverted.button {
+  color: #003b71;
+  background-color: white;
+  border: 1px solid #0078b3;
+}
+.kp-theme-ds2 .-secondary.button:hover,
+.kp-theme-ds2 .-secondary.button:focus,
+.kp-theme-ds2 .-secondary.button:active,
+.kp-theme-ds2 .-inverted.button:hover,
+.kp-theme-ds2 .-inverted.button:focus,
+.kp-theme-ds2 .-inverted.button:active {
+  color: white;
+  background-color: #0078b3;
+  border-color: #0078b3;
+}
+.kp-theme-ds2 .-secondary.button:disabled,
+.kp-theme-ds2 .-secondary.button .-disabled,
+.kp-theme-ds2 .-secondary.-disabled.button,
+.kp-theme-ds2 .-inverted.button:disabled,
+.kp-theme-ds2 .-inverted.button .-disabled,
+.kp-theme-ds2 .-inverted.-disabled.button {
+  color: #d3d6dc;
+  background-color: transparent;
+  border-color: #d3d6dc;
+}
+.kp-theme-ds2 .-secondary.button:disabled:hover,
+.kp-theme-ds2 .-secondary.button:disabled:focus,
+.kp-theme-ds2 .-secondary.button:disabled:active,
+.kp-theme-ds2 .-secondary.button .-disabled:hover,
+.kp-theme-ds2 .-secondary.button .-disabled:focus,
+.kp-theme-ds2 .-secondary.button .-disabled:active,
+.kp-theme-ds2 .-secondary.-disabled.button:hover,
+.kp-theme-ds2 .-secondary.-disabled.button:focus,
+.kp-theme-ds2 .-secondary.-disabled.button:active,
+.kp-theme-ds2 .-inverted.button:disabled:hover,
+.kp-theme-ds2 .-inverted.button:disabled:focus,
+.kp-theme-ds2 .-inverted.button:disabled:active,
+.kp-theme-ds2 .-inverted.button .-disabled:hover,
+.kp-theme-ds2 .-inverted.button .-disabled:focus,
+.kp-theme-ds2 .-inverted.button .-disabled:active,
+.kp-theme-ds2 .-inverted.-disabled.button:hover,
+.kp-theme-ds2 .-inverted.-disabled.button:focus,
+.kp-theme-ds2 .-inverted.-disabled.button:active {
+  background-color: transparent;
+}
+
+.button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  display: inline-block;
+  font-family: "Gotham 5r";
+  cursor: pointer;
+  user-select: none;
+  text-align: center;
+  height: auto;
+  line-height: 20px;
+  vertical-align: middle;
+  white-space: normal;
+  word-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+@media screen and (min-width: 601px) {
+  .button {
+    line-height: 22px;
+  }
+}
+
+.button {
+  -webkit-transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  -moz-transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  -ms-transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  -o-transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
+}
+.-large.button {
+  font-size: 24px;
+}
+.-small.button {
+  min-width: 8em;
+  font-size: 0.8125rem;
+}
+.-action.button {
+  background-color: transparent;
+  border-color: white;
+}
+.-action.button:hover,
+.-action.button:focus {
+  background-color: white;
+  color: #003b71;
+}
+.-action.-inverted.button {
+  border-color: white;
+  color: #0078b3;
+}
+.-action.-inverted.button:hover,
+.-action.-inverted.button:focus {
+  background-color: white;
+  color: #003b71;
+}
+.-inverted--white.button {
+  color: white;
+  border: 2px solid white;
+  background-color: transparent;
+}
+.-inverted--white.button:hover,
+.-inverted--white.button:focus,
+.-inverted--white.button:active {
+  background-color: white;
+  color: #0078b3;
+}
+.button:disabled:hover,
+.button .-disabled:hover {
+  cursor: not-allowed;
+  border-color: #d3d6dc;
+}
+.button:disabled.-inverted,
+.button .-disabled.-inverted {
+  color: #d3d6dc;
+  border: 2px solid #d3d6dc;
+}
+.-left.button {
+  float: left;
+}
+.-right.button {
+  float: right;
+}
+.-tertiary.button {
+  color: #006ba6;
+  background-color: transparent;
+  border: 0 none;
+  border-radius: 0;
+  min-width: auto;
+  padding: 0;
+  height: auto;
+  margin: 14px 0;
+}
+@media screen and (min-width: 601px) {
+  .-tertiary.button {
+    margin: 19px 0;
+  }
+}
+.-tertiary.button:hover,
+.-tertiary.button:focus,
+.-tertiary.button:active {
+  color: #003b71;
+}
+@media screen and (max-width: 600px) {
+  .button + .button {
+    margin-top: 15px;
+  }
+}
+
+.-close:before,
+.-close--large:before,
+.-close--small:before {
+  content: "\f11e";
+  font-family: "kp-icons";
+}
+
+.button i,
+.button img {
+  color: inherit;
+  padding-right: 20px;
+  vertical-align: middle;
+  line-height: 20px;
+  height: 20px;
+  display: inline-block;
+}
+.button i.-right-icon,
+.button img.-right-icon {
+  padding-right: 0;
+}
+
+.-close,
+.-close--large,
+.-close--small {
+  color: #0078b3;
+  font-size: 1.25rem;
+  border: none;
+  background: none;
+}
+
+@media screen and (max-width: 768px) {
+  .-primary-action {
+    width: 100%;
+    display: block;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 22px;
+  }
+}
+
+.sg-spacing .button {
+  margin-bottom: 16px;
+}
+@media screen and (min-width: 601px) {
+  .sg-spacing .button {
+    margin-bottom: 20px;
+  }
+}
+
+.button img {
+  height: 19px;
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .button img {
+    width: 39px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .button img {
+    height: 18px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .-close {
+    font-size: 1.125rem;
+  }
+}
+
+.-close--large {
+  font-size: 28px;
+}
+
+.-close--small {
+  font-size: 1.125rem;
+}
+
+.link-list,
+.link-list--horizontal {
+  padding-left: 0;
+  list-style: none;
+}
+
+.link-list-title--small {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 1.25rem;
+  font-weight: normal;
+  line-height: 28px;
+  color: #677083;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .link-list-title--small:not(.-locked) {
+    font-size: 1.125rem;
+    line-height: 24px;
+  }
+}
+
+.link-list-title--large {
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 1.75rem;
+  font-weight: normal;
+  line-height: 36px;
+  color: #0d1c3d;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .link-list-title--large:not(.-locked) {
+    font-size: 1.25rem;
+    line-height: 28px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .link-list-title--large {
+    font-size: 2.25rem;
+    font-weight: normal;
+    line-height: 48px;
+  }
+}
+@media screen and (max-width: 600px) and (max-width: 600px) {
+  body:not(.-locked) .link-list-title--large:not(.-locked) {
+    font-size: 1.75rem;
+    line-height: 36px;
+  }
+}
+
+.link-list {
+  margin-top: 0;
+  padding-top: 0;
+}
+.link-list--horizontal li {
+  display: inline-block;
+  padding-right: 20px;
+}
+.link-list--horizontal.-divided li {
+  padding-right: 20px;
+  border-right: 1px solid #d3d6dc;
+  margin-right: 20px;
+}
+.link-list--horizontal.-divided li:last-child {
+  border-right: 0;
+  margin-right: 0;
+}
+.link-list--horizontal li {
+  padding-bottom: 12px;
+}
+.link-list li {
+  padding-bottom: 10px;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+}
+@media screen and (max-width: 600px) {
+  body:not(.-locked) .link-list li:not(.-locked) {
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+
+/*All styling from link-list to a variation of horizontal link list*/
+input::-ms-clear {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* stylelint-disable declaration-no-important */
