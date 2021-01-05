@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build 'src/index.pug'",
+    "build": "parcel build src/index.pug --public-url .",
     "export:components": "pug src/components -P --out dist/components",
     "export:css": "sass src/assets/sass/yml.scss dist/components/kp-yml.css",
     "export": "rm -rf dist && npm run export:components && npm run export:css"
