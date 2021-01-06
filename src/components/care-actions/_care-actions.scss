@@ -9,17 +9,25 @@
 .care-actions-primary-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     list-style: none;
     margin: 0 0 0.75rem;
     padding: 0;
 
     &--flex {
         @include respond-to(tablet) {
-            flex: 0 0 calc(33.3333% - 0.6666rem);
-            // &:nth-child(3n - 1) {
-            //     margin: 0 1rem 1rem;
-            // }
+            &--50 {
+                flex: 0 0 calc(50% - 0.5rem);
+                &:nth-child(2n - 1) {
+                    margin: 0 1rem 0.75rem 0;
+                }
+            }
+            &--33 {
+                flex: 0 0 calc(33.3333% - 0.6666rem);
+                &:nth-child(3n - 1) {
+                    margin: 0 1rem 0.75rem;
+                }
+            }
+            
         }
         flex: 0 0 calc(100%);
     }
@@ -112,13 +120,15 @@
         display: flex;
         flex-direction: row;
         align-items: flex-end;
+        color: $blue-dark;
         cursor: pointer;
+        transition: background-color 0.2s ease, color 0.2s ease,
+            border-color 0.2s ease;
         img {
             margin-right: 0.5rem;
         }
         p {
             margin: 0;
-            color: $blue-dark;
             font-family: $font-family-md;
             font-size: $font-size-xs;
             line-height: 1.25rem;
@@ -130,6 +140,10 @@
         }
         &-number {
             text-decoration: none !important;
+        }
+        &:hover {
+            background-color: $blue-dark;
+            color: $white;
         }
     }
 }

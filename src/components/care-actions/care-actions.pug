@@ -50,12 +50,26 @@
     h3 Get Care
     ul.care-actions-primary-list
         each primaryCard in primaryCareActionCards
-            li.care-actions-primary-list--item.care-actions-primary-list--flex
-                .care-actions-primary-list--item-image
-                    img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
-                .care-actions-primary-list--item-content
-                    p.care-actions-primary-list--item-title #{primaryCard.title}
-                    p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+            case primaryCareActionCards.length
+                when 0
+                    - break
+                when 1
+                when 2
+                when 4
+                    li.care-actions-primary-list--item.care-actions-primary-list--flex.care-actions-primary-list--flex--50
+                        .care-actions-primary-list--item-image
+                            img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                        .care-actions-primary-list--item-content
+                            p.care-actions-primary-list--item-title #{primaryCard.title}
+                            p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+                when 3
+                default
+                    li.care-actions-primary-list--item.care-actions-primary-list--flex.care-actions-primary-list--flex--33
+                        .care-actions-primary-list--item-image
+                            img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                        .care-actions-primary-list--item-content
+                            p.care-actions-primary-list--item-title #{primaryCard.title}
+                            p.care-actions-primary-list--item-description #{primaryCard.subTitle}
     .care-actions-secondary-list
         each secondaryCard in secondaryCareActionCards
             button.care-actions-secondary-list-button #{secondaryCard.buttonText}     
