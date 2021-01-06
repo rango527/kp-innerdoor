@@ -1,0 +1,38 @@
+$breakpoints: (
+  "mobile": (
+    min-width: 375px,
+  ),
+  "tablet": (
+    min-width: 834px,
+  ),
+  "desktop": (
+    min-width: 1280px,
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: mobile, tablet, desktop";
+  }
+}
+
+// Example - uncomment for reference
+
+// body {
+//   // Mobile - default, building for mobile up
+//   border-right: 5px solid red;
+
+//   // Tablet media query
+//   @include respond-to(tablet) {
+//     border-right: 5px solid blue;
+//   }
+
+//   // Desktop media query
+//   @include respond-to(desktop) {
+//     border-right: 5px solid orange;
+//   }
+// }
