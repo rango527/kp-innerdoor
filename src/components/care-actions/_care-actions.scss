@@ -1,0 +1,135 @@
+.care-actions {
+    h3 {
+        font-family: $font-family-md;
+        font-size: 26px;
+        font-weight: 500;
+        margin: 0 0 1.5rem;
+      }
+}
+.care-actions-primary-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style: none;
+    margin: 0 0 0.75rem;
+    padding: 0;
+
+    &--flex {
+        @include respond-to(tablet) {
+            flex: 0 0 calc(33.3333% - 0.6666rem);
+            // &:nth-child(3n - 1) {
+            //     margin: 0 1rem 1rem;
+            // }
+        }
+        flex: 0 0 calc(100%);
+    }
+    &--item {
+        display: flex;
+        background-color: $blue-dark;
+        border-top: 5px solid $sky;
+        border: $border;
+        border-radius: $border-radius;
+        margin: 0 0 0.75rem 0;
+        padding: $padding-md;
+        transition: background-color 0.2s ease, color 0.2s ease,
+            border-color 0.2s ease;
+        cursor: pointer;
+        &-image {
+            margin-right: 1rem;
+
+            img {
+                width: 3rem;
+                height: 3rem;
+            }
+        }
+        &-content {
+            color: $white;
+            display: flex;
+            flex-direction: column;
+        }
+        &-title {
+            @include respond-to(desktop) {
+                font-size: 1.25rem;
+                line-height: 1.75rem;
+            }
+            font-family: $font-family-md;
+            font-size: 1rem;
+            line-height: 1.5rem;
+            letter-spacing: -0.01em;
+            margin: 0;
+        }
+        &-description {
+            font-size: $font-size-xs;
+            line-height: 1.25rem;
+            margin: 0;
+        }
+        &-link {
+            font-size: $font-size-xs;
+            margin: 0;
+            color: $link-color;
+        }
+        &:hover {
+            background-color: $contrast-blue;
+            text-decoration: underline;
+            color: $white;
+        }
+    }
+    
+}
+
+.care-actions-secondary-list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0.75rem;
+    &-button {
+        background-color: $white-blue;
+        border: 1px solid $blue;
+        border-radius: $button-radius;
+        color: $blue-dark;
+        margin-right: 1rem;
+        transition: background-color 0.2s ease, color 0.2s ease,
+            border-color 0.2s ease;
+        font-size: $font-size-xs;
+        line-height: 2rem;
+        margin: 0 0.625rem 0.625rem 0;
+        padding: 2px 1rem;
+        @include respond-to(desktop) {
+            margin: 0 1rem 0.75rem 0;
+            font-size: 1rem;
+            line-height: 3rem;
+        }
+        &:hover {
+            background-color: $blue;
+            color: $white;
+        }
+    }
+}
+
+.care-actions-footer {
+    margin: 0;
+    display: inline-block;
+    &--link {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        cursor: pointer;
+        img {
+            margin-right: 0.5rem;
+        }
+        p {
+            margin: 0;
+            color: $blue-dark;
+            font-family: $font-family-md;
+            font-size: $font-size-xs;
+            line-height: 1.25rem;
+            text-decoration: underline;
+            @include respond-to(tablet) {
+                font-size: $font-size-md;
+                line-height: 1.5rem;
+            }
+        }
+        &-number {
+            text-decoration: none !important;
+        }
+    }
+}
