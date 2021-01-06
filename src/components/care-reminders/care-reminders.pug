@@ -108,14 +108,20 @@
   ]
 
 .care-reminders
-  h3 Care Reminders
+  .care-reminders-header
+    .care-reminders-header--counter
+      img(src="assets/images/img-counter.png")
+      p 15
+    h3 Care Reminders
   ul.care-reminder-list
     each card in careReminderCards
-      li(class=`care-reminder-list--item ${card.borderColor}`)
+      li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor}`)
         .care-reminder-list--item-image
           img(src=`${card.iconSrc}` alt=`${card.alt}`)
         .care-reminder-list--item-content
           p.care-reminder-list--item-title #{card.title}
           p.care-reminder-list--item-description #{card.action}
+  a(href="/") - View less care reminders
+
 
 //- TODO: no care reminders - use pug conditional
