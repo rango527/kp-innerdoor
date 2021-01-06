@@ -3,7 +3,10 @@
     font-family: $font-family-md;
     font-size: 26px;
     font-weight: 500;
-    margin: 0 0 2rem;
+    margin: 0 0 1rem;
+    @include respond-to(tablet) {
+      margin: 0 0 2rem;
+    }
   }
   a {
     text-decoration: underline;
@@ -16,13 +19,32 @@
   list-style: none;
   margin: 0 0 2rem;
   padding: 0;
+  // uncomment these to demonstrate scrolling
+  // overflow-y: scroll;
+  // max-height: 300px;
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 
   &--item {
     display: flex;
+    background-color: $white;
     border: $border;
     border-radius: $border-radius;
-    margin: 0 1rem 1rem 0;
+    margin: 0 0 1rem 0;
     padding: $padding-md;
+    &:hover {
+      background-color: $pale-blue;
+      border: 1px solid $contrast-blue;
+    }
+    @include respond-to(tablet) {
+      flex: 0 0 calc(33.3333% - 0.6666rem);
+      &:nth-child(3n - 1) {
+        margin: 0 1rem 1rem;
+      }
+    }
     &-image {
       margin-right: 1rem;
     }
@@ -42,8 +64,40 @@
     }
     &-link {
       font-size: $font-size-xs;
-      margin: 0;
+      // margin: 0;
+      margin-top: auto;
       color: $link-color;
+    }
+  }
+}
+
+.care-team-no-results {
+  img {
+    margin-bottom: 1rem;
+  }
+  button {
+    background-color: $pale-blue;
+    border: 1px solid $contrast-blue;
+    border-radius: $button-radius;
+    font-size: 1rem;
+    margin-right: 1rem;
+    padding: 1rem;
+    transition: background-color 0.2s ease, color 0.2s ease,
+      border-color 0.2s ease;
+    &:hover {
+      background-color: $contrast-blue;
+      text-decoration: underline;
+      color: $white;
+    }
+  }
+  a {
+    color: $contrast-blue;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: underline;
+    &:hover {
+      background-color: $contrast-blue;
+      color: $white;
     }
   }
 }
