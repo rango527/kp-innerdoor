@@ -32,7 +32,7 @@ To run export scripts which will output individual components and YML specific C
 
 ## About Export
 
-Running the export script will clear out any existing `dist` folder, then create a folder structure of `dist/components`.
+Running the export script will clear any existing `dist` folder, then create a folder structure of `dist/components`.
 
 Individual Pug components will be output into their own subfolders, for example:
 
