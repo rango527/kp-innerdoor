@@ -1,4 +1,5 @@
 .care-reminders {
+  margin-bottom: 2rem;
   h3 {
     font-family: $font-family-md;
     font-size: 26px;
@@ -6,27 +7,67 @@
     margin: 0 0 2rem;
   }
   a {
+    color: $inky;
+    font-family: $font-family-md;
+    font-weight: 500;
     text-decoration: underline;
+    padding: 0.5rem;
+    &:hover {
+      background-color: $inky;
+      color: $white;
+    }
+  }
+}
+
+.care-reminders-header {
+  align-items: center;
+  display: flex;
+  margin-bottom: 1rem;
+  &--counter {
+    width: 36px;
+    height: 40px;
+    position: relative;
+    p {
+      color: $white;
+      font-family: $font-family-md;
+      font-weight: 500;
+      margin: 0;
+      position: absolute;
+      top: 8px;
+      right: 10px;
+    }
+  }
+  h3 {
+    margin: 0 0 0 0.5rem;
   }
 }
 
 .care-reminder-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  flex-direction: column;
   list-style: none;
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
   padding: 0;
 
+  @include respond-to(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   &--item {
-    max-width: calc((1280px / 5) - 40px);
     display: flex;
     background-color: $white;
-    border-top: 5px solid $sky;
     border: $border;
     border-radius: $border-radius-sm;
     margin: 0 0 1rem 0;
     padding: $padding-md;
+    @include respond-to(tablet) {
+      flex: 0 0 calc(33.3333% - 1rem);
+      margin-right: 1rem;
+    }
+    @include respond-to(desktop) {
+      flex: 0 0 calc(20% - 1rem);
+    }
     &-image {
       margin-right: 1rem;
     }
@@ -35,7 +76,7 @@
       flex-direction: column;
     }
     &-title {
-      color: #0d1c3d;
+      color: $inky;
       font-family: $font-family-md;
       line-height: 1.5rem;
       margin: 0;
@@ -52,251 +93,38 @@
   }
 }
 
-// .min-width {
-//   min-width: $mediaXS;
-// }
-
-// .default-p {
-//   padding: 1.5rem;
-// }
-
-// .tiny-p {
-//   padding: 0.75rem;
-// }
-
-// .p-button-text {
-//   padding: 2px 1rem !important;
-// }
-
-// .default-my {
-//   margin: 3rem 0;
-// }
-
-// .default-mx {
-//   margin: 0 1.5rem;
-// }
-
-// .mt-zero {
-//   margin-top: 0;
-// }
-
-// .my-zero {
-//   margin-top: 0;
-//   margin-bottom: 0;
-// }
-
-// .ml-zero {
-//   margin-left: 0 !important;
-// }
-
-// @media screen and (max-width: $mediaSM) {
-//   .default-mb {
-//       margin-bottom: 1rem;
-//   }
-// }
-// @media screen and (min-width: $mediaSM + 1) and (max-width: $mediaMD) {
-//   .default-mb {
-//       margin-bottom: 1.25rem;
-//   }
-// }
-// @media screen and (min-width: $mediaMD + 1) {
-//   .default-mb {
-//       margin-bottom: 1.5rem;
-//   }
-// }
-
-// .little-mb {
-//   margin-bottom: 0.5rem;
-// }
-
-// .base-mr {
-//   margin-right: 1rem;
-// }
-
-// .little-mr {
-//   margin-right: 0.5rem;
-// }
-
-// .tiny-ml {
-//   margin-left: 0.75rem;
-// }
-
-// .-df-wrap {
-//   display: flex;
-//   flex-wrap: wrap;
-// }
-
-// .-df-no-wrap {
-//   display: flex;
-//   flex-wrap: nowrap;
-// }
-
-// .default-img-size {
-//   width: 40px;
-//   height: 40px;
-// }
-// .normal-img-size {
-//   width: 32px;
-//   height: 32px;
-// }
-// .action-img-size {
-//   width: 24px;
-//   height: 24px;
-// }
-
-// .-text-decoration {
-//   text-decoration: underline;
-// }
-
-// @media screen and (min-width: 230px) {
-//   .panel-border {
-//       background: $white;
-//       border: 1px solid rgba(0, 0, 0, 0.08);
-//       box-sizing: border-box;
-
-//       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
-//       cursor: pointer;
-
-//       overflow-x: hidden;
-//       overflow-y: hidden;
-
-//       height: 100%;
-//       &--panel {
-//           border-radius: 16px;
-//       }
-//       &--card {
-//           border-radius: 8px;
-//       }
-//   }
-// }
-
-// .fivecolumns {
-//   display: flex;
-//   flex-wrap: wrap;
-
-//   .span2 {
-//       width: calc(20% - 12.8px);
-//       margin-left: 1rem;
-//   }
-// }
-
-// .care-reminder {
-//   &__counter {
-//       align-items: center;
-//       display: flex;
-//       flex-wrap: wrap;
-
-//       .counter {
-//           width: 36px;
-//           height: 40px;
-//           display: flex;
-//           justify-content: center;
-//           align-items: center;
-//           background-image: url('assets/img/img-counter.png');
-//           background-repeat: no-repeat;
-
-//           margin-right: 8px;
-
-//           &__number {
-//               margin-top: 0;
-//               margin-bottom: 4px;
-//               color: $white;
-//           }
-//       }
-//   }
-
-//   &__empty {
-//       align-items: flex-start;
-//       display: flex;
-//       flex-wrap: nowrap;
-//   }
-// }
-
-// .border-background {
-//   height: 4px;
-// }
-
-// .all-show-cards {
-//   display: inline-block;
-//   cursor: pointer;
-// }
-
-// .all-show-cards:hover {
-//   background-color: #003B71;
-
-//   .background-image {
-//       &--plus {
-//           background-image: url('assets/img/plus_hover.png');
-//       }
-//       &--minus {
-//           background-image: url('assets/img/minus_hover.png');
-//       }
-//   }
-//   .-inky-blue-dark {
-//       color: $white;
-//       text-decoration: none;
-//   }
-// }
-
-// .background-image {
-//   width: 24px;
-//   height: 24px;
-//   background-repeat: no-repeat;
-
-//   &--plus {
-//       background-image: url('assets/img/plus.png');
-//   }
-//   &--plus:hover {
-//       background-image: url('assets/img/plus_hover.png');
-//   }
-//   &--minus {
-//       background-image: url('assets/img/minus.png');
-//   }
-//   &--minus:hover {
-//       background-image: url('assets/img/minus_hover.png');
-//   }
-// }
-
-// .-inky-blue-dark {
-//   color: $blue-dark;
-// }
-
-// .fd-button {
-//   // display: none;
-// // height: 0;
-// // opacity: 0;
-// // overflow: hidden;
-//   // transition: .6s ease opacity,.6s ease transform;
-//   // opacity: 0;
-//   display: none;
-//   -webkit-animation: out 1000ms ease both;
-//   animation: out 1000ms ease both;
-// }
-// .is-open {
-//   // height: auto;
-//   // transition:opacity .3s ease-in-out;
-//   // opacity: 1;
-//   display: block;
-//   -webkit-animation: in 1000ms ease both;
-//   animation: in 1000ms ease both;
-// }
-
-// @-webkit-keyframes in {
-//   0% { -webkit-transform: scale(0) ease-out; opacity: 0; visibility: hidden;  }
-//   100% { -webkit-transform: scale(1) ease-out; opacity: 1; visibility: visible; }
-// }
-
-// @keyframes in {
-//   0% { transform: scale(0) ease-out; opacity: 0; visibility: hidden;  }
-//   100% { transform: scale(1) ease-out; opacity: 1; visibility: visible; }
-// }
-
-// @-webkit-keyframes out {
-//   0% { -webkit-transform: scale(1) ease-out; opacity: 1; visibility: visible; }
-//   100% { -webkit-transform: scale(0) ease-out; opacity: 0; visibility: hidden; }
-// }
-
-// @keyframes out {
-//   0% { transform: scale(1) ease-out; opacity: 1; visibility: visible; }
-//   100% { transform: scale(0) ease-out; opacity: 0; visibility: hidden;  }
-// }
+.care-reminder-list--item__border {
+  // TODO: convert to mixin
+  &-robin-egg {
+    border: $border;
+    border-top: 4px solid $robin-egg;
+    &:hover {
+      border: 1px solid darken($robin-egg, 18%);
+      border-top: 4px solid darken($robin-egg, 18%);
+    }
+  }
+  &-sky {
+    border: $border;
+    border-top: 4px solid $sky;
+    &:hover {
+      border: 1px solid darken($sky, 18%);
+      border-top: 4px solid darken($sky, 18%);
+    }
+  }
+  &-leaf {
+    border: $border;
+    border-top: 4px solid $leaf;
+    &:hover {
+      border: 1px solid darken($leaf, 18%);
+      border-top: 4px solid darken($leaf, 18%);
+    }
+  }
+  &-lavender {
+    border: $border;
+    border-top: 4px solid $lavender;
+    &:hover {
+      border: 1px solid darken($lavender, 18%);
+      border-top: 4px solid darken($lavender, 18%);
+    }
+  }
+}
