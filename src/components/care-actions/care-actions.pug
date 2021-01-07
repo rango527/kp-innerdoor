@@ -1,0 +1,79 @@
+-
+    // Care actions json data
+    const primaryCareActionCards = [
+        {
+            iconSrc: 'assets/images/online-care.png',
+            title: "Online Care",
+            alt: "alt description",
+            subTitle: "Get quality care faster."
+        },
+        {
+            iconSrc: 'assets/images/call-care.png',
+            title: "Call for Care",
+            alt: "alt description",
+            subTitle: "Talk with a licensed care provider by phone."
+        },
+        {
+            iconSrc: 'assets/images/person-care.png',
+            title: "In-Person Care",
+            alt: "alt description",
+            subTitle: "Make an appointment or find care locations."
+        }
+    ]
+
+    const secondaryCareActionCards = [
+        {
+            buttonText: "COVID-19: Get Care & Testing"
+        },
+        {
+            buttonText: "Women’s Health"
+        },
+        {
+            buttonText: "Cold & Flu, Cough, Sore Throat, Sinus"
+        },
+        {
+            buttonText: "Skin Problems / Conditions"
+        },
+        {
+            buttonText: "Women’s Health"
+        },
+        {
+            buttonText: "Cold & Flu, Cough, Sore Throat, Sinus"
+        },
+        {
+            buttonText: "Skin Problems / Conditions"
+        }
+    ]
+
+.care-actions
+    include ../panel/panel.pug
+        h3 Get Care
+        if primaryCareActionCards.length > 0
+            ul.care-actions-primary-list
+                each primaryCard in primaryCareActionCards
+                    case primaryCareActionCards.length
+                        when 1
+                        when 2
+                        when 4
+                            li.care-actions-primary-list--item.care-actions-primary-list--flex.care-actions-primary-list--flex--50
+                                .care-actions-primary-list--item-image
+                                    img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                                .care-actions-primary-list--item-content
+                                    p.care-actions-primary-list--item-title #{primaryCard.title}
+                                    p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+                        when 3
+                        default
+                            li.care-actions-primary-list--item.care-actions-primary-list--flex.care-actions-primary-list--flex--33
+                                .care-actions-primary-list--item-image
+                                    img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                                .care-actions-primary-list--item-content
+                                    p.care-actions-primary-list--item-title #{primaryCard.title}
+                                    p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+        .care-actions-secondary-list
+            each secondaryCard in secondaryCareActionCards
+                button.care-actions-secondary-list-button #{secondaryCard.buttonText}
+        .care-actions-footer
+            #care-actions-footer.care-actions-footer--link(data-status="off")
+                img(src="assets/images/plus.png" alt="")
+                p View all care actions
+                p.care-actions-footer--link-number &nbsp;(#{primaryCareActionCards.length + secondaryCareActionCards.length})
