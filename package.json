@@ -17,7 +17,7 @@
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
     "sass": "^1.32.0",
-    "styleguide": "^4.1.9"
+    "styleguide": "^5.0.23"
   },
   "dependencies": {
     "pug": "^3.0.0"

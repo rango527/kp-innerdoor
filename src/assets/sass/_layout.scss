@@ -3,6 +3,14 @@ body {
   background-color: $pebble;
 }
 
+.container {
+  padding: 0 2rem;
+  max-width: 1280px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 header {
   display: flex;
   align-items: center;
