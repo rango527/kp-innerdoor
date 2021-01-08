@@ -1,7 +1,5 @@
 // Compiled KP styleguide files
-@import "styleguide/main";
-@import "styleguide/global-main";
-@import "styleguide/modern-lib";
+@import "~styleguide/modern-lib";
 
 // YML Styles - includes variables and components
 @import "yml";
