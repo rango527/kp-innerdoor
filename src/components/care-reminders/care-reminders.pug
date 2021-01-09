@@ -109,19 +109,19 @@
 
 .care-reminders
   .care-reminders-header
-    .care-reminders-header--counter
+    .care-reminders-header--counter(aria-hidden="true")
       img(src="assets/images/img-counter.png")
-      p 15
-    h3 Care Reminders
+      p #{careReminderCards.length}
+    h3(aria-label=`${careReminderCards.length} care reminders`) Care Reminders
   ul.care-reminder-list
     each card in careReminderCards
       li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor}`)
-        .care-reminder-list--item-image
-          img(src=`${card.iconSrc}` alt=`${card.alt}`)
+        .care-reminder-list--item-image(aria-hidden="true")
+          img(src=`${card.iconSrc}` alt="")
         .care-reminder-list--item-content
           p.care-reminder-list--item-title #{card.title}
-          p.care-reminder-list--item-description #{card.action}
-  a(href="/") - View less care reminders
+          a.care-reminder-list--item-link(tabindex="0") #{card.action}
+  a.view-toggle(href="/") - View less care reminders
 
 
 //- TODO: no care reminders - use pug conditional
