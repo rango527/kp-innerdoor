@@ -1,11 +1,12 @@
+$assetImgPath: "../../../node_modules/styleguide/lib/modern/assets/images/";
+$font-path: "../../../node_modules/styleguide/lib/modern/assets/fonts/";
+
 // Compiled KP styleguide files
-@import "~styleguide/modern-lib";
+@import "~styleguide/styleguide-base";
+@import "~styleguide/styleguide-ds2";
 
 // YML Styles - includes variables and components
 @import "yml";
 
 // Demo layout
 @import "layout";
-
-// Styleguide example component
-@import "styleguide/example";
