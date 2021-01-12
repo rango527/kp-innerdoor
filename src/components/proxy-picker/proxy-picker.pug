@@ -1,38 +1,59 @@
 
 .proxy-picker
- .kp-theme-ds2
-    .newGrid_container
-        .rows
-            .columns-8
-                .box
-                    | grid__columns(8)
-            .columns-4
-                .box
-                    | grid__columns(4)
-    .navigational-picker.region-picker
-        .regionPicker
-            button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
-                div
-                    i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
-                    span.screenreader-only Your Region
-                    span.navigational-select-dropdown-value N. California
-                i.icon-chevron-down(aria-hidden="true")
-            ul.navigational-select-dropdown__list(data-analytics-location="Region Picker" role="listbox")
-                li.navigational-select-value.region-select-value(aria-selected="false" data-value="N. California" tabindex="-1")
+    .kp-theme-ds2
+        .newGrid_container
+            .rows
+                .columns-8
+                    .box
+                        | grid__columns(8)
+                .columns-4
+                    .box
+                        | grid__columns(4)
+        .navigational-picker.region-picker
+            .regionPicker
+                button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
                     div
                         i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
-                        a(data-analytics-click="N. California" data-analytics-type="link" href="#") California - Northern
-                    i.icon-checkmark(aria-hidden="true")
-                li.navigational-select-value.region-select-value(aria-selected="false" data-value="S. California" tabindex="-1")
-                    div
-                        i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
-                        a(data-analytics-click="S. California" data-analytics-type="link" href="#") California - Southern
-                    i.icon-checkmark(aria-hidden="true")
-                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Colorado" tabindex="-1")
-                    div
-                        i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
-                        a(data-analytics-click="Denver" data-analytics-type="link" href="#") Denver
-                    i.icon-checkmark(aria-hidden="true")
+                        span.screenreader-only Your Region
+                        span.navigational-select-dropdown-value N. California
+                    i.icon-chevron-down(aria-hidden="true")
+                ul.navigational-select-dropdown__list(data-analytics-location="Region Picker" role="listbox")
+                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="N. California" tabindex="-1")
+                        div
+                            i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
+                            a(data-analytics-click="N. California" data-analytics-type="link" href="#") California - Northern
+                        i(aria-hidden="true")
+                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="S. California" tabindex="-1")
+                        div
+                            i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
+                            a(data-analytics-click="S. California" data-analytics-type="link" href="#") California - Southern
+                        i.icon-checkmark(aria-hidden="true")
+                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Colorado" tabindex="-1")
+                        div
+                            i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
+                            a(data-analytics-click="Denver" data-analytics-type="link" href="#") Denver
+                        i.icon-checkmark(aria-hidden="true")
 script.
+    var navItems = document.querySelectorAll('li');
+    for (var i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("click", function() {
+            console.log("click")
+            if (!this.classList.contains('active')) {
+                clearActives(navItems);
+                this.classList.toggle('active');
+                var closestElement = this.closest('li')
+                console.log(closestElement)
+                closestElement.children[1].classList.add("icon-checkmark")
+            }
+        });
+    function clearActives(classlist) {
+        if (classlist) {
+            for (i = 0; i < classlist.length; i++) {
+            classlist[i].classList.remove('active');
+            var closestElement = classlist[i].closest('li')
+            closestElement.children[1].classList.remove('icon-checkmark')
+            }
+        }
+    }
+    }
 
-                
