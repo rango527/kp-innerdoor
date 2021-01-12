@@ -1,26 +1,38 @@
 
 .proxy-picker
-    .container
-        .navigational-picker.region-picker
-            .regionPicker
-                button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
+ .kp-theme-ds2
+    .newGrid_container
+        .rows
+            .columns-8
+                .box
+                    | grid__columns(8)
+            .columns-4
+                .box
+                    | grid__columns(4)
+    .navigational-picker.region-picker
+        .regionPicker
+            button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
+                div
+                    i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
                     span.screenreader-only Your Region
                     span.navigational-select-dropdown-value N. California
-                    i.icon-chevron-down(aria-hidden="true")
-                ul.navigational-select-dropdown__list(data-analytics-location="Region Picker" role="listbox")
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="N. California" tabindex="-1")
+                i.icon-chevron-down(aria-hidden="true")
+            ul.navigational-select-dropdown__list(data-analytics-location="Region Picker" role="listbox")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="N. California" tabindex="-1")
+                    div
+                        i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
                         a(data-analytics-click="N. California" data-analytics-type="link" href="#") California - Northern
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="S. California" tabindex="-1")
+                    i.icon-checkmark(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="S. California" tabindex="-1")
+                    div
+                        i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
                         a(data-analytics-click="S. California" data-analytics-type="link" href="#") California - Southern
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Colorado" tabindex="-1")
-                        a(data-analytics-click="Colorado" data-analytics-type="link" href="#") Colorado
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Georgia" tabindex="-1")
-                        a(data-analytics-click="Georgia" data-analytics-type="link") Georgia
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Hawaii" tabindex="-1")
-                        a(data-analytics-click="Hawaii" data-analytics-type="link" href="#") Hawaii
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Md. / Va. / D.C." tabindex="-1")
-                        a(data-analytics-click="Md. / Va. / D.C." data-analytics-type="link" href="#") Maryland / Virginia / Washington, D.C.
-                    li.navigational-select-value.region-select-value(aria-selected="false" data-value="Ore. / Wash." tabindex="-1")
-                        a(data-analytics-click="Ore. / Wash." data-analytics-type="link" href="#") Oregon / Washington
-//- <i class="icon-zz005-checkmark-circle  neutral-icon" aria-hidden="true"></i>
-//- <span class="screenreader-only">Completed</span>
+                    i.icon-checkmark(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Colorado" tabindex="-1")
+                    div
+                        i.icon-profile.primary-icon-circle--blue.kp-yml-icon(aria-hidden="true")
+                        a(data-analytics-click="Denver" data-analytics-type="link" href="#") Denver
+                    i.icon-checkmark(aria-hidden="true")
+script.
+
+                
