@@ -1,0 +1,21 @@
+
+    .region-picker {
+        @include region-picker ;
+    }
+
+
+.region-picker .regionPicker .navigational-select-dropdown__list {
+    border-radius: 16px;
+}
+
+.region-picker .regionPicker .navigational-select-dropdown {
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 50px;
+}
+
+.region-picker .regionPicker .navigational-select-dropdown:focus {
+    outline: none;
+}
+
+
