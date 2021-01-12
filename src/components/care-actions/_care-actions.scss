@@ -12,41 +12,40 @@
   list-style: none;
   margin: 0 0 0.75rem;
   padding: 0;
-  height: 100%;
   &--flex {
+    display: flex;
+    flex: 0 0 calc(100%);
+    margin-bottom: 0.75rem;
     @include respond-to(tablet) {
       &--50 {
-        flex: 0 0 calc(50% - 0.5rem);
+        flex: 0 0 calc(50% - 1rem);
         &:nth-child(2n - 1) {
-          margin: 0 1rem 0.75rem 0;
+          margin-left: 1rem;
+          margin-right: 1rem;
         }
       }
       &--33 {
         flex: 0 0 calc(33.3333% - 0.6666rem);
         &:nth-child(3n - 1) {
-          margin: 0 1rem 0.75rem;
+          margin-left: 1rem;
+          margin-right: 1rem;
         }
       }
     }
-    flex: 0 0 calc(100%);
-    margin-bottom: 0.75rem;
   }
   &--item {
-    width: 100%;
-    height: 100%;
     display: flex;
+    flex: 1;
     background-color: $midnight;
     border-top: 5px solid $sky;
     border: $border;
     border-radius: $border-radius;
-    margin: 0 0 0.75rem 0;
     padding: $padding-md;
     transition: background-color 0.2s ease, color 0.2s ease,
       border-color 0.2s ease;
     cursor: pointer;
     &-image {
       margin-right: 1rem;
-
       img {
         width: 3rem;
         height: 3rem;
@@ -66,14 +65,20 @@
       font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: -0.01em;
+      display: flex;
+      justify-content: left;
       text-align: left;
       margin: 0;
+      word-break: break-word;
     }
     &-description {
       font-size: $font-size-xs;
       line-height: 1.25rem;
+      display: flex;
+      justify-content: left;
       text-align: left;
       margin: 0;
+      word-break: break-word;
     }
     &-link {
       font-size: $font-size-xs;
