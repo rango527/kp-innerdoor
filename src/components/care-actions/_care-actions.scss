@@ -12,7 +12,7 @@
   list-style: none;
   margin: 0 0 0.75rem;
   padding: 0;
-
+  height: 100%;
   &--flex {
     @include respond-to(tablet) {
       &--50 {
@@ -29,8 +29,11 @@
       }
     }
     flex: 0 0 calc(100%);
+    margin-bottom: 0.75rem;
   }
   &--item {
+    width: 100%;
+    height: 100%;
     display: flex;
     background-color: $midnight;
     border-top: 5px solid $sky;
@@ -63,11 +66,13 @@
       font-size: 1rem;
       line-height: 1.5rem;
       letter-spacing: -0.01em;
+      text-align: left;
       margin: 0;
     }
     &-description {
       font-size: $font-size-xs;
       line-height: 1.25rem;
+      text-align: left;
       margin: 0;
     }
     &-link {
@@ -121,6 +126,8 @@
     flex-direction: row;
     align-items: flex-end;
     color: $midnight;
+    background-color: $white;
+    border: 0;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease,
       border-color 0.2s ease;
