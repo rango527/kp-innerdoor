@@ -75,7 +75,8 @@
       each secondaryCard in secondaryCareActionCards
         li
           button.care-actions-secondary-list-button(role="link") #{secondaryCard.buttonText}
-    button#care-actions-footer.care-actions-footer.care-actions-footer--link(aria-controls="hidden-group-0" aria-expanded="false" role="button" tabindex="0")
-      img(src="assets/images/plus.png" alt="")
-      p View all care actions
-      p.care-actions-footer--link-number &nbsp;(#{primaryCareActionCards.length + secondaryCareActionCards.length})
+    span.care-actions-footer(aria-controls="hidden-group-0" aria-expanded="false" role="button" tabindex="0")
+      #care-actions-footer.care-actions-footer--link
+        img(src="assets/images/plus.png" alt="")
+        p View all care actions
+        p.care-actions-footer--link-number &nbsp;(#{primaryCareActionCards.length + secondaryCareActionCards.length})
