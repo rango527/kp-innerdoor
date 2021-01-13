@@ -4,6 +4,9 @@ $font-path: "../../../node_modules/styleguide/lib/modern/assets/fonts/";
 // Compiled KP styleguide files
 @import "~styleguide/styleguide-base";
 @import "~styleguide/styleguide-ds2";
+@import 'navigational-picker-pattern/navigational-picker';
+@import '~styleguide/lib/modern/stylesheets/_fonts';
+@import '~styleguide/lib/modern/stylesheets/_kp-icons';
 
 // YML Styles - includes variables and components
 @import "yml";
