@@ -1,7 +1,7 @@
 
-    .region-picker {
-        @include region-picker ;
-    }
+.region-picker {
+     @include region-picker ;
+ }
     
 .region-picker .regionPicker .navigational-select-dropdown__list {
     border-radius: 16px;
@@ -9,12 +9,12 @@
 
 .region-picker .regionPicker .navigational-select-dropdown {
     border: 1px solid #006BA6;
-    padding: 8px 16px;
+    padding: 8px 20px;
     border-radius: 50px;
     background-color: #F0F7FA;
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: 20%;
     justify-content: space-between;
 }
 
@@ -24,6 +24,7 @@
 
 .navigational-select-dropdown-value {
     color: #003B71;
+    font-weight: bolder;
 }
 
 .region-picker .regionPicker .navigational-select-dropdown__list .navigational-select-value:focus {
@@ -54,6 +55,8 @@
 
 .kp-yml-icon {
     margin-right: 10px;
+    color: #003B71
+
 }
 .navigational-select-value-disabled {
     border-top-right-radius: 16px;
@@ -71,3 +74,54 @@
     margin-right: 5px;
     vertical-align: middle;
 }
+
+.region-picker .regionPicker .navigational-select-dropdown__list.-expanded {
+    max-height: 300px;
+    overflow-x: scroll;
+    width: 30%;
+}
+
+.icon-chevron-down {
+    margin: auto 5px;
+}
+
+.region-picker .regionPicker .icon-chevron-down:before {
+    color: #003B71;
+}
+
+
+@media only screen and (max-width: 1360px){
+    .region-picker .regionPicker .navigational-select-dropdown {
+        width: 30%; 
+    }
+  }
+  
+  
+  @media only screen and (max-width: 1120px){
+    .region-picker .regionPicker .navigational-select-dropdown {
+      width: 40%
+    }
+    .region-picker .regionPicker .navigational-select-dropdown__list.-expanded {
+        max-height: 300px;
+        overflow-x: scroll;
+        width: 30%
+    }
+  }
+  
+  @media only screen and (max-width: 720px){
+    .region-picker .regionPicker .navigational-select-dropdown {
+      width: 90%
+    }
+    .region-picker .regionPicker .navigational-select-dropdown__list.-expanded {
+        max-height: 300px;
+        overflow-x: scroll;
+        width: 90%
+    }
+
+  }
+  
+  @media only screen and (max-width: 601px){
+    .region-picker .regionPicker .navigational-select-dropdown {
+        width: 100%
+    }
+  }
