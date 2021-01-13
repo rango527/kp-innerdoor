@@ -1,0 +1,68 @@
+
+.proxy-picker
+    .navigational-picker.region-picker
+        .regionPicker
+            button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
+                div
+                    img.kp-yml-group-icon(src="assets/images/proxy-grouped.svg" alt="")
+                    span.screenreader-only Your Region
+                    span.navigational-select-dropdown-value N. California
+                i.icon-chevron-down.kp-yml-group-icon(aria-hidden="true")
+            ul.navigational-select-dropdown__list(data-analytics-location="Region Picker" role="listbox")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="N. California" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="N. California" data-analytics-type="link" href="#") California - Northern
+                    i.kp-yml-icon(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="S. California" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="S. California" data-analytics-type="link" href="#") California - Southern
+                    i.kp-yml-icon(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Denver" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="Denver" data-analytics-type="link" href="#") Denver
+                    i.kp-yml-icon(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Pheonix" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="Pheonix" data-analytics-type="link" href="#") Pheonix
+                    i.kp-yml-icon(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Austin" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="Austin" data-analytics-type="link" href="#") Austin
+                    i(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="Miami" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="Miami" data-analytics-type="link" href="#") Miami
+                    i.kp-yml-icon(aria-hidden="true")
+                li.navigational-select-value.region-select-value(aria-selected="false" data-value="New York" tabindex="-1")
+                    div
+                        img.kp-yml-group-icon(src="assets/images/user-dark.svg" alt="")
+                        a(data-analytics-click="New York" data-analytics-type="link" href="#") New York
+                    i.kp-yml-icon(aria-hidden="true")
+script.
+    var navItems = document.querySelectorAll('li');
+    for (var i = 0; i < navItems.length; i++) {
+        navItems[i].addEventListener("click", function() {
+            if (!this.classList.contains('active')) {
+                clearActives(navItems);
+                this.classList.toggle('active');
+                var closestElement = this.closest('li')
+                closestElement.children[1].classList.add("icon-checkmark")
+            }
+        });
+    function clearActives(classlist) {
+        if (classlist) {
+            for (i = 0; i < classlist.length; i++) {
+            classlist[i].classList.remove('active');
+            var closestElement = classlist[i].closest('li')
+            closestElement.children[1].classList.remove('icon-checkmark')
+            }
+        }
+    }
+    }
+
