@@ -44,35 +44,70 @@
       buttonText: "Skin Problems / Conditions"
     }
   ]
+.care-display#care-display
+  .care-actions
+    .toggle-content.is-visible#care-actions
+      include ../panel/panel.pug
+        h3 Get Care
+        if primaryCareActionCards.length > 0
+          ul.care-actions-primary-list
+            each primaryCard, index in primaryCareActionCards
+              case primaryCareActionCards.length
+                when 1
+                when 2
+                when 4
+                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--50(onclick=`primaryCard(${index})`)
+                    button.care-actions-primary-list--item
+                      .care-actions-primary-list--item-image
+                        img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                      .care-actions-primary-list--item-content
+                        p.care-actions-primary-list--item-title #{primaryCard.title}
+                        p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+                when 3
+                default
+                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--33(onclick=`primaryCard(${index})`)
+                    button.care-actions-primary-list--item
+                      .care-actions-primary-list--item-image
+                        img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                      .care-actions-primary-list--item-content
+                        p.care-actions-primary-list--item-title #{primaryCard.title}
+                        p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+        ul.care-actions-secondary-list#hidden-group-0
+          each secondaryCard in secondaryCareActionCards
+            li
+              button.care-actions-secondary-list-button(role="link") #{secondaryCard.buttonText}
+        button.view-toggle(aria-expanded="false" type="button") View all care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
+  include ../primary-card-content/primary-card-content.pug
+  script.
+    var careDisplay = document.getElementById("care-display");
+    var careActions = document.getElementById("care-actions");
+    var primaryContent = document.getElementById("primary-card-content");
+    var primaryModal = document.getElementById("primary-card-modal");
+    var container = document.getElementById("container");
 
-.care-actions
-  include ../panel/panel.pug
-    h3 Get Care
-    if primaryCareActionCards.length > 0
-      ul.care-actions-primary-list
-        each primaryCard in primaryCareActionCards
-          case primaryCareActionCards.length
-            when 1
-            when 2
-            when 4
-              li.care-actions-primary-list--flex.care-actions-primary-list--flex--50
-                button.care-actions-primary-list--item
-                  .care-actions-primary-list--item-image
-                    img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
-                  .care-actions-primary-list--item-content
-                    p.care-actions-primary-list--item-title #{primaryCard.title}
-                    p.care-actions-primary-list--item-description #{primaryCard.subTitle}
-            when 3
-            default
-              li.care-actions-primary-list--flex.care-actions-primary-list--flex--33
-                button.care-actions-primary-list--item
-                  .care-actions-primary-list--item-image
-                    img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
-                  .care-actions-primary-list--item-content
-                    p.care-actions-primary-list--item-title #{primaryCard.title}
-                    p.care-actions-primary-list--item-description #{primaryCard.subTitle}
-    ul.care-actions-secondary-list#hidden-group-0
-      each secondaryCard in secondaryCareActionCards
-        li
-          button.care-actions-secondary-list-button(role="link") #{secondaryCard.buttonText}
-    button.view-toggle(aria-expanded="false" type="button") View all care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
+    function primaryCard(clicked_id)
+    {
+      if(window.innerWidth >= 834) {
+        careDisplay.classList.add("care-display-animation-in");
+        careDisplay.classList.remove("care-display-animation-out");
+        
+        document.getElementById("greeting").textContent = "What kind of care do you need?";
+
+        careActions.style.height = careActions.scrollHeight + 'px';
+        window.setTimeout(function () {
+          careActions.style.height = '0';
+        }, 1);
+        window.setTimeout(function () {
+          careActions.classList.remove('is-visible');
+        }, 400);
+      }
+
+      primaryContent.style.display = "block";
+      primaryContent.classList.remove("primary-card-content--animation-out");
+      var clickCard = document.getElementById(`primary-card-content-${clicked_id}`);
+      clickCard.classList.remove("display-none");
+      primaryModal.classList.remove("primary-card-content-modal-out");
+      // when mobile size
+      document.getElementById("greeting-mobile").classList.remove("greeting-mobile--opacity-animation-out");
+      container.classList.add("container-primary-content-mobile");
+    }
