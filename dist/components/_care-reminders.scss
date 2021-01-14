@@ -1,0 +1,164 @@
+.care-reminders {
+  margin-bottom: 2rem;
+  h3 {
+    font-family: $font-family-md;
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0 0 2rem;
+  }
+  // TODO: convert to mixin & use on care actions as well
+  .view-toggle {
+    color: $inky;
+    background: transparent;
+    background-image: url("/assets/images/minus.png");
+    background-repeat: no-repeat;
+    background-position: 0.25rem center;
+    border: none;
+    display: flex;
+    align-items: center;
+    font-family: $font-family-md;
+    font-weight: 500;
+    text-decoration: underline;
+    padding: 0.5rem 0.5rem 0.5rem 2rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    &:hover {
+      background-color: $inky;
+      background-image: url("/assets/images/minus-hover.png");
+      color: $white;
+    }
+  }
+  &__empty {
+    margin-bottom: 2rem;
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: $font-size-lg;
+        line-height: 1.32;
+        font-weight: 500;
+        @include respond-to(desktop) {
+          align-items: flex-center;
+          font-size: $font-size-xl;
+          line-height: 1;
+        }
+        img {
+          margin-right: 0.5rem;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+.care-reminders-header {
+  margin-bottom: 2rem;
+  h3 {
+    display: flex;
+    align-items: center;
+    line-height: 1;
+    margin: 0;
+    span {
+      display: flex;
+      justify-content: center;
+      background-color: $kp-blue;
+      border-radius: 50px;
+      color: $white;
+      font-size: 1rem;
+      line-height: 1;
+      padding: 0.55rem 0.5rem 0.45rem;
+      margin-right: 0.5rem;
+      min-width: 2rem;
+      min-height: 2rem;
+    }
+  }
+}
+
+.care-reminder-list {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  margin: 0 0 1rem;
+  padding: 0;
+
+  @include respond-to(tablet) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  &--item {
+    display: flex;
+    background-color: $white;
+    border: $border;
+    border-radius: $border-radius-sm;
+    margin: 0 0 1rem 0;
+    padding: $padding-md;
+    &.is-hidden {
+      display: none;
+    }
+    &.is-visible {
+      // tbd
+    }
+    @include respond-to(tablet) {
+      flex: 0 0 calc(33.3333% - 1rem);
+      margin-right: 1rem;
+    }
+    @include respond-to(desktop) {
+      flex: 0 0 calc(20% - 1rem);
+    }
+    &-image {
+      margin-right: 1rem;
+    }
+    &-content {
+      display: flex;
+      flex-direction: column;
+    }
+    &-title {
+      color: $inky;
+      font-family: $font-family-md;
+      line-height: 1.5rem;
+      margin: 0 0 0.5rem;
+    }
+    &-link {
+      padding: 0;
+      font-size: $font-size-xs;
+      color: $inky;
+      text-decoration: underline;
+      margin: 0;
+      &:hover {
+        color: $inky;
+        cursor: pointer;
+        background-color: $white;
+      }
+    }
+  }
+}
+
+.care-reminder-list--item__border {
+  @mixin reminder-borders($color1, $color2) {
+    border: $border;
+    border-top: 4px solid $color1;
+    &:hover {
+      border: 1px solid $color2;
+      border-top: 4px solid $color2;
+    }
+  }
+  &-appointments {
+    @include reminder-borders($aqua, $ocean);
+  }
+  &-med-acct {
+    @include reminder-borders($sky, $contrast-blue);
+  }
+  &-med-results {
+    @include reminder-borders($contrast-blue, $midnight);
+  }
+  &-messaging {
+    @include reminder-borders($grass, $moss);
+  }
+  &-pharmacy {
+    @include reminder-borders($lilac, $plum);
+  }
+}
