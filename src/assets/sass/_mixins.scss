@@ -19,20 +19,3 @@ $breakpoints: (
     @warn "Breakpoint mixin supports: mobile, tablet, desktop";
   }
 }
-
-// Example - uncomment for reference
-
-// body {
-//   // Mobile - default, building for mobile up
-//   border-right: 5px solid red;
-
-//   // Tablet media query
-//   @include respond-to(tablet) {
-//     border-right: 5px solid blue;
-//   }
-
-//   // Desktop media query
-//   @include respond-to(desktop) {
-//     border-right: 5px solid orange;
-//   }
-// }

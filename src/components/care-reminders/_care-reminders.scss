@@ -96,6 +96,12 @@
     border-radius: $border-radius-sm;
     margin: 0 0 1rem 0;
     padding: $padding-md;
+    &.is-hidden {
+      display: none;
+    }
+    &.is-visible {
+      // tbd
+    }
     @include respond-to(tablet) {
       flex: 0 0 calc(33.3333% - 1rem);
       margin-right: 1rem;

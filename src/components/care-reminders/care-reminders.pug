@@ -114,11 +114,33 @@
       span #{careReminderCards.length}
       |  Care Reminders
   ul.care-reminder-list
-    each card in careReminderCards
-      li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor}`)
+    each card, index in careReminderCards
+      li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor} ${index >= 5 ? 'is-hidden' : ''}`)
         .care-reminder-list--item-image(aria-hidden="true")
           img(src=`${card.iconSrc}` alt=`${card.altText}`)
         .care-reminder-list--item-content
           p.care-reminder-list--item-title #{card.title}
           a.care-reminder-list--item-link(tabindex="0") #{card.action}
-  button.view-toggle(aria-expanded="true" type="button") View less care reminders
+  if careReminderCards.length > 5
+    button.view-toggle(aria-expanded="true" type="button" onclick=`viewToggle()`) View all care reminders
+script.
+  function viewToggle() {
+    let hiddenList = Array.from(document.getElementsByClassName('is-hidden'));
+    let visibleList = Array.from(document.getElementsByClassName('is-visible'));
+
+    if (hiddenList.length) {
+      document.querySelector(".care-reminders .view-toggle").innerHTML =
+        "View less care reminders";
+      hiddenList.forEach(function (el) {
+        el.classList.add("is-visible");
+        el.classList.remove("is-hidden");
+      });
+    } else {
+      document.querySelector(".care-reminders .view-toggle").innerHTML =
+        "View all care reminders";
+      visibleList.forEach(function (el) {
+        el.classList.add("is-hidden");
+        el.classList.remove("is-visible");
+      });
+    }
+  }
