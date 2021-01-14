@@ -1,0 +1,58 @@
+div.primary-card-content#primary-card-content
+  h1.greeting.greeting-mobile#greeting-mobile What kind of care do you need?
+  .primary-card-content-modal#primary-card-modal
+    .primary-card-content-0.display-none#primary-card-content-0
+      include ../panel/panel.pug
+        .panel-height
+          .close
+            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(0)")
+          h3 Online Care
+    .primary-card-content-1.display-none#primary-card-content-1
+      include ../panel/panel.pug
+        .panel-height
+          .close
+            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(1)")
+          h3 Call for Care
+    .primary-card-content-2.display-none#primary-card-content-2
+      include ../panel/panel.pug
+        .panel-height
+          .close
+            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(2)")
+          h3 In-Person Care
+  
+  script.
+    function closePrimaryCardContent(id)
+    {
+      careDisplay.classList.remove("care-display-animation-in");
+      careDisplay.classList.add("care-display-animation-out");
+      
+      var clickCard = document.getElementById(`primary-card-content-${id}`);
+      clickCard.classList.add("display-none");
+
+      // Get the natural height of the element
+      var getHeight = function () {
+        careActions.style.display = 'block'; // Make it visible
+        var height = careActions.scrollHeight + 'px'; // Get it's height
+        careActions.style.display = ''; //  Hide it again
+        return height;
+      };
+
+      var height = getHeight(); // Get the natural height
+      careActions.classList.add('is-visible'); // Make the element visible
+      careActions.style.height = height; // Update the max-height
+
+      // Once the transition is complete, remove the inline max-height so the content can scale responsively
+      window.setTimeout(function () {
+        careActions.style.height = '';
+        document.getElementById("greeting").textContent = "Hi Jaeroine, how can we help you?";
+      }, 400);
+
+      // when mobile
+      primaryModal.classList.add("primary-card-content-modal-out");
+      window.setTimeout(function () {
+        primaryContent.classList.add("primary-card-content--animation-out");
+        primaryContent.style.display = "none";
+      }, 400);
+      document.getElementById("greeting-mobile").classList.add("greeting-mobile--opacity-animation-out");
+      container.classList.remove("container-primary-content-mobile");
+    }
