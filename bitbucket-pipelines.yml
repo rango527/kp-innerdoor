@@ -16,16 +16,6 @@ image: node:15.4.0
 pipelines:
   default:
     - step:
-        name: Build
-        caches:
-          - node
-        script:
-          - npm install
-          # CI=true in default variables for Bitbucket Pipelines https://support.atlassian.com/bitbucket-cloud/docs/variables-in-pipelines/
-          - npm run build
-        artifacts:
-          - dist/**
-    - step:
         name: Deployment
         deployment: test
         trigger: automatic
