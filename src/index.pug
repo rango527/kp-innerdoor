@@ -1,10 +1,14 @@
 extends layout/layout.pug
 
 block content
-  .container#container
+  .container#container.newGrid_container
     include components/proxy-picker/proxy-picker.pug
     include components/greeting/greeting.pug
-    include components/care-actions/care-actions.pug
     include components/banner/banner.pug
     include components/care-team/care-team.pug
+
+    //- show both populated and empty states
     include components/care-reminders/care-reminders.pug
+    include components/care-reminders/care-reminders-empty.pug
+
+    include components/care-actions/care-actions.pug
