@@ -1,111 +1,112 @@
 -
   const careReminderCards = [
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-1.png',
+      borderColor: "med-acct",
+      altText: "medical account",
+      iconSrc: 'assets/images/icon-medical-account.svg',
       title: "Extend your access",
       action: "Renew your permission to use kp.org on behalf of those you care for before it expires"
     },
     {
-      borderColor: "leaf",
-      borderColor2: "#57A635",
-      iconSrc: 'assets/images/icon-2.png',
+      borderColor: "messaging",
+      altText: "messaging",
+      iconSrc: 'assets/images/icon-messaging.svg',
       title: "4 prescriptions will be ready to fill on this date",
       action: "Re-fill prescriptions"
     },
     {
-      borderColor: "lavender",
-      borderColor2: "#846EAD",
-      iconSrc: 'assets/images/icon-3.png',
+      borderColor: "pharmacy",
+      altText: "pharmacy",
+      iconSrc: 'assets/images/icon-pharmacy.svg',
       title: "Your prescription is on its way",
       action: "Track it"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-4.png',
+      borderColor: "med-results",
+      altText: "medical results",
+      iconSrc: 'assets/images/icon-medical-results.svg',
       title: "Preventive care reminders",
       action: "Take steps now to feel your best"
     },
     {
-      borderColor: "robin-egg",
-      borderColor2: "#20A29E",
-      iconSrc: 'assets/images/icon-5.png',
+      borderColor: "appointments",
+      altText: "appointments",
+      iconSrc: 'assets/images/icon-appointments.svg',
       title: "We can see you sooner",
       action: "View and confirm you want the new appointment"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-1.png',
+      borderColor: "med-acct",
+      altText: "medical account",
+      iconSrc: 'assets/images/icon-medical-account.svg',
       title: "Extend your access",
       action: "Renew your permission to use kp.org on behalf of those you care for before it expires"
     },
     {
-      borderColor: "leaf",
-      borderColor2: "#57A635",
-      iconSrc: 'assets/images/icon-2.png',
+      borderColor: "messaging",
+      altText: "messaging",
+      iconSrc: 'assets/images/icon-messaging.svg',
       title: "4 prescriptions will be ready to fill on this date",
       action: "Re-fill prescriptions"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-4.png',
+      borderColor: "med-results",
+      altText: "medical results",
+      iconSrc: 'assets/images/icon-medical-results.svg',
       title: "Preventive care reminders",
       action: "Take steps now to feel your best"
     },
     {
-      borderColor: "robin-egg",
-      borderColor2: "#20A29E",
-      iconSrc: 'assets/images/icon-5.png',
+      borderColor: "appointments",
+      altText: "appointments",
+      iconSrc: 'assets/images/icon-appointments.svg',
       title: "We can see you sooner",
       action: "View and confirm you want the new appointment"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-1.png',
+      borderColor: "med-acct",
+      altText: "medical account",
+      iconSrc: 'assets/images/icon-medical-account.svg',
       title: "Extend your access",
       action: "Renew your permission to use kp.org on behalf of those you care for before it expires"
     },
     {
-      borderColor: "leaf",
-      borderColor2: "#57A635",
-      iconSrc: 'assets/images/icon-2.png',
+      borderColor: "messaging",
+      altText: "messaging",
+      iconSrc: 'assets/images/icon-messaging.svg',
       title: "4 prescriptions will be ready to fill on this date",
       action: "Re-fill prescriptions"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-4.png',
+      borderColor: "med-results",
+      altText: "medical results",
+      iconSrc: 'assets/images/icon-medical-results.svg',
       title: "Preventive care reminders",
       action: "Take steps now to feel your best"
     },
     {
-      borderColor: "robin-egg",
-      borderColor2: "#20A29E",
-      iconSrc: 'assets/images/icon-5.png',
+      borderColor: "appointments",
+      altText: "appointments",
+      iconSrc: 'assets/images/icon-appointments.svg',
       title: "We can see you sooner",
       action: "View and confirm you want the new appointment"
     },
     {
-      borderColor: "sky",
-      borderColor2: "#006BA6",
-      iconSrc: 'assets/images/icon-1.png',
+      borderColor: "med-acct",
+      altText: "medical account",
+      iconSrc: 'assets/images/icon-medical-account.svg',
       title: "Extend your access",
       action: "Renew your permission to use kp.org on behalf of those you care for before it expires"
     },
     {
-      borderColor: "leaf",
-      borderColor2: "#57A635",
-      iconSrc: 'assets/images/icon-2.png',
+      borderColor: "messaging",
+      altText: "messaging",
+      iconSrc: 'assets/images/icon-messaging.svg',
       title: "4 prescriptions will be ready to fill on this date",
       action: "Re-fill prescriptions"
     }
   ]
+
 
 .care-reminders
   .care-reminders-header
@@ -116,10 +117,8 @@
     each card in careReminderCards
       li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor}`)
         .care-reminder-list--item-image(aria-hidden="true")
-          img(src=`${card.iconSrc}` alt="")
+          img(src=`${card.iconSrc}` alt=`${card.altText}`)
         .care-reminder-list--item-content
           p.care-reminder-list--item-title #{card.title}
           a.care-reminder-list--item-link(tabindex="0") #{card.action}
   button.view-toggle(aria-expanded="true" type="button") View less care reminders
-
-//- TODO: no care reminders - use pug conditional

@@ -27,6 +27,31 @@
       color: $white;
     }
   }
+  &__empty {
+    margin-bottom: 2rem;
+    ul {
+      padding: 0;
+      list-style: none;
+      li {
+        display: flex;
+        align-items: flex-start;
+        font-size: $font-size-lg;
+        line-height: 1.32;
+        font-weight: 500;
+        @include respond-to(desktop) {
+          align-items: flex-center;
+          font-size: $font-size-xl;
+          line-height: 1;
+        }
+        img {
+          margin-right: 0.5rem;
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
 }
 
 .care-reminders-header {
@@ -94,7 +119,8 @@
     &-link {
       padding: 0;
       font-size: $font-size-xs;
-      color: $link-color;
+      color: $inky;
+      text-decoration: underline;
       margin: 0;
       &:hover {
         color: $inky;
@@ -106,37 +132,27 @@
 }
 
 .care-reminder-list--item__border {
-  // TODO: convert to mixin
-  &-robin-egg {
+  @mixin reminder-borders($color1, $color2) {
     border: $border;
-    border-top: 4px solid $robin-egg;
+    border-top: 4px solid $color1;
     &:hover {
-      border: 1px solid darken($robin-egg, 18%);
-      border-top: 4px solid darken($robin-egg, 18%);
+      border: 1px solid $color2;
+      border-top: 4px solid $color2;
     }
   }
-  &-sky {
-    border: $border;
-    border-top: 4px solid $sky;
-    &:hover {
-      border: 1px solid darken($sky, 18%);
-      border-top: 4px solid darken($sky, 18%);
-    }
+  &-appointments {
+    @include reminder-borders($aqua, $ocean);
   }
-  &-leaf {
-    border: $border;
-    border-top: 4px solid $leaf;
-    &:hover {
-      border: 1px solid darken($leaf, 18%);
-      border-top: 4px solid darken($leaf, 18%);
-    }
+  &-med-acct {
+    @include reminder-borders($sky, $contrast-blue);
   }
-  &-lavender {
-    border: $border;
-    border-top: 4px solid $lavender;
-    &:hover {
-      border: 1px solid darken($lavender, 18%);
-      border-top: 4px solid darken($lavender, 18%);
-    }
+  &-med-results {
+    @include reminder-borders($contrast-blue, $midnight);
+  }
+  &-messaging {
+    @include reminder-borders($grass, $moss);
+  }
+  &-pharmacy {
+    @include reminder-borders($lilac, $plum);
   }
 }
