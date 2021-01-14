@@ -10,16 +10,12 @@ body {
   justify-content: space-around;
   overflow-x: hidden;
 
-  --desktop-space-size: 50vw - 640px + 2rem;      // when desktop, container max-width: 1280px; padding: 0 2rem;
-  --desktop-space-size-2: 100vw - 1280px + 4rem;
-  --desktop-space-size-2-minus: -100vw + 1280px - 4rem;
-
   @include respond-to(tablet) {
     padding-right: 1.75rem;
     padding-left: 1.75rem;
   }
   @include respond-to(desktop) {
-    padding: 0 calc(var(--desktop-space-size)); 
+    padding: 0 $desktop-space-size; 
   }
   @media only screen and (max-width: 834px){
     &-primary-content-mobile {

@@ -8,8 +8,8 @@
     margin-left: 3.5rem;
   }
   @include respond-to(desktop) {
-    margin-right: calc(var(--desktop-space-size-2-minus));    // (50vw - 640px + 2rem) * 2
-    margin-left: calc(var(--desktop-space-size-2));
+    margin-right: $desktop-space-size-2-minus;    // (50vw - 640px + 2rem) * 2
+    margin-left: $desktop-space-size-2;
   }
   @media only screen and (max-width: 834px){
     position: fixed; /* Stay in place */
@@ -48,14 +48,14 @@
 }
 
 @keyframes animateTop {
-  0% {top:500px; opacity:0}
-  70% {top:500px; opacity:0}
+  0% {top:100vw; opacity:0}
+  70% {top:100vw; opacity:0}
   100% {top:0; opacity:1}
 }
 
 @keyframes animateBottom {
   from {top:0; opacity:1}
-  to {top:500px; opacity:0}
+  to {top:100vw; opacity:0}
 }
 
 .display-none {

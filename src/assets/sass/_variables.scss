@@ -70,7 +70,6 @@ $font-family-lt: "Gotham-Light";
 $font-size-xs: 0.8125rem; // 13px
 $font-size-md: 1rem; // 16px
 $font-size-lg: 1.5rem; // 24px
-
 $font-size-h1: 3rem; // 48px
 
 // Links
@@ -81,3 +80,8 @@ $panel-border: $border;
 
 // Buttons
 $button-radius: 100px;
+
+$desktop-space-size: calc(50vw - 640px + 2rem);      // when desktop, container max-width: 1280px; padding: 0 2rem;
+$desktop-space-size-2: calc(100vw - 1280px + 4rem);
+$desktop-space-size-2-minus: calc(-100vw + 1280px - 4rem);
+$desktop-right-size-2: calc(100% + 100vw - 1280px + 4rem);
