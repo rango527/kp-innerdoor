@@ -12307,6 +12307,12 @@ body {
   }
 }
 
+hr.yml {
+  border-top: 1px dashed #ababab;
+  border-bottom: 1px dashed #ffffff;
+  width: 100%;
+}
+
 header {
   display: flex;
   align-items: center;

@@ -25,6 +25,12 @@ body {
   }
 }
 
+hr.yml {
+  border-top: 1px dashed darken($pebble, 30%);
+  border-bottom: 1px dashed $white;
+  width: 100%;
+}
+
 header {
   display: flex;
   align-items: center;
