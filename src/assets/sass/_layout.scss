@@ -15,9 +15,9 @@ body {
     padding-left: 1.75rem;
   }
   @include respond-to(desktop) {
-    padding: 0 $desktop-space-size; 
+    padding: 0 $desktop-space-size;
   }
-  @media only screen and (max-width: 834px){
+  @media only screen and (max-width: 834px) {
     &-primary-content-mobile {
       position: fixed;
       scroll-behavior: smooth;
@@ -28,7 +28,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  background-color: $inky;
+  background-color: $inky-blue;
   height: 2rem;
   margin-bottom: 1rem;
   padding: 2rem;

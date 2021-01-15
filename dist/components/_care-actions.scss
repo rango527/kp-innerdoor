@@ -6,15 +6,15 @@
 }
 
 .toggle-content {
-	display: none;
-	height: 0;
-	overflow: hidden;
-	transition: height 400ms ease-in-out;
+  display: none;
+  height: 0;
+  overflow: hidden;
+  transition: height 400ms ease-in-out;
 }
 
 .toggle-content.is-visible {
-	display: block;
-	height: auto;
+  display: block;
+  height: auto;
 }
 
 .care-display-animation-in {
@@ -22,19 +22,31 @@
 }
 
 @keyframes primaryCardAnimation {
-  0%  {right: 0px;}
-  100%  {right: calc(100% + 2rem);}
+  0% {
+    right: 0px;
+  }
+  100% {
+    right: calc(100% + 2rem);
+  }
 }
 @include respond-to(tablet) {
   @keyframes primaryCardAnimation {
-    0%  {right: 0px;}
-    100%  {right: calc(100% + 3.5rem);}
+    0% {
+      right: 0px;
+    }
+    100% {
+      right: calc(100% + 3.5rem);
+    }
   }
 }
 @include respond-to(desktop) {
   @keyframes primaryCardAnimation {
-    0%  {right: 0px; }
-    100%  {right: calc(100% + var(--desktop-space-size-2)); }
+    0% {
+      right: 0px;
+    }
+    100% {
+      right: calc(100% + var(--desktop-space-size-2));
+    }
   }
 }
 
@@ -43,19 +55,31 @@
 }
 
 @keyframes primaryCardAnimationOut {
-  0%  {right: calc(100% + 2rem);}
-  100%  {right: 0px;}
+  0% {
+    right: calc(100% + 2rem);
+  }
+  100% {
+    right: 0px;
+  }
 }
 @include respond-to(tablet) {
   @keyframes primaryCardAnimationOut {
-    0%  {right: calc(100% + 3.5rem);}
-    100%  {right: 0px;}
+    0% {
+      right: calc(100% + 3.5rem);
+    }
+    100% {
+      right: 0px;
+    }
   }
 }
 @include respond-to(desktop) {
   @keyframes primaryCardAnimationOut {
-    0%  {right: calc(100% + var(--desktop-space-size-2));}
-    100%  {right: 0px;}
+    0% {
+      right: calc(100% + var(--desktop-space-size-2));
+    }
+    100% {
+      right: 0px;
+    }
   }
 }
 
@@ -68,7 +92,7 @@
     margin: 0 0 1.5rem;
   }
   .view-toggle {
-    color: $inky;
+    color: $inky-blue;
     background: transparent;
     background-image: url("/assets/images/plus.png");
     background-repeat: no-repeat;
@@ -82,7 +106,7 @@
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
-      background-color: $inky;
+      background-color: $inky-blue;
       background-image: url("/assets/images/plus-hover.png");
       color: $white;
     }

@@ -11358,7 +11358,7 @@ a .icon-link-external {
 }
 .panel {
   background-color: #ffffff;
-  color: #0d1c3d;
+  color: #0D1C3D;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
@@ -11372,7 +11372,7 @@ a .icon-link-external {
   }
 }
 .panel.info {
-  background-color: #94dfff;
+  background-color: #94DFFF;
 }
 .panel h2 {
   font-family: "Gotham-Medium";
@@ -11390,7 +11390,7 @@ a .icon-link-external {
   margin-right: 1rem;
 }
 .panel-footer--link a {
-  color: #0d1c3d;
+  color: #0D1C3D;
   font-family: "Gotham-Medium";
 }
 
@@ -11518,8 +11518,8 @@ a .icon-link-external {
   margin: 0 0 2rem;
 }
 .banner button {
-  background-color: #94dfff;
-  border: 1px solid #0d1c3d;
+  background-color: #94DFFF;
+  border: 1px solid #0D1C3D;
   border-radius: 100px;
   font-size: 1rem;
   margin-right: 1rem;
@@ -11527,19 +11527,19 @@ a .icon-link-external {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .banner button:hover {
-  background-color: #0d1c3d;
+  background-color: #0D1C3D;
   text-decoration: underline;
   color: #ffffff;
 }
 .banner a {
-  color: #0d1c3d;
+  color: #0D1C3D;
   display: inline-block;
   padding: 0.5rem;
   text-decoration: underline;
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .banner a:hover {
-  background-color: #0d1c3d;
+  background-color: #0D1C3D;
   color: #ffffff;
 }
 
@@ -11554,7 +11554,7 @@ h1.greeting {
   font-size: 26px;
   line-height: 2rem;
   margin: 0 0 2rem;
-  color: #003b71;
+  color: #003B71;
 }
 @media (min-width: 834px) {
   h1.greeting {
@@ -11645,8 +11645,8 @@ h1.greeting-mobile--opacity-animation-out {
   padding: 1rem;
 }
 .care-team-list--item:hover {
-  background-color: #f0f7fa;
-  border: 1px solid #006ba6;
+  background-color: #F0F7FA;
+  border: 1px solid #006BA6;
 }
 @media (min-width: 834px) {
   .care-team-list--item {
@@ -11676,15 +11676,15 @@ h1.greeting-mobile--opacity-animation-out {
 .care-team-list--item-link {
   font-size: 0.8125rem;
   margin-top: auto;
-  color: #006ba6;
+  color: #006BA6;
 }
 
 .care-team-no-results img {
   margin-bottom: 1rem;
 }
 .care-team-no-results button {
-  background-color: #f0f7fa;
-  border: 1px solid #006ba6;
+  background-color: #F0F7FA;
+  border: 1px solid #006BA6;
   border-radius: 100px;
   font-size: 1rem;
   margin-right: 1rem;
@@ -11692,18 +11692,18 @@ h1.greeting-mobile--opacity-animation-out {
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
 .care-team-no-results button:hover {
-  background-color: #006ba6;
+  background-color: #006BA6;
   text-decoration: underline;
   color: #ffffff;
 }
 .care-team-no-results a {
-  color: #006ba6;
+  color: #006BA6;
   display: inline-block;
   padding: 1rem;
   text-decoration: underline;
 }
 .care-team-no-results a:hover {
-  background-color: #006ba6;
+  background-color: #006BA6;
   color: #ffffff;
 }
 
@@ -11717,7 +11717,7 @@ h1.greeting-mobile--opacity-animation-out {
   margin: 0 0 2rem;
 }
 .care-reminders .view-toggle {
-  color: #0d1c3d;
+  color: #0D1C3D;
   background: transparent;
   background-image: url("/minus.f7f471cf.png");
   background-repeat: no-repeat;
@@ -11732,7 +11732,7 @@ h1.greeting-mobile--opacity-animation-out {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .care-reminders .view-toggle:hover {
-  background-color: #0d1c3d;
+  background-color: #0D1C3D;
   background-image: url("/minus-hover.06e717d3.png");
   color: #ffffff;
 }
@@ -11776,7 +11776,7 @@ h1.greeting-mobile--opacity-animation-out {
 .care-reminders-header h3 span {
   display: flex;
   justify-content: center;
-  background-color: #0078b3;
+  background-color: #0078B3;
   border-radius: 50px;
   color: #ffffff;
   font-size: 1rem;
@@ -11830,7 +11830,7 @@ h1.greeting-mobile--opacity-animation-out {
   flex-direction: column;
 }
 .care-reminder-list--item-title {
-  color: #0d1c3d;
+  color: #0D1C3D;
   font-family: "Gotham-Medium";
   line-height: 1.5rem;
   margin: 0 0 0.5rem;
@@ -11838,19 +11838,19 @@ h1.greeting-mobile--opacity-animation-out {
 .care-reminder-list--item-link {
   padding: 0;
   font-size: 0.8125rem;
-  color: #0d1c3d;
+  color: #0D1C3D;
   text-decoration: underline;
   margin: 0;
 }
 .care-reminder-list--item-link:hover {
-  color: #0d1c3d;
+  color: #0D1C3D;
   cursor: pointer;
   background-color: #ffffff;
 }
 
 .care-reminder-list--item__border-appointments {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #20a29e;
+  border-top: 4px solid #20A29E;
 }
 .care-reminder-list--item__border-appointments:hover {
   border: 1px solid #066564;
@@ -11858,31 +11858,31 @@ h1.greeting-mobile--opacity-animation-out {
 }
 .care-reminder-list--item__border-med-acct {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #90cef1;
+  border-top: 4px solid #90CEF1;
 }
 .care-reminder-list--item__border-med-acct:hover {
-  border: 1px solid #006ba6;
-  border-top: 4px solid #006ba6;
+  border: 1px solid #006BA6;
+  border-top: 4px solid #006BA6;
 }
 .care-reminder-list--item__border-med-results {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #006ba6;
+  border-top: 4px solid #006BA6;
 }
 .care-reminder-list--item__border-med-results:hover {
-  border: 1px solid #003b71;
-  border-top: 4px solid #003b71;
+  border: 1px solid #003B71;
+  border-top: 4px solid #003B71;
 }
 .care-reminder-list--item__border-messaging {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #57a635;
+  border-top: 4px solid #57A635;
 }
 .care-reminder-list--item__border-messaging:hover {
-  border: 1px solid #4a7628;
-  border-top: 4px solid #4a7628;
+  border: 1px solid #4A7628;
+  border-top: 4px solid #4A7628;
 }
 .care-reminder-list--item__border-pharmacy {
   border: 1px solid rgba(0, 0, 0, 0.08);
-  border-top: 4px solid #846ead;
+  border-top: 4px solid #846EAD;
 }
 .care-reminder-list--item__border-pharmacy:hover {
   border: 1px solid #583985;
@@ -11982,7 +11982,7 @@ h1.greeting-mobile--opacity-animation-out {
   margin: 0 0 1.5rem;
 }
 .care-actions .view-toggle {
-  color: #0d1c3d;
+  color: #0D1C3D;
   background: transparent;
   background-image: url("/plus.ae768a75.png");
   background-repeat: no-repeat;
@@ -11997,7 +11997,7 @@ h1.greeting-mobile--opacity-animation-out {
   transition: background-color 0.2s ease, color 0.2s ease;
 }
 .care-actions .view-toggle:hover {
-  background-color: #0d1c3d;
+  background-color: #0D1C3D;
   background-image: url("/plus-hover.b72fdb0b.png");
   color: #ffffff;
 }
@@ -12033,8 +12033,8 @@ h1.greeting-mobile--opacity-animation-out {
 .care-actions-primary-list--item {
   display: flex;
   flex: 1;
-  background-color: #003b71;
-  border-top: 5px solid #90cef1;
+  background-color: #003B71;
+  border-top: 5px solid #90CEF1;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
   padding: 1rem;
@@ -12082,10 +12082,10 @@ h1.greeting-mobile--opacity-animation-out {
 .care-actions-primary-list--item-link {
   font-size: 0.8125rem;
   margin: 0;
-  color: #006ba6;
+  color: #006BA6;
 }
 .care-actions-primary-list--item:hover {
-  background-color: #006ba6;
+  background-color: #006BA6;
   text-decoration: underline;
   color: #ffffff;
 }
@@ -12098,10 +12098,10 @@ h1.greeting-mobile--opacity-animation-out {
   padding: 0;
 }
 .care-actions-secondary-list-button {
-  background-color: #f0f7fa;
-  border: 1px solid #0078b3;
+  background-color: #F0F7FA;
+  border: 1px solid #0078B3;
   border-radius: 100px;
-  color: #003b71;
+  color: #003B71;
   margin-right: 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   font-size: 0.8125rem;
@@ -12117,7 +12117,7 @@ h1.greeting-mobile--opacity-animation-out {
   }
 }
 .care-actions-secondary-list-button:hover {
-  background-color: #0078b3;
+  background-color: #0078B3;
   color: #ffffff;
 }
 
@@ -12129,7 +12129,7 @@ h1.greeting-mobile--opacity-animation-out {
   display: flex;
   flex-direction: row;
   align-items: flex-end;
-  color: #003b71;
+  color: #003B71;
   background-color: #ffffff;
   border: 0;
   cursor: pointer;
@@ -12155,7 +12155,7 @@ h1.greeting-mobile--opacity-animation-out {
   text-decoration: none !important;
 }
 .care-actions-footer--link:hover {
-  background-color: #003b71;
+  background-color: #003B71;
   color: #ffffff;
 }
 
@@ -12279,7 +12279,7 @@ h1.greeting-mobile--opacity-animation-out {
 }
 
 body {
-  background-color: #f7f7f7;
+  background-color: #F7F7F7;
 }
 
 .container {
@@ -12297,7 +12297,7 @@ body {
 }
 @media (min-width: 1280px) {
   .container {
-    padding: 0 calc(50vw - 640px + 2rem);
+    padding: 0 calc( 50vw - 640px + 2rem );
   }
 }
 @media only screen and (max-width: 834px) {
@@ -12310,7 +12310,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  background-color: #0d1c3d;
+  background-color: #0D1C3D;
   height: 2rem;
   margin-bottom: 1rem;
   padding: 2rem;
@@ -12324,7 +12324,7 @@ header a:hover, header a:visited {
 }
 
 footer {
-  background-color: #e9ebee;
+  background-color: #E9EBEE;
   height: 2rem;
 }
 
