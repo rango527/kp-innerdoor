@@ -645,7 +645,7 @@ h1.greeting-mobile--opacity-animation-out {
       right: 0px;
     }
     100% {
-      right: calc(100% + var(--desktop-space-size-2));
+      right: calc(100% + 100vw - 1280px + 4rem);
     }
   }
 }
@@ -674,7 +674,7 @@ h1.greeting-mobile--opacity-animation-out {
 @media (min-width: 1280px) {
   @keyframes primaryCardAnimationOut {
     0% {
-      right: calc(100% + var(--desktop-space-size-2));
+      right: calc(100% + 100vw - 1280px + 4rem);
     }
     100% {
       right: 0px;
@@ -882,8 +882,8 @@ h1.greeting-mobile--opacity-animation-out {
 }
 @media (min-width: 1280px) {
   .primary-card-content {
-    margin-right: calc(var(--desktop-space-size-2-minus));
-    margin-left: calc(var(--desktop-space-size-2));
+    margin-right: calc(-100vw + 1280px - 4rem);
+    margin-left: calc(100vw - 1280px + 4rem);
   }
 }
 @media only screen and (max-width: 834px) {
@@ -894,8 +894,6 @@ h1.greeting-mobile--opacity-animation-out {
     /* Sit on top */
     width: 100vw;
     /* Full width */
-    height: 100vw;
-    /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
     animation: backgroundColorAnimation 800ms both;
@@ -940,11 +938,11 @@ h1.greeting-mobile--opacity-animation-out {
 }
 @keyframes animateTop {
   0% {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
   70% {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
   100% {
@@ -958,7 +956,7 @@ h1.greeting-mobile--opacity-animation-out {
     opacity: 1;
   }
   to {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
 }
@@ -987,6 +985,36 @@ h1.greeting-mobile--opacity-animation-out {
   .panel-height {
     height: 100vh;
   }
+}
+
+.add-new-member {
+  margin: 1rem 0;
+}
+@media (min-width: 834px) {
+  .add-new-member {
+    margin: 1.5rem 0;
+  }
+}
+.add-new-member-btn {
+  color: #003b71;
+  background-color: #f0f7fa;
+  background: transparent;
+  background-image: url("/assets/images/plus.png");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  border: 1px solid #006ba6;
+  border-radius: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: bolder;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.add-new-member-btn:hover {
+  background-color: #003b71;
+  background-image: url("/assets/images/plus-hover.png");
+  color: #ffffff;
 }
 
 /*# sourceMappingURL=kp-yml.css.map */
