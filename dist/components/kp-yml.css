@@ -987,4 +987,34 @@ h1.greeting-mobile--opacity-animation-out {
   }
 }
 
+.add-new-member {
+  margin: 1rem 0;
+}
+@media (min-width: 834px) {
+  .add-new-member {
+    margin: 1.5rem 0;
+  }
+}
+.add-new-member-btn {
+  color: #003b71;
+  background-color: #f0f7fa;
+  background: transparent;
+  background-image: url("/assets/images/plus.png");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  border: 1px solid #006ba6;
+  border-radius: 40px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.04);
+  font-size: 0.8125rem;
+  line-height: 1.25rem;
+  font-weight: bolder;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.add-new-member-btn:hover {
+  background-color: #003b71;
+  background-image: url("/assets/images/plus-hover.png");
+  color: #ffffff;
+}
+
 /*# sourceMappingURL=kp-yml.css.map */
