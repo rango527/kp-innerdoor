@@ -34,7 +34,7 @@
 @include respond-to(desktop) {
   @keyframes primaryCardAnimation {
     0%  {right: 0px; }
-    100%  {right: calc(100% + var(--desktop-space-size-2)); }
+    100%  {right: $desktop-right-size-2; }
   }
 }
 
@@ -54,7 +54,7 @@
 }
 @include respond-to(desktop) {
   @keyframes primaryCardAnimationOut {
-    0%  {right: calc(100% + var(--desktop-space-size-2));}
+    0%  {right: $desktop-right-size-2;}
     100%  {right: 0px;}
   }
 }

@@ -40,7 +40,6 @@
       careDisplay.classList.add("care-display-animation-out");
       
       var clickCard = document.getElementById(`primary-card-content-${id}`);
-      clickCard.classList.add("display-none");
     
       // Get the natural height of the element
       var getHeight = function () {
@@ -65,6 +64,7 @@
       window.setTimeout(function () {
         primaryContent.classList.add("primary-card-content--animation-out");
         primaryContent.style.display = "none";
+        clickCard.classList.add("display-none");
       }, 400);
       document.getElementById("greeting-mobile").classList.add("greeting-mobile--opacity-animation-out");
       container.classList.remove("container-primary-content-mobile");

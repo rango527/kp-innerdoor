@@ -645,7 +645,7 @@ h1.greeting-mobile--opacity-animation-out {
       right: 0px;
     }
     100% {
-      right: calc(100% + var(--desktop-space-size-2));
+      right: calc(100% + 100vw - 1280px + 4rem);
     }
   }
 }
@@ -674,7 +674,7 @@ h1.greeting-mobile--opacity-animation-out {
 @media (min-width: 1280px) {
   @keyframes primaryCardAnimationOut {
     0% {
-      right: calc(100% + var(--desktop-space-size-2));
+      right: calc(100% + 100vw - 1280px + 4rem);
     }
     100% {
       right: 0px;
@@ -882,8 +882,8 @@ h1.greeting-mobile--opacity-animation-out {
 }
 @media (min-width: 1280px) {
   .primary-card-content {
-    margin-right: calc(var(--desktop-space-size-2-minus));
-    margin-left: calc(var(--desktop-space-size-2));
+    margin-right: calc(-100vw + 1280px - 4rem);
+    margin-left: calc(100vw - 1280px + 4rem);
   }
 }
 @media only screen and (max-width: 834px) {
@@ -894,8 +894,6 @@ h1.greeting-mobile--opacity-animation-out {
     /* Sit on top */
     width: 100vw;
     /* Full width */
-    height: 100vw;
-    /* Full height */
     overflow: auto;
     /* Enable scroll if needed */
     animation: backgroundColorAnimation 800ms both;
@@ -940,11 +938,11 @@ h1.greeting-mobile--opacity-animation-out {
 }
 @keyframes animateTop {
   0% {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
   70% {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
   100% {
@@ -958,7 +956,7 @@ h1.greeting-mobile--opacity-animation-out {
     opacity: 1;
   }
   to {
-    top: 500px;
+    top: 100vw;
     opacity: 0;
   }
 }
