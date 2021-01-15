@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 53.2 (72643) - https://sketchapp.com -->
+    <title>Invalid Entry Icon</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <circle id="path-1" cx="8" cy="8" r="8"></circle>
+        <path d="M1,9 C0.44771525,9 0,8.55228475 0,8 C0,7.44771525 0.44771525,7 1,7 C1.55228475,7 2,7.44771525 2,8 C2,8.55228475 1.55228475,9 1,9 Z M0,0 L2,0 L2,6 L0,6 L0,0 Z" id="path-3"></path>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Text-Input/Error/Desktop-&amp;-Tablet" transform="translate(0.000000, -99.000000)">
+            <g id="Forms-/Desktop/-Input-text-/-Error">
+                <g id="Error-Message" transform="translate(0.000000, 95.000000)">
+                    <g id="Invalid-Entry-Icon" transform="translate(0.000000, 4.000000)">
+                        <g id="BG">
+                            <mask id="mask-2" fill="white">
+                                <use xlink:href="#path-1"></use>
+                            </mask>
+                            <use id="Circle" fill-opacity="0.05" fill="#B63125" xlink:href="#path-1"></use>
+                            <g id="Colors-/-Deep-Red" opacity="0.05" mask="url(#mask-2)" fill="#B63125">
+                                <rect id="Rectangle-1-Copy-12" x="0" y="0" width="16" height="16"></rect>
+                            </g>
+                        </g>
+                        <g id="Exclamation" transform="translate(7.000000, 4.000000)">
+                            <mask id="mask-4" fill="white">
+                                <use xlink:href="#path-3"></use>
+                            </mask>
+                            <use id="Mask" fill="#B63125" fill-rule="nonzero" xlink:href="#path-3"></use>
+                            <g id="Colors-/-Deep-Red" mask="url(#mask-4)" fill="#B63125">
+                                <g transform="translate(-7.000000, -4.000000)" id="Rectangle-1-Copy-12">
+                                    <rect x="0" y="0" width="16" height="16"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
