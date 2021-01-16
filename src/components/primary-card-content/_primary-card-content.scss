@@ -57,6 +57,11 @@
       margin-bottom: 1.5rem;
     }
   }
+  .close-btn {
+    padding: 0;
+    border: none;
+    background-color: $white;
+  }
   &__title {
     display: flex;
     align-items: center;
