@@ -75,7 +75,7 @@
         ul.care-actions-secondary-list#hidden-group-0
           each secondaryCard in secondaryCareActionCards
             li
-              button.care-actions-secondary-list-button(role="link") #{secondaryCard.buttonText}
+              a.care-actions-secondary-list-button(href="#") #{secondaryCard.buttonText}
         button.view-toggle(aria-expanded="false" type="button") View all care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
   include ../primary-card-content/primary-card-content.pug
   script.
