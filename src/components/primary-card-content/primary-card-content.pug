@@ -118,7 +118,7 @@ div.primary-card-content#primary-card-content
             .newGrid_container
               .primary-card-content__header
                 h3 #{content.header}
-                img(src="assets/images/close.png" alt="" onclick=`closePrimaryCardContent(${cardIndex})`)
+                img(src="assets/images/close.svg" alt="" onclick=`closePrimaryCardContent(${cardIndex})`)
               if content.data.length > 0
                 .rows
                   each card, index in content.data
