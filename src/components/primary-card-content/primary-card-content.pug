@@ -1,25 +1,166 @@
+-
+  // primary card content json data
+  const primaryCardContentData = [
+    {
+      header: "Online Care",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/speed-icon.svg",
+              alt: ""
+            }
+          ],
+          body: [
+            "Get online care and prescriptions from a doctor, usually within an hour.",
+          ],
+          buttonText: "Schedule an e-visit",
+        },
+        {
+          title: "Phone or video appt",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "E-mail",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: [
+            "Problems with a bladder infection",
+            "Urinary incontinance",
+            "Vaginal Yeast Infections"
+            ],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+      ]
+    },
+    {
+      header: "Call for Care",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/speed-icon.svg",
+              alt: ""
+            }
+          ],
+          body: ["Get online care and prescriptions from a doctor, usually within an hour."],
+          buttonText: "Schedule an e-visit",
+        },
+        {
+          title: "Phone or video appt",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "E-mail",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+      ]
+    },
+    {
+      header: "In-Person Care",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/speed-icon.svg",
+              alt: ""
+            }
+          ],
+          body: ["Get online care and prescriptions from a doctor, usually within an hour."],
+          buttonText: "Schedule an e-visit",
+        },
+      ]
+    },
+  ]
+
 div.primary-card-content#primary-card-content
   h1.greeting.greeting-mobile#greeting-mobile What kind of care do you need?
   .primary-card-content-modal#primary-card-modal
-    .primary-card-content-0.display-none#primary-card-content-0
-      include ../panel/panel.pug
-        .panel-height
-          .close
-            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(0)")
-          h3 Online Care
-    .primary-card-content-1.display-none#primary-card-content-1
-      include ../panel/panel.pug
-        .panel-height
-          .close
-            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(1)")
-          h3 Call for Care
-    .primary-card-content-2.display-none#primary-card-content-2
-      include ../panel/panel.pug
-        .panel-height
-          .close
-            img(src="assets/images/close.png" alt="" onclick="closePrimaryCardContent(2)")
-          h3 In-Person Care
-  
+    each content, cardIndex in primaryCardContentData
+      .display-none(class=`primary-card-content-${cardIndex}` id=`primary-card-content-${cardIndex}`)
+        include ../panel/panel-grid.pug
+          .kp-theme-ds2
+            .newGrid_container
+              .primary-card-content__header
+                h3 #{content.header}
+                img(src="assets/images/close.svg" alt="" onclick=`closePrimaryCardContent(${cardIndex})`)
+              if content.data.length > 0
+                .rows
+                  each card, index in content.data
+                    case content.data.length
+                      when 1
+                      when 2
+                      when 4
+                        .columns-6
+                          .primary-card-content__title
+                            h3.-title #{card.title}
+                            each titleProperty in card.titleProperty
+                              img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+                              h6 #{titleProperty.text}
+                          if card.body.length == 1
+                            h5 #{card.body}
+                          else
+                            ul
+                              each cardbody in card.body
+                                li
+                                  h5 #{cardbody}
+                          button.primary-card-content__btn(role="link") #{card.buttonText}
+                          .primary-card-content__divider.primary-card-content__divider-mobile
+                      when 3
+                      default
+                        .columns-4
+                          .primary-card-content__title
+                            h3.-title #{card.title}
+                            each titleProperty in card.titleProperty
+                              img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+                              h6 #{titleProperty.text}
+                          if card.body.length == 1
+                            h5 #{card.body}
+                          else
+                            ul
+                              each cardbody in card.body
+                                li #{cardbody}
+                          button.primary-card-content__btn(role="link") #{card.buttonText}
+                          .primary-card-content__divider.primary-card-content__divider-mobile
+              .primary-card-content__divider.primary-card-content__divider-tablet
+              .primary-card-content__footer
+                h5 <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.
+      
   script.
     function closePrimaryCardContent(id)
     {
