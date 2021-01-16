@@ -138,14 +138,14 @@
     font-size: $font-size-xs;
     line-height: 2rem;
     padding: 2px 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     @include respond-to(tablet) {
-      margin-bottom: 1.25rem;
+      margin-bottom: 1.875rem;
     }
     @include respond-to(desktop) {
       font-size: $font-size-md;
       line-height: 3rem;
-      margin-bottom: 1.5rem;
+      margin-bottom: 2.25rem;
     }
     &:hover {
       background-color: $kp-blue;
