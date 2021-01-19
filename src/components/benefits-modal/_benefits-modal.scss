@@ -1,0 +1,140 @@
+//variables
+$border__bottom--grey: rgba(0, 0, 0, 0.08);
+$modal__black-opacity: rgba(0, 0, 0, 0.8);
+
+//mixins
+@mixin link-button__styles {
+  color: #003b71;
+  background-color: #f0f7fa;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: white;
+    background-color: #0078b3;
+    text-decoration: underline;
+    text-decoration: underline;
+  }
+}
+
+#modal-title-1 {
+  padding: 0;
+}
+
+@mixin box-rounded__styles {
+  box-sizing: border-box;
+  box-shadow: 0px 4px 20px $border__bottom--grey;
+  border-radius: 16px;
+  border: 2px solid $border__bottom--grey;
+}
+
+//most of these styles overwrite default modal 3.0 styles
+@mixin modal-ds2__styles {
+  @include media($mobile) {
+    height: auto;
+    top: 20%;
+  }
+
+  .modal-header {
+    background-color: color("pebble");
+  }
+
+  .modal-inner {
+    @include box-rounded__styles;
+    padding: 0px 0 16px 0;
+    margin: 40px auto 0;
+
+    @include media($desktop) {
+      max-width: 692px;
+      padding: 0px 0 24px 0;
+    }
+
+    @include media($tablet) {
+      margin: 40px auto 0;
+      padding: 0px 0 24px 0;
+    }
+
+    .modal-header {
+      border-top-left-radius: 16px;
+      border-top-right-radius: 16px;
+      border-bottom: 2px solid $border__bottom--grey;
+      padding: 16px 16px;
+
+      .modal-title {
+        @include media($desktop) {
+          font-size: 20px;
+          line-height: 28px;
+          padding: 20px 24px;
+          // font-family: $light-font-family;
+        }
+
+        @include media($tablet) {
+          padding: 20px 24px;
+          // font-family: $light-font-family;
+        }
+      }
+    }
+
+    > .-close--small {
+      display: flex;
+      flex-direction: column;
+      background: transparent;
+      border: 0;
+      font-size: 13px;
+      font-family: $medium-font-family;
+      padding: 0.5rem 1rem;
+      i {
+        margin-bottom: 0.5rem;
+      }
+      &:before {
+        display: block;
+        background-color: color("pebble");
+        margin-bottom: 6px;
+      }
+    }
+  }
+
+  &:not(.modal-fullscreen)
+    .modal-icons-enabled
+    .modal-content
+    .modal-content-body {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+
+  .modal-content-body {
+    .columns-6 {
+      p {
+        line-height: 24px;
+
+        @include media($desktop) {
+          margin-bottom: 0;
+          margin: 0;
+        }
+      }
+    }
+
+    a.button {
+      @include link-button__styles;
+
+      @include media($desktop) {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .modal-fade-screen {
+    background: $modal__black-opacity;
+  }
+}
+
+//classes
+.modal-pattern {
+  @include modal-ds2__styles;
+}
+
+.modal-button {
+  img {
+    width: 40px;
+  }
+}
