@@ -21,6 +21,7 @@
     "styleguide": "^5.0.23"
   },
   "dependencies": {
+    "modal-pattern": "~3.2.12",
     "navigational-picker-pattern": "^1.0.51",
     "pug": "^3.0.0"
   }
