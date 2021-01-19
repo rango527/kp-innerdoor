@@ -44,6 +44,7 @@
       buttonText: "Skin Problems / Conditions"
     }
   ]
+
 .care-display#care-display
   .care-actions
     .toggle-content.is-visible#care-actions
@@ -90,7 +91,7 @@
       if(window.innerWidth >= 834) {
         careDisplay.classList.add("care-display-animation-in");
         careDisplay.classList.remove("care-display-animation-out");
-        
+
         document.getElementById("greeting").textContent = "What kind of care do you need?";
 
         careActions.style.height = careActions.scrollHeight + 'px';
