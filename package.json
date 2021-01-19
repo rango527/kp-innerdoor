@@ -10,6 +10,7 @@
     "export:scss": "cp src/components/**/*.scss dist/deliverables/components",
     "export:assets": "cp -r src/assets dist/deliverables",
     "export": "rm -rf dist && npm run export:components && npm run export:scss && npm run export:assets",
+    "lint:styles": "stylelint src/assets/sass/*.scss src/components/**/*.scss --fix",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -17,8 +18,15 @@
   "license": "ISC",
   "devDependencies": {
     "parcel-bundler": "^1.12.4",
+    "prettier": "^2.2.1",
     "sass": "^1.32.0",
-    "styleguide": "^5.0.23"
+    "styleguide": "^5.0.23",
+    "stylelint": "^13.9.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-order": "^4.1.0",
+    "stylelint-prettier": "^1.1.2",
+    "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
     "modal-pattern": "~3.2.12",

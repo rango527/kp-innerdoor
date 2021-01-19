@@ -1,20 +1,20 @@
 // KP assets
-$assetImgPath: "../../../node_modules/styleguide/lib/modern/assets/images/";
-$font-path: "../../../node_modules/styleguide/lib/modern/assets/fonts/";
-@import "~styleguide/lib/modern/stylesheets/kp-icons";
+$assetImgPath: '../../../node_modules/styleguide/lib/modern/assets/images/';
+$font-path: '../../../node_modules/styleguide/lib/modern/assets/fonts/';
+@import '~styleguide/lib/modern/stylesheets/kp-icons';
 
 // KP styleguide
-@import "~styleguide/styleguide-base";
-@import "~styleguide/styleguide-ds2";
+@import '~styleguide/styleguide-base';
+@import '~styleguide/styleguide-ds2';
 
 // KP Imports / Dependencies
-@import "modal-pattern/modal";
-@import "navigational-picker-pattern/navigational-picker";
+@import 'modal-pattern/modal';
+@import 'navigational-picker-pattern/navigational-picker';
 
 // YML generated styles - includes variables and components
 // NOTE: These must be imported *after* all KP / Styleguide scaffolding
-@import "yml";
+@import 'yml';
 
 // Demo layout - For internal YML use only
 // NOTE: KP devs disregard
-@import "layout";
+@import 'layout';

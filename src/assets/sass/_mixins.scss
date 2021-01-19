@@ -1,13 +1,13 @@
 // Responsive breakpoint
 // TODO: match styleguide 5.x
 $breakpoints: (
-  "mobile": (
+  'mobile': (
     min-width: 375px,
   ),
-  "tablet": (
+  'tablet': (
     min-width: 834px,
   ),
-  "desktop": (
+  'desktop': (
     min-width: 1280px,
   ),
 ) !default;
