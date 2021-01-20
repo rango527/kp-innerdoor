@@ -40,7 +40,7 @@
   }
 
   h3 {
-    font-family: $font-family-md;
+    font-family: $font-family-normal;
     font-size: 1.25rem;
     font-weight: 500;
     line-height: 2rem;
@@ -79,7 +79,7 @@
     }
     h6 {
       color: $contrast-blue;
-      font-family: $font-family-md;
+      font-family: $font-family-normal;
       font-size: 15px;
       font-style: italic;
       font-weight: 500;
@@ -87,7 +87,7 @@
     }
   }
   h5 {
-    font-family: $font-family-lt;
+    font-family: $font-family-light;
     font-size: 0.875rem;
     font-weight: 500;
     line-height: 1.25rem;
@@ -117,7 +117,7 @@
       margin-top: 1.5rem;
     }
     li {
-      font-family: $font-family-lt;
+      font-family: $font-family-light;
       font-size: 0.875rem;
       font-weight: 500;
       line-height: 1.25rem;

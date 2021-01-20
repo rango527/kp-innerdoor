@@ -86,7 +86,7 @@
 .care-actions {
   flex: 0 0 100%;
   h3 {
-    font-family: $font-family-md;
+    font-family: $font-family-normal;
     font-size: 26px;
     font-weight: 500;
     margin: 0 0 1.5rem;
@@ -100,7 +100,7 @@
     border: none;
     color: $inky-blue;
     display: flex;
-    font-family: $font-family-md;
+    font-family: $font-family-normal;
     font-weight: 500;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
     text-decoration: underline;
@@ -143,7 +143,6 @@
     background-color: $midnight;
     border: $border;
     border-radius: $border-radius;
-    border-top: 5px solid $sky;
     cursor: pointer;
     display: flex;
     flex: 1;
@@ -168,7 +167,7 @@
         line-height: 1.75rem;
       }
       display: flex;
-      font-family: $font-family-md;
+      font-family: $font-family-normal;
       font-size: 1rem;
       justify-content: left;
       letter-spacing: -0.01em;
@@ -248,7 +247,7 @@
       margin-right: 0.5rem;
     }
     p {
-      font-family: $font-family-md;
+      font-family: $font-family-normal;
       font-size: $font-size-xs;
       line-height: 1.25rem;
       margin: 0;

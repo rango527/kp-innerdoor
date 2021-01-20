@@ -1,109 +1,108 @@
 .welcome-modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 999;
-  visibility: visible;
   animation: showWelcomeModal 0.5s both;
-
+  bottom: 0;
   display: flex;
   justify-content: center;
-  padding-top: 100px;
+  left: 0;
   overflow-y: auto;
+  padding-top: 100px;
+  position: fixed;
+  right: 0;
+  top: 0;
+  visibility: visible;
+  z-index: 999;
   &-panel {
-    width: 343px;
-    max-height: 595px;
-    @include respond-to(tablet) {
-      width: 520px;
-      max-height: 650px;
-    }
-    @include respond-to(desktop) {
-      width: 692px;
-      max-height: 894px;
-    }
     background-color: $white;
-    color: $inky-blue;
     border: $modal-border;
     border-radius: $border-radius;
-    box-sizing: border-box;
     box-shadow: $box-shadow;
+    box-sizing: border-box;
+    color: $inky-blue;
+    max-height: 595px;
     overflow: hidden;
+    width: 343px;
+    @include respond-to(tablet) {
+      max-height: 650px;
+      width: 520px;
+    }
+    @include respond-to(desktop) {
+      max-height: 894px;
+      width: 692px;
+    }
   }
   &__header {
-    height: 4rem;
     background-color: $pebble;
+    border-bottom: $modal-border;
     display: flex;
+    height: 4rem;
     justify-content: space-between;
     padding-left: 1.5rem;
-    border-bottom: $modal-border;
     h4 {
-      font-weight: 500;
-      display: flex;
       align-items: center;
+      display: flex;
+      font-weight: 500;
       margin: 0;
     }
     .close {
-      width: 4rem;
+      align-items: center;
+      background-color: transparent;
+      border: 0;
+      cursor: pointer;
       display: flex;
       flex-direction: column;
-      align-items: center;
       margin-top: 0.5rem;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
+      width: 4rem;
     }
     span {
-      font-size: $font-size-xs;
-      line-height: 1.25rem;
       color: $contrast-blue;
+      font-size: $font-size-xs;
       font-weight: 500;
+      line-height: 1.25rem;
       margin-top: 0.25rem;
     }
   }
   &__content {
+    margin: 1rem 0;
+    max-height: 375px;
     overflow-x: hidden;
     overflow-y: auto;
-    max-height: 375px;
     padding: 0 1rem;
-    margin: 1rem 0;
     .feature-img {
-      border-radius: 14px;
       border: $panel-border;
-      width: 311px;
+      border-radius: 14px;
       display: block;
       margin-bottom: 1rem;
+      width: 311px;
     }
     h3 {
+      color: $midnight;
       font-size: 1.25rem;
       font-weight: 500;
       line-height: 1.75rem;
-      color: $midnight;
       margin: 0 0 10px;
     }
     h5 {
       font-size: $font-size-xs;
-      line-height: 1.25rem;
       font-weight: 500;
+      line-height: 1.25rem;
       margin: 0;
     }
     @include respond-to(tablet) {
+      margin: 1.25rem 0;
       max-height: 410px;
       padding: 0 1.25rem;
-      margin: 1.25rem 0;
       .feature-img {
-        width: 480px;
         margin-bottom: 1.25rem;
+        width: 480px;
       }
     }
     @include respond-to(desktop) {
+      margin: 1.5rem 0;
       max-height: 618px;
       padding: 0 1.5rem;
-      margin: 1.5rem 0;
       .feature-img {
-        width: 644px;
         margin-bottom: 1.5rem;
+        width: 644px;
       }
       h3 {
         font-size: 26px;
@@ -120,11 +119,11 @@
     margin: 0 1rem;
 
     &-frame {
-      display: flex;
       align-items: center;
+      display: flex;
       button {
-        padding: 2px 1rem;
         margin-right: 1rem;
+        padding: 2px 1rem;
         @include respond-to(desktop) {
           font-size: 1rem;
           line-height: 3rem;
@@ -135,53 +134,41 @@
         }
       }
       input {
-        margin-right: 6px;
         cursor: pointer;
+        margin-right: 6px;
       }
       h6 {
-        font-size: $padding-xs;
-        line-height: 2rem;
         color: $contrast-blue;
+        font-size: $padding-xs;
         font-weight: 500;
+        line-height: 2rem;
         margin: 0;
       }
     }
     &-divider {
+      background: $pebble;
       flex: 0 0 100%;
       height: 0.25rem;
-      background: $pebble;
       margin: 1rem 0;
     }
     &-paging {
+      align-items: center;
       display: flex;
       justify-content: flex-end;
-      align-items: center;
       margin-bottom: 1rem;
       .previous-btn {
         background-image: url('/assets/images/chevron-back-none.svg');
-        background-repeat: no-repeat;
         background-position: 0.7rem center;
-        padding: 0 0.7rem 0 2.5rem;
+        background-repeat: no-repeat;
         margin-right: 1rem;
-        // transition: background-color 0.2s ease, color 0.2s ease;
-        // &:hover {
-        //   background-color: $midnight;
-        //   // background-image: url("/assets/images/plus-hover.png");
-        //   color: $white;
-        // }
+        padding: 0 0.7rem 0 2.5rem;
       }
       .next-btn {
         background-image: url('/assets/images/chevron-forward.svg');
-        background-repeat: no-repeat;
         background-position: right 0.7rem center;
-        padding: 0 2.5rem 0 0.7rem;
+        background-repeat: no-repeat;
         margin-right: 1rem;
-        // transition: background-color 0.2s ease, color 0.2s ease;
-        // &:hover {
-        //   background-color: $midnight;
-        //   // background-image: url("/assets/images/plus-hover.png");
-        //   color: $white;
-        // }
+        padding: 0 2.5rem 0 0.7rem;
       }
       .btn-none {
         background-color: transparent;
@@ -190,10 +177,10 @@
         cursor: not-allowed;
       }
       h6 {
-        font-size: $font-size-xs;
-        line-height: 32px;
         color: $dolphin;
+        font-size: $font-size-xs;
         font-weight: 500;
+        line-height: 32px;
         margin: 0;
       }
     }
@@ -232,11 +219,11 @@
 }
 
 .welcome-modal button {
-  color: $midnight;
   background-color: $pale-blue;
   border: 1px solid $contrast-blue;
   border-radius: $button-radius;
+  color: $midnight;
   font-size: $font-size-xs;
-  line-height: 2rem;
   font-weight: 500;
+  line-height: 2rem;
 }
