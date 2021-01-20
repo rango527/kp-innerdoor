@@ -146,7 +146,9 @@ $modal__black-opacity: rgba(0, 0, 0, 0.8);
   background-position: 1rem center;
   align-items: center;
   padding-left: 3rem;
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-image: url("/assets/images/icon-id-card-white.svg");
   }
 }
