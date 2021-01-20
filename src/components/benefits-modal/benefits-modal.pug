@@ -1,7 +1,7 @@
 .kp-theme-ds2
-  #benefits-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-benefits-modal")
+  #benefits-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-benefits-modal" tabindex="-1")
     .modal-container
-      .modal-inner.modal-icons-enabled(aria-label="Title of Modal Example Four" role="dialog")
+      .modal-inner.modal-icons-enabled(aria-label="Benefits" role="dialog")
         button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
           img(src="assets/images/icon-close.svg" alt="")
           | Close
@@ -24,5 +24,3 @@
 
   //- Trigger to be placed in markup
   button.button.modal-button(data-modal-trigger="benefits-modal") Benefits
-    //- img(src="assets/images/icon-id-card.svg" alt="" aria-hidden="true")
-    //- | Benefits

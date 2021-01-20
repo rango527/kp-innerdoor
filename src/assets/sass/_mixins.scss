@@ -2,10 +2,10 @@
 // TODO: match styleguide 5.x
 $breakpoints: (
   'mobile': (
-    min-width: 375px,
+    min-width: 600px,
   ),
   'tablet': (
-    min-width: 834px,
+    min-width: 768px,
   ),
   'desktop': (
     min-width: 1280px,
@@ -22,12 +22,38 @@ $breakpoints: (
   }
 }
 
-// Typography
+// Typography - Headings
+@mixin header-h1($textAlign: left) {
+  font-family: $font-family-normal;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  line-height: 32px;
+  margin: 0 0 1rem;
+  text-align: $textAlign;
+  @include respond-to(tablet) {
+    font-size: 32px;
+    letter-spacing: -0.02em;
+    line-height: 40px;
+  }
+  @include respond-to(desktop) {
+    font-size: 48px;
+    line-height: 52px;
+  }
+}
+
 @mixin header-h6($textAlign: left) {
-  font-family: $font-family-md;
+  font-family: $font-family-normal;
   font-size: $font-size-xs;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
   text-align: $textAlign;
+  @include respond-to(tablet) {
+    //tbd
+  }
+  @include respond-to(desktop) {
+    // tbd
+  }
 }

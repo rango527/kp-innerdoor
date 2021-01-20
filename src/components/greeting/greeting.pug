@@ -1,2 +1,9 @@
 //- TODO: change markup to match aem component
-h1.greeting#greeting Hi Jaeroine, how can we help you?
+- let title = "Hi Jaeroine, how can we help you?"
+//- h1.greeting#greeting Hi Jaeroine, how can we help you?
+.responsivegrid.aem-GridColumn.aem-GridColumn--default--12
+  .aem-Grid.aem-Grid--12.aem-Grid--default--12
+    .title.greeting.aem-GridColumn.aem-GridColumn--default--12
+      .cmp-title(data-analytics-location=`${title}`)
+        h1#greeting.cmp-title__text
+          | #{title}
