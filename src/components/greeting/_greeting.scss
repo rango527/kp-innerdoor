@@ -2,4 +2,41 @@
   .cmp-title__text {
     @include header-h1();
   }
+  &-mobile {
+    display: none;
+    @media only screen and (max-width: 834px) {
+      animation: opacityAnimation 800ms both;
+      color: $white;
+      // visibility: visible;
+      display: block;
+      margin-top: 2rem;
+      padding: 0 1rem;
+    }
+    &--opacity-animation-out {
+      animation: opacityAnimationOut 800ms both;
+    }
+  }
+
+  @keyframes opacityAnimation {
+    0% {
+      opacity: 0;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes opacityAnimationOut {
+    0% {
+      opacity: 1;
+    }
+    70% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
 }
