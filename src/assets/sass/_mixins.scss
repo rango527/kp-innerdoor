@@ -23,11 +23,11 @@ $breakpoints: (
 }
 
 // Typography
-@mixin header-h6() {
+@mixin header-h6($textAlign: left) {
   font-family: $font-family-md;
   font-size: $font-size-xs;
   font-style: normal;
   font-weight: 500;
   line-height: 20px;
-  text-align: left;
+  text-align: $textAlign;
 }

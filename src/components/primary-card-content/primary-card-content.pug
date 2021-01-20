@@ -119,7 +119,7 @@ div.primary-card-content#primary-card-content
               .primary-card-content__header
                 h3 #{content.header}
                 button.close-btn(onclick=`closePrimaryCardContent(${cardIndex})`)
-                  img(src="assets/images/close.svg" alt="")
+                  img(src="assets/images/icon-close-circle.svg" alt="")
               if content.data.length > 0
                 .rows
                   each card, index in content.data
@@ -161,13 +161,13 @@ div.primary-card-content#primary-card-content
               .primary-card-content__divider.primary-card-content__divider-tablet
               .primary-card-content__footer
                 h5 <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.
-      
+
   script.
     function closePrimaryCardContent(id)
     {
       careDisplay.classList.remove("care-display-animation-in");
       careDisplay.classList.add("care-display-animation-out");
-      
+
       var clickCard = document.getElementById(`primary-card-content-${id}`);
 
       // Get the natural height of the element
