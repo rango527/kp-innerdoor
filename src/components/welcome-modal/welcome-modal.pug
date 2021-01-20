@@ -39,7 +39,7 @@
             button.next-btn#next-btn(aria-label="next tip") Next tip
           else
             button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
-          h6#pageination 1 of #{welcomeModalData.length}
+          h6#pagination 1 of #{welcomeModalData.length}
 script.
   var container = document.getElementById("container");
   container.classList.add("container--modal");
@@ -54,17 +54,17 @@ script.
 
   var previousBtn = document.getElementById("previous-btn");
   var nextBtn = document.getElementById("next-btn");
-  var pageination = document.getElementById("pageination");
+  var pagination = document.getElementById("pagination");
 
   var index = 0;
   document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-  
+
   nextBtn.onclick = function () {
     if (index < #{welcomeModalData.length - 1}) {
       document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
       index += 1;
       document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-      pageination.textContent = `${index+1} of #{welcomeModalData.length}`;
+      pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
       previousBtn.classList.remove("btn-none");
       if (#{welcomeModalData.length - 1} == index) {
         nextBtn.classList.add("btn-none");
@@ -77,7 +77,7 @@ script.
       document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
       index -= 1;
       document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-      pageination.textContent = `${index+1} of #{welcomeModalData.length}`;
+      pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
       nextBtn.classList.remove("btn-none");
       if (index == 0) {
         previousBtn.classList.add("btn-none");
