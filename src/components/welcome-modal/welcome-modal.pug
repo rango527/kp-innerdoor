@@ -13,33 +13,32 @@
   ]
 
 .welcome-modal#welcome-modal(role="dialog" aria-labelledby="welcome-modal-heading" tabindex="-1")
-  .kp-theme-ds2
-    .welcome-modal-panel
-      .welcome-modal__header
-        h4#welcome-modal-heading What’s New
-        button.close(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close" onclick="closeWelcomeModal()")
-          img(src="assets/images/icon-close.svg" alt="")
-          span Close
-      .welcome-modal__content
-        each data, index in welcomeModalData
-          div(id=`welcome-modal-data-${index}` style="display:none;")
-            if data.image != ""
-              img.feature-img#feature-img(src=`${data.image}` alt="")
-            h3#feature-title #{data.title}
-            h5#feature-description #{data.description}
-      .welcome-modal__footer
-        .welcome-modal__footer-frame
-          button(aria-label="optional CTA") Optional CTA
-          input(type="checkbox")
-          h6 Don’t show again
-        .welcome-modal__footer-divider
-        .welcome-modal__footer-paging
-          button.previous-btn.btn-none#previous-btn(aria-label="previous tip") Previous tip
-          if welcomeModalData.length > 1
-            button.next-btn#next-btn(aria-label="next tip") Next tip
-          else
-            button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
-          h6#pagination 1 of #{welcomeModalData.length}
+  .welcome-modal-panel
+    .welcome-modal__header
+      h4#welcome-modal-heading What’s New
+      button.close(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close" onclick="closeWelcomeModal()")
+        img(src="assets/images/icon-close.svg" alt="")
+        span Close
+    .welcome-modal__content
+      each data, index in welcomeModalData
+        div(id=`welcome-modal-data-${index}` style="display:none;")
+          if data.image != ""
+            img.feature-img#feature-img(src=`${data.image}` alt="")
+          h3#feature-title #{data.title}
+          h5#feature-description #{data.description}
+    .welcome-modal__footer
+      .welcome-modal__footer-frame
+        button(aria-label="optional CTA") Optional CTA
+        input(type="checkbox")
+        h6 Don’t show again
+      .welcome-modal__footer-divider
+      .welcome-modal__footer-paging
+        button.previous-btn.btn-none#previous-btn(aria-label="previous tip") Previous tip
+        if welcomeModalData.length > 1
+          button.next-btn#next-btn(aria-label="next tip") Next tip
+        else
+          button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
+        h6#pagination 1 of #{welcomeModalData.length}
 script.
   var container = document.getElementById("container");
   container.classList.add("container--modal");
