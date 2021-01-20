@@ -24,9 +24,7 @@
     }
   }
   h2 {
-    font-family: $font-family-normal;
-    font-size: $font-size-xl;
-    font-weight: 500;
+    @include header-h2();
     margin-top: 0;
   }
   &-footer {
