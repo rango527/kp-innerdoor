@@ -10,6 +10,10 @@ body {
   justify-content: space-around;
   overflow-x: hidden;
 
+  &--modal {
+    position: fixed;
+    scroll-behavior: smooth;
+  }
   @include respond-to(tablet) {
     padding-right: 1.75rem;
     padding-left: 1.75rem;
