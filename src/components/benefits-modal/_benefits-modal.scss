@@ -76,15 +76,17 @@ $modal__black-opacity: rgba(0, 0, 0, 0.8);
     }
 
     > .-close--small {
+      @include header-h6(center);
       display: flex;
       flex-direction: column;
       background: transparent;
       border: 0;
-      font-size: 13px;
-      font-family: $medium-font-family;
-      padding: 0.5rem 1rem;
-      i {
-        margin-bottom: 0.5rem;
+      align-items: center;
+
+      padding: 0.6rem 0.5rem 0.5rem;
+      img {
+        width: 24px;
+        height: 24px;
       }
       &:before {
         display: block;
@@ -104,9 +106,13 @@ $modal__black-opacity: rgba(0, 0, 0, 0.8);
 
   .modal-content-body {
     .columns-6 {
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
       p {
         line-height: 24px;
-
+        margin-top: 0;
         @include media($desktop) {
           margin-bottom: 0;
           margin: 0;
@@ -134,7 +140,13 @@ $modal__black-opacity: rgba(0, 0, 0, 0.8);
 }
 
 .modal-button {
-  img {
-    width: 40px;
+  display: flex;
+  background-image: url("/assets/images/icon-id-card.svg");
+  background-repeat: no-repeat;
+  background-position: 1rem center;
+  align-items: center;
+  padding-left: 3rem;
+  &:hover {
+    background-image: url("/assets/images/icon-id-card-white.svg");
   }
 }

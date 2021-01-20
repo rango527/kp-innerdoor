@@ -3,7 +3,7 @@
     .modal-container
       .modal-inner.modal-icons-enabled(aria-label="Title of Modal Example Four" role="dialog")
         button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-          i.icon-close
+          img(src="assets/images/icon-close.svg" alt="")
           | Close
         .modal-header
           p#modal-title-1.modal-title Benefits
@@ -12,19 +12,17 @@
             p Everything you need to know about your Kaiser Permanente member benefits.
             .rows
               .columns-6
-                p
-                  strong Your plan and ID number
+                h3 Your plan and ID number
                 p Find your ID number and plan type.
                 a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door") View profile & preferences
               .columns-6
-                p
-                  strong Your coverage details
+                h3 Your coverage details
                 p
                   | View progress toward your deductible, out of pocket maximum, and other plan details.
                 a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door") View coverage & costs
       .modal-fade-screen
 
   //- Trigger to be placed in markup
-  button.button.modal-button(data-modal-trigger="benefits-modal")
-    img(src="assets/images/icon-id-card.svg" alt="" aria-hidden="true")
-    | Benefits
+  button.button.modal-button(data-modal-trigger="benefits-modal") Benefits
+    //- img(src="assets/images/icon-id-card.svg" alt="" aria-hidden="true")
+    //- | Benefits
