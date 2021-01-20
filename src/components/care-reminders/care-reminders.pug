@@ -122,25 +122,4 @@
           p.care-reminder-list--item-title #{card.title}
           a.care-reminder-list--item-link(tabindex="0") #{card.action}
   if careReminderCards.length > 5
-    button.view-toggle(aria-expanded="true" type="button" onclick=`viewToggle()`) View all care reminders
-script.
-  function viewToggle() {
-    let hiddenList = Array.from(document.getElementsByClassName('is-hidden'));
-    let visibleList = Array.from(document.getElementsByClassName('is-visible'));
-
-    if (hiddenList.length) {
-      document.querySelector(".care-reminders .view-toggle").innerHTML =
-        "View less care reminders";
-      hiddenList.forEach(function (el) {
-        el.classList.add("is-visible");
-        el.classList.remove("is-hidden");
-      });
-    } else {
-      document.querySelector(".care-reminders .view-toggle").innerHTML =
-        "View all care reminders";
-      visibleList.forEach(function (el) {
-        el.classList.add("is-hidden");
-        el.classList.remove("is-visible");
-      });
-    }
-  }
+    button#my-button.view-toggle(aria-expanded="true" type="button") View all care reminders
