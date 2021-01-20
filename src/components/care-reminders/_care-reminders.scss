@@ -8,36 +8,36 @@
   }
   // TODO: convert to mixin & use on care actions as well
   .view-toggle {
-    color: $inky-blue;
-    background: transparent;
-    background-image: url("/assets/images/minus.png");
-    background-repeat: no-repeat;
-    background-position: 0.25rem center;
-    border: none;
-    display: flex;
     align-items: center;
+    background: transparent;
+    background-image: url('/assets/images/minus.png');
+    background-position: 0.25rem center;
+    background-repeat: no-repeat;
+    border: none;
+    color: $inky-blue;
+    display: flex;
     font-family: $font-family-md;
     font-weight: 500;
-    text-decoration: underline;
     padding: 0.5rem 0.5rem 0.5rem 2rem;
+    text-decoration: underline;
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
       background-color: $inky-blue;
-      background-image: url("/assets/images/minus-hover.png");
+      background-image: url('/assets/images/minus-hover.png');
       color: $white;
     }
   }
   &__empty {
     margin-bottom: 2rem;
     ul {
-      padding: 0;
       list-style: none;
+      padding: 0;
       li {
-        display: flex;
         align-items: flex-start;
+        display: flex;
         font-size: $font-size-lg;
-        line-height: 1.32;
         font-weight: 500;
+        line-height: 1.32;
         @include respond-to(desktop) {
           align-items: flex-center;
           font-size: $font-size-xl;
@@ -57,22 +57,22 @@
 .care-reminders-header {
   margin-bottom: 2rem;
   h3 {
-    display: flex;
     align-items: center;
+    display: flex;
     line-height: 1;
     margin: 0;
     span {
-      display: flex;
-      justify-content: center;
       background-color: $kp-blue;
       border-radius: 50px;
       color: $white;
+      display: flex;
       font-size: 1rem;
+      justify-content: center;
       line-height: 1;
-      padding: 0.55rem 0.5rem 0.45rem;
       margin-right: 0.5rem;
-      min-width: 2rem;
       min-height: 2rem;
+      min-width: 2rem;
+      padding: 0.55rem 0.5rem 0.45rem;
     }
   }
 }
@@ -90,11 +90,11 @@
   }
 
   &--item {
-    display: flex;
     background-color: $white;
     border: $border;
     border-radius: $border-radius-sm;
-    margin: 0 0 1rem 0;
+    display: flex;
+    margin: 0 0 1rem;
     padding: $padding-md;
     &.is-hidden {
       display: none;
@@ -120,15 +120,15 @@
       margin: 0 0 0.5rem;
     }
     &-link {
-      padding: 0;
-      font-size: $font-size-xs;
       color: $inky-blue;
-      text-decoration: underline;
+      font-size: $font-size-xs;
       margin: 0;
+      padding: 0;
+      text-decoration: underline;
       &:hover {
+        background-color: $white;
         color: $inky-blue;
         cursor: pointer;
-        background-color: $white;
       }
     }
   }

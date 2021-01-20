@@ -1,13 +1,13 @@
 // TODO: change values to sass vars
 .panel {
   background-color: $white;
-  color: $inky-blue;
   border: $panel-border;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
+  color: $inky-blue;
   margin-bottom: 3rem;
-  padding: $padding-md;
   max-width: 100%;
+  padding: $padding-md;
 
   @include respond-to(tablet) {
     padding: $padding-lg;
@@ -18,8 +18,8 @@
   }
   &.grid {
     padding: 0;
-    @media only screen and (max-width: 833px){
-      border-radius: 2rem 2rem 0px 0px;
+    @media only screen and (max-width: 833px) {
+      border-radius: 2rem 2rem 0 0;
       margin-bottom: 0;
     }
   }

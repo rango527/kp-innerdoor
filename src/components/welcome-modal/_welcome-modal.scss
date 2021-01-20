@@ -80,7 +80,7 @@
       font-weight: 500;
       line-height: 1.75rem;
       color: $midnight;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px;
     }
     h5 {
       font-size: $font-size-xs;
@@ -108,7 +108,7 @@
       h3 {
         font-size: 26px;
         line-height: 2rem;
-        margin: 0 0 0.75rem 0;
+        margin: 0 0 0.75rem;
       }
       h5 {
         font-size: 1rem;
@@ -158,7 +158,7 @@
       align-items: center;
       margin-bottom: 1rem;
       .previous-btn {
-        background-image: url("/assets/images/chevron-back-none.svg");
+        background-image: url('/assets/images/chevron-back-none.svg');
         background-repeat: no-repeat;
         background-position: 0.7rem center;
         padding: 0 0.7rem 0 2.5rem;
@@ -171,7 +171,7 @@
         // }
       }
       .next-btn {
-        background-image: url("/assets/images/chevron-forward.svg");
+        background-image: url('/assets/images/chevron-forward.svg');
         background-repeat: no-repeat;
         background-position: right 0.7rem center;
         padding: 0 2.5rem 0 0.7rem;
@@ -219,8 +219,16 @@
 }
 
 @keyframes showWelcomeModal {
-  0%  {background-color: rgba(0, 0, 0, 0); opacity: 0;pointer-events: none;}
-  100%  {background-color: rgba(0, 0, 0, 0.8); opacity: 1;pointer-events: auto;}
+  0% {
+    background-color: rgba(0, 0, 0, 0);
+    opacity: 0;
+    pointer-events: none;
+  }
+  100% {
+    background-color: rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    pointer-events: auto;
+  }
 }
 
 .welcome-modal button {
