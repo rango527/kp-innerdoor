@@ -62,8 +62,8 @@
                       .care-actions-primary-list--item-image
                         img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
                       .care-actions-primary-list--item-content
-                        p.care-actions-primary-list--item-title #{primaryCard.title}
-                        p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+                        .care-actions-primary-list--item-title #{primaryCard.title}
+                        .care-actions-primary-list--item-description #{primaryCard.subTitle}
                 when 3
                 default
                   li.care-actions-primary-list--flex.care-actions-primary-list--flex--33(onclick=`primaryCard(${index})`)
@@ -71,8 +71,8 @@
                       .care-actions-primary-list--item-image
                         img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
                       .care-actions-primary-list--item-content
-                        p.care-actions-primary-list--item-title #{primaryCard.title}
-                        p.care-actions-primary-list--item-description #{primaryCard.subTitle}
+                        .care-actions-primary-list--item-title #{primaryCard.title}
+                        .care-actions-primary-list--item-description #{primaryCard.subTitle}
         ul.care-actions-secondary-list#hidden-group-0
           each secondaryCard in secondaryCareActionCards
             li
