@@ -16,7 +16,7 @@
   .welcome-modal-panel
     .welcome-modal__header
       h4#welcome-modal-heading What’s New
-      button.close(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close" onclick="closeWelcomeModal()")
+      button.close#close-welcome-modal(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
         img(src="assets/images/icon-close.svg" alt="")
         span Close
     .welcome-modal__content
@@ -44,12 +44,12 @@ script.
   container.classList.add("container--modal");
 
   var welcomeModal = document.getElementById("welcome-modal");
+  var closeWelcomeModal = document.getElementById("close-welcome-modal");
 
-  function closeWelcomeModal()
-  {
+  closeWelcomeModal.onclick = function () {
     welcomeModal.style.display = "none";
     container.classList.remove("container--modal");
-  }
+  };
 
   var previousBtn = document.getElementById("previous-btn");
   var nextBtn = document.getElementById("next-btn");
@@ -57,7 +57,7 @@ script.
 
   var index = 0;
   document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-
+  
   nextBtn.onclick = function () {
     if (index < #{welcomeModalData.length - 1}) {
       document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
