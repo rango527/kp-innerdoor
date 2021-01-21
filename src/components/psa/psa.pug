@@ -1,0 +1,44 @@
+-
+  const psaContentData = [
+    {
+      title: "Get your flu shot for free",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis.",
+      buttonText: "Get a flu shot"
+    },
+    {
+      title: "Get immediate help with our virtual assistant",
+      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam.",
+      buttonText: "Open virtual assistant"
+    },
+    {
+      title: "Managing diabetes",
+      description: "You get convenient access to care that fits your life. Learn more about how to live your best life. ",
+      buttonText: "View resources"
+    }
+  ]
+.container-bg
+  .psa
+    .newGrid_container
+      .rows
+        if psaContentData.length > 0
+          each content, index in psaContentData
+            case psaContentData.length
+              when 1
+              when 2
+              when 4
+                .columns-6
+                  .content
+                    h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
+                    h5.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
+                    .content-footer(data-analytics-location="button-container")
+                      button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
+                      a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more
+              when 3
+              default
+                .columns-4
+                  .content
+                    h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
+                    h5.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
+                    .content-footer(data-analytics-location="button-container")
+                      button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
+                      a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more

@@ -1,0 +1,163 @@
+.container-bg {
+  overflow: hidden;
+  background: $pale-blue;
+  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.05);
+  margin-bottom: 3rem;
+}
+
+.psa {
+  .content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    @include respond-to(mobile) {
+      padding: 0 1.5rem;
+    }
+    @include respond-to(tablet) {
+      padding: 0 1rem;
+    }
+    &-title {
+      @include header-h2();
+      margin: 0 0 1rem;
+      @include respond-to(tablet) {
+        margin: 0 0 20px;
+      }
+      @include respond-to(desktop) {
+        margin: 0 0 1.5rem;
+      }
+    }
+    &-description {
+      color: $inky-blue;
+      font-family: $font-family-light;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      line-height: 20px;
+      margin: 0 0 1rem;
+      text-align: left;
+      // NOTE: mobile and tablet sizes are the same in Figma
+      @include respond-to(tablet) {
+        margin: 0 0 20px;
+      }
+      @include respond-to(desktop) {
+        font-size: 1rem;
+        line-height: 24px;
+        margin: 0 0 24px;
+      }
+    }
+    &-footer {
+      margin-top: auto;
+      align-items: center;
+      display: inline-flex;
+      flex-wrap: wrap;
+      &--button {
+        background-color: $pale-blue;
+        border: 1px solid $contrast-blue;
+        border-radius: $button-radius;
+        color: $midnight;
+        display: inline-block;
+        font-size: $font-size-xs;
+        line-height: 2rem;
+        margin-right: 0.5rem;
+        padding: 2px 1rem;
+        text-decoration: none;
+        transition: background-color 0.2s ease, color 0.2s ease,
+          border-color 0.2s ease;
+        @include respond-to(tablet) {
+            margin-right: 10px;
+          }  
+        @include respond-to(desktop) {
+          font-size: 15px;
+          line-height: 3rem;
+          margin-right: 1rem;
+        }
+        &:hover {
+          background-color: $contrast-blue;
+          color: $white;
+        }
+      }
+      &--link {
+        color: $contrast-blue;
+        font-size: $font-size-xs;
+        line-height: 2rem;
+        &:hover {
+          background-color: $contrast-blue;
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+.psa .newGrid_container {
+  padding: 0;
+}
+
+.psa .newGrid_container .columns-6 {
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
+  @media only screen and (min-width: 769px) {
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.025);
+    margin: 0 -100vw;
+    padding-right: 100vw;
+    padding-left: 100vw;
+    &:nth-child(2n) {
+      padding-right: calc(100vw + 20px);
+      .content {
+        box-shadow: none !important;
+      }
+    }
+    &:nth-child(2n-1) {
+      padding-left: calc(100vw + 20px);
+    }
+  }
+  &:nth-child(2n - 1) {
+    .content {
+      box-shadow: inset -2px 0px 0px rgba(0, 0, 0, 0.05);
+    }
+  }
+}
+
+.psa .newGrid_container .columns-4 {
+  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
+  @media only screen and (min-width: 769px) {
+    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.017);
+    margin: 0 -100vw;
+    padding-right: 100vw;
+    padding-left: 100vw;
+    &:nth-child(3n) {
+      padding-right: calc(100vw + 20px);
+      .content {
+        box-shadow: none !important;
+      }
+    }
+    &:nth-child(3n-2) {
+      padding-left: calc(100vw + 20px);
+    }
+  }
+  .content {
+    box-shadow: inset -2px 0px 0px rgba(0, 0, 0, 0.05);
+  }
+  &:nth-child(3n) {
+    .content {
+      box-shadow: none !important;
+    }
+  }
+}
+
+.psa .newGrid_container .columns-4, .columns-6 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  @include respond-to(tablet) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  @include respond-to(desktop) {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+  @media only screen and (max-width: 768px) {
+    grid-column: span 12 !important;
+  }
+}
