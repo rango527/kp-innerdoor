@@ -114,53 +114,52 @@ div.primary-card-content#primary-card-content
     each content, cardIndex in primaryCardContentData
       .display-none(class=`primary-card-content-${cardIndex}` id=`primary-card-content-${cardIndex}`)
         include ../panel/panel-grid.pug
-          .kp-theme-ds2
-            .newGrid_container
-              .primary-card-content__header
-                h3 #{content.header}
-                button.close-btn(onclick=`closePrimaryCardContent(${cardIndex})`)
-                  img(src="assets/images/icon-close-circle.svg" alt="")
-              if content.data.length > 0
-                .rows
-                  each card, index in content.data
-                    case content.data.length
-                      when 1
-                      when 2
-                      when 4
-                        .columns-6
-                          .primary-card-content__title
-                            h3.-title #{card.title}
-                            each titleProperty in card.titleProperty
-                              img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
-                              h6 #{titleProperty.text}
-                          if card.body.length == 1
-                            h5 #{card.body}
-                          else
-                            ul
-                              each cardbody in card.body
-                                li
-                                  h5 #{cardbody}
-                          button.primary-card-content__btn(role="link") #{card.buttonText}
-                          .primary-card-content__divider.primary-card-content__divider-mobile
-                      when 3
-                      default
-                        .columns-4
-                          .primary-card-content__title
-                            h3.-title #{card.title}
-                            each titleProperty in card.titleProperty
-                              img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
-                              h6 #{titleProperty.text}
-                          if card.body.length == 1
-                            h5 #{card.body}
-                          else
-                            ul
-                              each cardbody in card.body
-                                li #{cardbody}
-                          button.primary-card-content__btn(role="link") #{card.buttonText}
-                          .primary-card-content__divider.primary-card-content__divider-mobile
-              .primary-card-content__divider.primary-card-content__divider-tablet
-              .primary-card-content__footer
-                h5 <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.
+          .newGrid_container
+            .primary-card-content__header
+              h3 #{content.header}
+              button.close-btn(onclick=`closePrimaryCardContent(${cardIndex})`)
+                img(src="assets/images/icon-close-circle.svg" alt="")
+            if content.data.length > 0
+              .rows
+                each card, index in content.data
+                  case content.data.length
+                    when 1
+                    when 2
+                    when 4
+                      .columns-6
+                        .primary-card-content__title
+                          h3.-title #{card.title}
+                          each titleProperty in card.titleProperty
+                            img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+                            h6 #{titleProperty.text}
+                        if card.body.length == 1
+                          h5 #{card.body}
+                        else
+                          ul
+                            each cardbody in card.body
+                              li
+                                h5 #{cardbody}
+                        button.primary-card-content__btn(role="link") #{card.buttonText}
+                        .primary-card-content__divider.primary-card-content__divider-mobile
+                    when 3
+                    default
+                      .columns-4
+                        .primary-card-content__title
+                          h3.-title #{card.title}
+                          each titleProperty in card.titleProperty
+                            img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+                            h6 #{titleProperty.text}
+                        if card.body.length == 1
+                          h5 #{card.body}
+                        else
+                          ul
+                            each cardbody in card.body
+                              li #{cardbody}
+                        button.primary-card-content__btn(role="link") #{card.buttonText}
+                        .primary-card-content__divider.primary-card-content__divider-mobile
+            .primary-card-content__divider.primary-card-content__divider-tablet
+            .primary-card-content__footer
+              h5 <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.
 
   script.
     function closePrimaryCardContent(id)
