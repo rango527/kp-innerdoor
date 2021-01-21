@@ -57,7 +57,7 @@
                 when 1
                 when 2
                 when 4
-                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--50(onclick=`primaryCard(${index})`)
+                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--50
                     button.care-actions-primary-list--item
                       .care-actions-primary-list--item-image
                         img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
@@ -66,7 +66,7 @@
                         .care-actions-primary-list--item-description #{primaryCard.subTitle}
                 when 3
                 default
-                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--33(onclick=`primaryCard(${index})`)
+                  li.care-actions-primary-list--flex.care-actions-primary-list--flex--33
                     button.care-actions-primary-list--item
                       .care-actions-primary-list--item-image
                         img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
@@ -85,9 +85,15 @@
     var primaryContent = document.getElementById("primary-card-content");
     var primaryModal = document.getElementById("primary-card-modal");
     var container = document.getElementById("container");
+    
+    var primaryCards = document.querySelectorAll('.care-actions-primary-list--flex');
+    primaryCards.forEach(function(card, i){
+      card.addEventListener('click', function (e) {
+        cardIndex(e, i);
+      });
+    })
 
-    function primaryCard(clicked_id)
-    {
+    function cardIndex(e, index) {
       if(window.innerWidth >= 834) {
         careDisplay.classList.add("care-display-animation-in");
         careDisplay.classList.remove("care-display-animation-out");
@@ -105,7 +111,7 @@
 
       primaryContent.style.display = "block";
       primaryContent.classList.remove("primary-card-content--animation-out");
-      var clickCard = document.getElementById(`primary-card-content-${clicked_id}`);
+      var clickCard = document.getElementById(`primary-card-content-${index}`);
       clickCard.classList.remove("display-none");
       primaryModal.classList.remove("primary-card-content-modal-out");
       // when mobile size

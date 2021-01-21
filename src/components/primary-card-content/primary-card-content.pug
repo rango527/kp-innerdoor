@@ -117,7 +117,7 @@ div.primary-card-content#primary-card-content
           .newGrid_container
             .primary-card-content__header
               h3 #{content.header}
-              button.close-btn(onclick=`closePrimaryCardContent(${cardIndex})`)
+              button.close-primary-content
                 img(src="assets/images/icon-close-circle.svg" alt="")
             if content.data.length > 0
               .rows
@@ -162,12 +162,18 @@ div.primary-card-content#primary-card-content
               h5 <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.
 
   script.
-    function closePrimaryCardContent(id)
-    {
+    var closePrimaryContents = document.querySelectorAll('.close-primary-content');
+    closePrimaryContents.forEach(function(content, i){
+      content.addEventListener('click', function (e) {
+        contentIndex(e, i);
+      });
+    })
+    
+    function contentIndex(e, index) {
       careDisplay.classList.remove("care-display-animation-in");
       careDisplay.classList.add("care-display-animation-out");
 
-      var clickCard = document.getElementById(`primary-card-content-${id}`);
+      var clickCard = document.getElementById(`primary-card-content-${index}`);
 
       // Get the natural height of the element
       var getHeight = function () {
