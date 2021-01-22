@@ -8,7 +8,7 @@
       border-radius: 40px;
       display: flex;
       padding: 0.5rem 1rem;
-      @include header-h6();
+      @include heading-h6($midnight);
 
       img {
         &:first-of-type {
@@ -54,7 +54,7 @@
           display: flex;
           padding: 1rem;
           text-decoration: none;
-          @include header-h6();
+          @include heading-h6();
           img {
             margin-right: 0.5rem;
           }
