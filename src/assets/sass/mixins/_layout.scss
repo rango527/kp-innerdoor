@@ -21,7 +21,7 @@ $breakpoints: (
   }
 }
 
-// Responsive padding pattern
+// Responsive padding pattern - default as used on modals
 @mixin padding-responsive($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
   padding: $mobile;
   @include respond-to(tablet) {

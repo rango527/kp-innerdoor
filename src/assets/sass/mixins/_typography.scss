@@ -73,14 +73,15 @@ HEADING LEVELS
 @mixin heading-h6($color: $inky-blue, $textAlign: left) {
   @include font-base($font-family-heavy, normal, 500);
   color: $color;
-  font-size: $font-size-xs;
+  font-size: 0.8125rem; // 13px
+  letter-spacing: 0;
   line-height: 20px;
   text-align: $textAlign;
   @include respond-to(tablet) {
     //tbd
   }
   @include respond-to(desktop) {
-    // tbd
+    font-size: 1rem;
   }
 }
 
@@ -94,14 +95,13 @@ BODY CONTENT
 // Desktop: Paragraph/P3 (Tablet + Mobile)
 @mixin body-text($color: $inky-blue, $textAlign: left) {
   @include font-base($font-family-medium, normal, 400);
-  font-size: 14px;
+  // TODO: ask design about conflicts, in some places this is 14px
+  font-size: 0.8125rem; // 13px
   letter-spacing: 0.01em;
   line-height: 20px;
   text-align: $textAlign;
   @include respond-to(desktop) {
-    font-size: 16px;
-    letter-spacing: 0.01em;
+    font-size: 1rem; // 16px
     line-height: 24px;
-    text-align: left;
   }
 }
