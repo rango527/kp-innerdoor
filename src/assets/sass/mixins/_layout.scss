@@ -1,0 +1,33 @@
+// Responsive breakpoints
+$breakpoints: (
+  'mobile': (
+    min-width: 600px,
+  ),
+  'tablet': (
+    min-width: 768px,
+  ),
+  'desktop': (
+    min-width: 1280px,
+  ),
+) !default;
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @warn "Breakpoint mixin supports: mobile, tablet, desktop";
+  }
+}
+
+// Responsive padding pattern
+@mixin padding-responsive($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
+  padding: $mobile;
+  @include respond-to(tablet) {
+    padding: $tablet;
+  }
+  @include respond-to(desktop) {
+    padding: $desktop;
+  }
+}

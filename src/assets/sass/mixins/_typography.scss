@@ -1,0 +1,107 @@
+/*
+BASE VALUES MIXIN
+*/
+// NOTE: by default, type elements should not have top margins
+@mixin font-base($font-family, $font-style, $font-weight) {
+  font-family: $font-family;
+  font-style: $font-style;
+  font-weight: $font-weight;
+  margin-top: 0;
+}
+
+/*
+HEADING LEVELS
+*/
+
+// NOTE: Use for all <h1> elements
+// Uses the following Figma styles per breakpoint -
+// Mobile: Header / H3;
+// Tablet: Header / H2;
+// Desktop: Header / H1;
+@mixin heading-h1($color: $midnight, $textAlign: left) {
+  @include font-base($font-family-heavy, normal, 500);
+  color: $color;
+  font-size: 1.625rem; // 26px
+  letter-spacing: -0.01em;
+  line-height: 32px;
+  text-align: $textAlign;
+  @include respond-to(tablet) {
+    font-size: 2rem; // 32px
+    line-height: 40px;
+  }
+  @include respond-to(desktop) {
+    font-size: 3rem; // 48x
+    letter-spacing: -0.02em;
+    line-height: 52px;
+  }
+}
+
+// NOTE: Use for all <h2> elements
+// Uses the following Figma styles per breakpoint -
+// Mobile & Tablet: Header / H3;
+// Desktop: Header / H2;
+@mixin heading-h2($color: $midnight, $textAlign: left) {
+  @include font-base($font-family-heavy, normal, 500);
+  font-size: 1.625rem; // 26px
+  letter-spacing: -0.01em;
+  line-height: 32px;
+  text-align: $textAlign;
+  @include respond-to(desktop) {
+    font-size: 2rem; // 32px
+    letter-spacing: -0.02em;
+    line-height: 40px;
+  }
+}
+
+// NOTE: Use for all <h3> elements
+// Uses the following Figma styles per breakpoint -
+// Mobile & Tablet: Header / H4;
+// Desktop: Header / H3;
+@mixin heading-h3($textAlign: left) {
+  @include font-base($font-family-heavy, normal, 500);
+  font-size: 1.25rem; // 20px
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  text-align: $textAlign;
+  @include respond-to(desktop) {
+    font-size: 1.625rem; // 26px
+    line-height: 32px;
+  }
+}
+
+// TODO: double check values & possible refactor
+@mixin heading-h6($color: $inky-blue, $textAlign: left) {
+  @include font-base($font-family-heavy, normal, 500);
+  color: $color;
+  font-size: $font-size-xs;
+  line-height: 20px;
+  text-align: $textAlign;
+  @include respond-to(tablet) {
+    //tbd
+  }
+  @include respond-to(desktop) {
+    // tbd
+  }
+}
+
+/*
+BODY CONTENT
+*/
+
+// NOTE: Use for all <p> elements
+// Uses the following Figma styles per breakpoint -
+// Mobile & Tablet: Paragraph/P4 (Caption)
+// Desktop: Paragraph/P3 (Tablet + Mobile)
+@mixin body-text($color: $inky-blue, $textAlign: left) {
+  @include font-base($font-family-medium, normal, 400);
+  font-size: 14px;
+  letter-spacing: 0.01em;
+  line-height: 20px;
+  text-align: $textAlign;
+  @include respond-to(desktop) {
+    font-size: 16px;
+    letter-spacing: 0.01em;
+    line-height: 24px;
+    text-align: left;
+  }
+}
