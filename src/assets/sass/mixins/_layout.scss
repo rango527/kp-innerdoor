@@ -1,4 +1,6 @@
-// Responsive breakpoints
+/*
+RESPONSIVE BREAKPOINTS
+*/
 $breakpoints: (
   'mobile': (
     min-width: 600px,
@@ -21,7 +23,9 @@ $breakpoints: (
   }
 }
 
-// Responsive padding pattern - default as used on modals
+/*
+RESPONSIVE PADDING
+*/
 @mixin padding-responsive($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
   padding: $mobile;
   @include respond-to(tablet) {

@@ -9,7 +9,9 @@
       display: flex;
       padding: 0.5rem 1rem;
       @include heading-h6($midnight);
-
+      @include respond-to(desktop) {
+        font-size: 0.8125rem; // 13px
+      }
       img {
         &:first-of-type {
           margin-right: 1rem;

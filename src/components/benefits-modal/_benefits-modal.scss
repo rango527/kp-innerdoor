@@ -1,6 +1,5 @@
 .modal-innerdoor {
   &.modal-pattern {
-    // position: inherit;
     height: auto;
     .modal-container {
       padding: 0;
@@ -69,13 +68,13 @@
       }
       .-close--small {
         @include heading-h6($contrast-blue);
-        @include padding-responsive();
+        @include padding-responsive(0.5rem, 1rem, 1.25rem);
         align-items: center;
         background: transparent;
         border: transparent;
         display: flex;
         flex-direction: column;
-        padding: 0.5rem;
+        // padding: 0.5rem;
         img {
           height: 24px;
           width: 24px;
@@ -94,6 +93,9 @@
 // TODO: scope to benefits button
 .modal-button {
   @include heading-h6($midnight);
+  @include respond-to(desktop) {
+    font-size: 0.8125rem; // 13px
+  }
   align-items: center;
   background-image: url('/assets/images/icon-id-card.svg');
   background-position: 1rem center;

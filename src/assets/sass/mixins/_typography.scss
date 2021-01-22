@@ -77,9 +77,6 @@ HEADING LEVELS
   letter-spacing: 0;
   line-height: 20px;
   text-align: $textAlign;
-  @include respond-to(tablet) {
-    //tbd
-  }
   @include respond-to(desktop) {
     font-size: 1rem;
   }
