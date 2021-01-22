@@ -1,9 +1,7 @@
 .care-reminders,
 .care-reminders__empty {
   h3 {
-    font-family: $font-family-heavy;
-    font-size: 26px;
-    font-weight: 500;
+    @include heading-h3();
     margin: 0 0 2rem;
   }
 }
