@@ -24,7 +24,7 @@
     }
   }
   h3 {
-    @include header-h3();
+    @include heading-h3();
     margin-top: 0;
   }
   &-footer {
@@ -36,7 +36,7 @@
       }
       a {
         color: $inky-blue;
-        font-family: $font-family-normal;
+        font-family: $font-family-heavy;
       }
     }
   }

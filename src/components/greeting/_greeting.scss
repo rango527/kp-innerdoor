@@ -1,6 +1,6 @@
 .greeting {
   .cmp-title__text {
-    @include header-h1();
+    @include heading-h1($midnight);
   }
   &-mobile {
     display: none;

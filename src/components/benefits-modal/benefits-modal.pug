@@ -1,5 +1,4 @@
-
-#benefits-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-benefits-modal")
+#benefits-modal.modal-innerdoor.modal-pattern(aria-hidden="true" data-analytics-location="modal-benefits-modal")
   .modal-container
     .modal-inner.modal-icons-enabled(aria-label="Benefits" role="dialog" tabindex="-1")
       button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
@@ -10,12 +9,12 @@
       .modal-content
         .modal-content-body
           p Everything you need to know about your Kaiser Permanente member benefits.
-          .rows
-            .columns-6
+          .content-body-container
+            .content
               h3 Your plan and ID number
               p Find your ID number and plan type.
               a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door") View profile & preferences
-            .columns-6
+            .content
               h3 Your coverage details
               p
                 | View progress toward your deductible, out of pocket maximum, and other plan details.
