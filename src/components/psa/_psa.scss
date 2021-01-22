@@ -18,7 +18,7 @@
       padding: 0 1rem;
     }
     &-title {
-      @include header-h2();
+      @include heading-h2();
       margin: 0 0 1rem;
       @include respond-to(tablet) {
         margin: 0 0 20px;
@@ -66,8 +66,8 @@
         transition: background-color 0.2s ease, color 0.2s ease,
           border-color 0.2s ease;
         @include respond-to(tablet) {
-            margin-right: 10px;
-          }  
+          margin-right: 10px;
+        }
         @include respond-to(desktop) {
           font-size: 15px;
           line-height: 3rem;
@@ -146,7 +146,8 @@
   }
 }
 
-.psa .newGrid_container .columns-4, .columns-6 {
+.psa .newGrid_container .columns-4,
+.columns-6 {
   padding-top: 2rem;
   padding-bottom: 2rem;
   @include respond-to(tablet) {
