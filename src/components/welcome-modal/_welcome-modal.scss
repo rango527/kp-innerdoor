@@ -1,67 +1,91 @@
 .welcome-modal {
-  animation: showWelcomeModal 0.5s both;
   bottom: 0;
-  display: flex;
-  justify-content: center;
-  left: 0;
   overflow-y: auto;
-  padding-top: 100px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  visibility: visible;
-  z-index: 999;
-  &-panel {
-    background-color: $white;
-    border: $modal-border;
-    border-radius: $border-radius;
-    box-shadow: $box-shadow;
-    box-sizing: border-box;
-    color: $inky-blue;
-    max-height: 595px;
-    overflow: hidden;
-    width: 343px;
-    @include respond-to(tablet) {
-      max-height: 650px;
-      width: 520px;
+  &.modal-pattern {
+    height: auto;
+    .modal-container {
+      padding: 0;
     }
-    @include respond-to(desktop) {
-      max-height: 894px;
-      width: 692px;
-    }
-  }
-  &__header {
-    background-color: $pebble;
-    border-bottom: $modal-border;
-    display: flex;
-    height: 4rem;
-    justify-content: space-between;
-    padding-left: 1.5rem;
-    h4 {
-      align-items: center;
+    .modal-header {
+      @include padding-responsive();
+      background-color: $pebble;
+      border: 2px solid #e9ebee;
+      border-radius: 1rem 1rem 0 0;
       display: flex;
-      font-weight: 500;
-      margin: 0;
     }
-    .close {
-      align-items: center;
-      background-color: transparent;
-      border: 0;
-      cursor: pointer;
+
+    .modal-content {
+      @include body-text();
+      @include padding-responsive();
+    }
+
+    .content-body-container {
       display: flex;
       flex-direction: column;
-      margin-top: 0.5rem;
-      width: 4rem;
+      @include respond-to(tablet) {
+        flex-direction: row;
+      }
     }
-    span {
-      color: $contrast-blue;
-      font-size: $font-size-xs;
-      font-weight: 500;
-      line-height: 1.25rem;
-      margin-top: 0.25rem;
+
+    .content {
+      margin-right: 1rem;
+      &:first-of-type {
+        margin-bottom: 1rem;
+      }
+      @include respond-to(tablet) {
+        width: 50%;
+      }
+    }
+
+    .modal-icons-enabled {
+      .modal-content {
+        .modal-content-body {
+          margin: 0;
+        }
+      }
+    }
+
+    .modal-inner {
+      border-radius: 1rem;
+      display: flex;
+      flex-direction: column;
+      margin: 40px auto 0;
+      padding: 0;
+      max-height: 595px;
+      width: 343px;
+      @include respond-to(tablet) {
+        margin-top: 200px;
+        max-height: 650px;
+        width: 520px;
+      }
+      @include respond-to(desktop) {
+        margin-top: 66px;
+        max-height: 894px;
+        width: 692px;
+      }
+      .-close--small {
+        @include heading-h6($contrast-blue);
+        @include padding-responsive(0.5rem, 1rem, 1.25rem);
+        align-items: center;
+        background: transparent;
+        border: transparent;
+        display: flex;
+        flex-direction: column;
+        // padding: 0.5rem;
+        img {
+          height: 24px;
+          width: 24px;
+        }
+      }
+      .button {
+        @include body-text();
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
   }
-  &__content {
+  .modal-content {
     margin: 1rem 0;
     max-height: 375px;
     overflow-x: hidden;
@@ -75,10 +99,7 @@
       width: 311px;
     }
     h3 {
-      color: $midnight;
-      font-size: 1.25rem;
-      font-weight: 500;
-      line-height: 1.75rem;
+      @include heading-h3();
       margin: 0 0 10px;
     }
     h5 {
@@ -105,8 +126,6 @@
         width: 644px;
       }
       h3 {
-        font-size: 26px;
-        line-height: 2rem;
         margin: 0 0 0.75rem;
       }
       h5 {
@@ -115,9 +134,8 @@
       }
     }
   }
-  &__footer {
+  .modal-footer {
     margin: 0 1rem;
-
     &-frame {
       align-items: center;
       display: flex;
@@ -137,12 +155,9 @@
         cursor: pointer;
         margin-right: 6px;
       }
-      h6 {
+      label {
         color: $contrast-blue;
-        font-size: $padding-sm;
-        font-weight: 500;
-        line-height: 2rem;
-        margin: 0;
+        font-size: $font-size-xs;
       }
     }
     &-divider {
@@ -176,7 +191,7 @@
         color: $dolphin;
         cursor: not-allowed;
       }
-      h6 {
+      p {
         color: $dolphin;
         font-size: $font-size-xs;
         font-weight: 500;
@@ -226,4 +241,12 @@
   font-size: $font-size-xs;
   font-weight: 500;
   line-height: 2rem;
+}
+
+.modal-showing .modal-fade-screen {
+  background: rgba(0, 0, 0, 0.8);
+}
+// TODO: scope to weclome modal button
+.modal-button {
+  display: none;
 }

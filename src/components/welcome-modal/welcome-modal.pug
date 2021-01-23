@@ -12,48 +12,45 @@
     }
   ]
 
-.welcome-modal#welcome-modal(role="dialog" aria-labelledby="welcome-modal-heading" tabindex="-1")
-  .welcome-modal-panel
-    .welcome-modal__header
-      h4#welcome-modal-heading What’s New
-      button.close#close-welcome-modal(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-        img(src="assets/images/icon-close.svg" alt="")
-        span Close
-    .welcome-modal__content
-      each data, index in welcomeModalData
-        div(id=`welcome-modal-data-${index}` style="display:none;")
-          if data.image != ""
-            img.feature-img#feature-img(src=`${data.image}` alt="")
-          h3#feature-title #{data.title}
-          h5#feature-description #{data.description}
-    .welcome-modal__footer
-      .welcome-modal__footer-frame
-        button(aria-label="optional CTA") Optional CTA
-        input(type="checkbox")
-        h6 Don’t show again
-      .welcome-modal__footer-divider
-      .welcome-modal__footer-paging
-        button.previous-btn.btn-none#previous-btn(aria-label="previous tip") Previous tip
-        if welcomeModalData.length > 1
-          button.next-btn#next-btn(aria-label="next tip") Next tip
-        else
-          button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
-        h6#pagination 1 of #{welcomeModalData.length}
+#welcome-modal.welcome-modal.modal-pattern.modal-showing(aria-hidden="true" data-analytics-location="modal-welcome-modals")
+  div  
+    .modal-container
+      .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
+        button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
+          img(src="assets/images/icon-close.svg" alt="")
+          | Close
+        .modal-header
+          p#modal-title-1.modal-title What’s New
+        .modal-content
+          each data, index in welcomeModalData
+            div(id=`welcome-modal-data-${index}` style="display:none;")
+              if data.image != ""
+                img.feature-img#feature-img(src=`${data.image}` alt="")
+              h3#feature-title #{data.title}
+              h5#feature-description #{data.description}
+        .modal-footer
+          .modal-footer-frame
+            button(aria-label="optional CTA") Optional CTA
+            input#do-not-show(type="checkbox")
+            label(for="do-not-show") Don't show again
+          .modal-footer-divider
+          .modal-footer-paging
+            button.previous-btn.btn-none#previous-btn(aria-label="previous tip") Previous tip
+            if welcomeModalData.length > 1
+              button.next-btn#next-btn(aria-label="next tip") Next tip
+            else
+              button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
+            p#pagination(aria-live="polite" aria-atomic="true") 1 of #{welcomeModalData.length}
+      .modal-fade-screen
+  .rows
+    .columns-3
+      .modal-button(data-modal-trigger="welcome-modal") Welcome modal
+    
 script.
-  var container = document.getElementById("container");
-  container.classList.add("container--modal");
-
-  var welcomeModal = document.getElementById("welcome-modal");
-  var closeWelcomeModal = document.getElementById("close-welcome-modal");
-
-  closeWelcomeModal.onclick = function () {
-    welcomeModal.style.display = "none";
-    container.classList.remove("container--modal");
-  };
-
   var previousBtn = document.getElementById("previous-btn");
   var nextBtn = document.getElementById("next-btn");
   var pagination = document.getElementById("pagination");
+  document.body.classList.add("kp-modal-disable-scroll");
 
   var index = 0;
   document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
