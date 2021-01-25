@@ -21,7 +21,7 @@ body {
   @include respond-to(desktop) {
     padding: 0 $desktop-space-size;
   }
-  @media only screen and (max-width: 833px) {
+  @media only screen and (max-width: 767px) {
     &-primary-content-mobile {
       position: fixed;
       scroll-behavior: smooth;

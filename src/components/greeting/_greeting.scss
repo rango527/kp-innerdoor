@@ -4,7 +4,7 @@
   }
   &-mobile {
     display: none;
-    @media only screen and (max-width: 834px) {
+    @media only screen and (max-width: 767px) {
       animation: opacityAnimation 800ms both;
       color: $white;
       // visibility: visible;
