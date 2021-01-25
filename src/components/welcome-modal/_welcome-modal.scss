@@ -100,6 +100,7 @@
     }
     h3 {
       @include heading-h3();
+      color: $midnight;
       margin: 0 0 10px;
     }
     h5 {
@@ -141,7 +142,7 @@
       display: flex;
       button {
         margin-right: 1rem;
-        padding: 2px 1rem;
+        padding: 1px 1rem;
         @include respond-to(desktop) {
           font-size: 1rem;
           line-height: 3rem;
@@ -151,13 +152,62 @@
           color: $white;
         }
       }
-      input {
-        cursor: pointer;
-        margin-right: 6px;
+      
+      /* Hide the input by default */
+      input[type="checkbox"] {
+        display: none;
       }
+      
       label {
+        position: relative;
+        display: inline-block;
+        
+        /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
+        padding-left: 27px;
+      }
+      
+      label::before,
+      label::after {
+        position: absolute;
+        content: "";
+        display: inline-block;
+      }
+      
+      /* Outer box of the fake checkbox */
+      label::before{
+        height: 18px;
+        width: 18px;
+        border: 2px solid $contrast-blue;
+        border-radius: 4px;
+        left: 0px;
+      }
+      
+      /* Checkmark of the fake checkbox */
+      label::after {
+        height: 5px;
+        width: 10px;
+        border-left: 2px solid;
+        border-bottom: 2px solid;
+        transform: rotate(-45deg);
+        left: 4px;
+        top: 5px;
+      }
+      
+      /* Hide the checkmark by default */
+      input[type="checkbox"] + label::after {
+        content: none;
+      }
+      
+      /*Unhide on the checked state*/
+      input[type="checkbox"]:checked + label::after {
+        content: "";
+      }
+      
+      label {
+        cursor: pointer;
         color: $contrast-blue;
         font-size: $font-size-xs;
+        margin-top: -3px;
       }
     }
     &-divider {
@@ -172,24 +222,54 @@
       justify-content: flex-end;
       margin-bottom: 1rem;
       .previous-btn {
-        background-image: url('/assets/images/chevron-back-none.svg');
+        background-image: url('/assets/images/chevron-back.svg');
         background-position: 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
-        padding: 0 0.7rem 0 2.5rem;
+        padding: 1px 0.7rem 1px 2.5rem;
+        &:hover {
+          background-image: url('/assets/images/chevron-back-hover.svg');
+          background-color: $contrast-blue;
+          color: $white;
+        }
+        &-none {
+          background-image: url('/assets/images/chevron-back-none.svg');
+          background-color: transparent;
+          border: 1px solid transparent;
+          color: $dolphin;
+          cursor: not-allowed;
+          &:hover {
+            background-image: url('/assets/images/chevron-back-none.svg');
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: $dolphin;
+          }
+        }
       }
       .next-btn {
         background-image: url('/assets/images/chevron-forward.svg');
         background-position: right 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
-        padding: 0 2.5rem 0 0.7rem;
-      }
-      .btn-none {
-        background-color: transparent;
-        border: 1px solid transparent;
-        color: $dolphin;
-        cursor: not-allowed;
+        padding: 1px 2.5rem 1px 0.7rem;
+        &:hover {
+          background-image: url('/assets/images/chevron-forward-hover.svg');
+          background-color: $contrast-blue;
+          color: $white;
+        }
+        &-none {
+          background-image: url('/assets/images/chevron-forward-none.svg');
+          background-color: transparent;
+          border: 1px solid transparent;
+          color: $dolphin;
+          cursor: not-allowed;
+          &:hover {
+            background-image: url('/assets/images/chevron-forward-none.svg');
+            background-color: transparent;
+            border: 1px solid transparent;
+            color: $dolphin;
+          }
+        }
       }
       p {
         color: $dolphin;
@@ -246,7 +326,13 @@
 .modal-showing .modal-fade-screen {
   background: rgba(0, 0, 0, 0.8);
 }
+
 // TODO: scope to weclome modal button
-.modal-button {
-  display: none;
+.welcome-rows {
+  width: 0 !important;
+  height: 0 !important;
+}
+
+.welcome-modal-button {
+  opacity: 0 !important;
 }

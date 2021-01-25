@@ -1,4 +1,7 @@
 -
+  var SHOWWELCOMEMODAL = "true";
+  var DELAYTIME = "3000";   // default time is 3s
+
   const welcomeModalData = [
     {
       image: "assets/images/welcome-modal-img-1.svg",
@@ -12,8 +15,8 @@
     }
   ]
 
-#welcome-modal.welcome-modal.modal-pattern.modal-showing(aria-hidden="true" data-analytics-location="modal-welcome-modals")
-  div  
+#welcome-modal.welcome-modal.modal-pattern(aria-hidden="false" data-analytics-location="modal-welcome-modals")
+  div
     .modal-container
       .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
         button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
@@ -35,22 +38,27 @@
             label(for="do-not-show") Don't show again
           .modal-footer-divider
           .modal-footer-paging
-            button.previous-btn.btn-none#previous-btn(aria-label="previous tip") Previous tip
+            button.previous-btn.previous-btn-none#previous-btn(aria-label="previous tip") Previous tip
             if welcomeModalData.length > 1
               button.next-btn#next-btn(aria-label="next tip") Next tip
             else
-              button.next-btn.btn-none#next-btn(aria-label="next tip") Next tip
+              button.next-btn.next-btn-none#next-btn(aria-label="next tip") Next tip
             p#pagination(aria-live="polite" aria-atomic="true") 1 of #{welcomeModalData.length}
       .modal-fade-screen
-  .rows
-    .columns-3
-      .modal-button(data-modal-trigger="welcome-modal") Welcome modal
+.rows
+  .columns-3.welcome-rows
+    button.modal-button.welcome-modal-button#welcome-modal-button(data-modal-trigger="welcome-modal") Welcome modal
     
 script.
+  if (#{SHOWWELCOMEMODAL} == true) {
+    window.setTimeout(function () {
+      document.getElementById("welcome-modal-button").click();
+    }, #{DELAYTIME});
+  }
+
   var previousBtn = document.getElementById("previous-btn");
   var nextBtn = document.getElementById("next-btn");
   var pagination = document.getElementById("pagination");
-  document.body.classList.add("kp-modal-disable-scroll");
 
   var index = 0;
   document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
@@ -61,9 +69,9 @@ script.
       index += 1;
       document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
       pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
-      previousBtn.classList.remove("btn-none");
+      previousBtn.classList.remove("previous-btn-none");
       if (#{welcomeModalData.length - 1} == index) {
-        nextBtn.classList.add("btn-none");
+        nextBtn.classList.add("next-btn-none");
       }
     }
   };
@@ -74,9 +82,9 @@ script.
       index -= 1;
       document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
       pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
-      nextBtn.classList.remove("btn-none");
+      nextBtn.classList.remove("next-btn-none");
       if (index == 0) {
-        previousBtn.classList.add("btn-none");
+        previousBtn.classList.add("previous-btn-none");
       }
     }
   };
