@@ -91,10 +91,11 @@
     font-weight: 500;
     margin: 0 0 1.5rem;
   }
-  .view-toggle {
+  .view-toggle,
+  .view-toggle-static {
     align-items: center;
     background: transparent;
-    background-image: url('/assets/images/plus.png');
+    background-image: url('/assets/images/minus.png');
     background-position: 0.25rem center;
     background-repeat: no-repeat;
     border: none;
@@ -107,8 +108,15 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
       background-color: $inky-blue;
-      background-image: url('/assets/images/plus-hover.png');
+      background-image: url('/assets/images/minus-hover.png');
       color: $white;
+    }
+  }
+
+  .view-toggle-static {
+    background-image: url('/assets/images/plus.png');
+    &:hover {
+      background-image: url('/assets/images/plus-hover.png');
     }
   }
 }
@@ -118,7 +126,8 @@
   list-style: none;
   margin: 0 0 0.75rem;
   padding: 0;
-  &--flex {
+  &--flex,
+  &--flex-static {
     display: flex;
     flex: 0 0 100%;
     margin-bottom: 0.75rem;

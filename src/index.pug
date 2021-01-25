@@ -2,7 +2,7 @@ extends layout/layout.pug
 
 block content
   #container.container
-    //- include components/welcome-modal/welcome-modal.pug
+    include components/welcome-modal/welcome-modal.pug
     include components/proxy-picker/proxy-picker.pug
     include components/benefits-modal/benefits-modal.pug
     include components/add-new-member/add-new-member.pug
@@ -14,6 +14,7 @@ block content
     include components/care-reminders/care-reminders.pug
     include components/care-reminders/care-reminders-empty.pug
 
+    include components/care-actions/care-actions-more.pug
     include components/care-actions/care-actions.pug
 
   //- intentionally outside of container
