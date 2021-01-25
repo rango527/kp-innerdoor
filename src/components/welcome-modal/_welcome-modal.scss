@@ -98,12 +98,12 @@
       margin-bottom: 1rem;
       width: 311px;
     }
-    h3 {
+    .feature-title {
       @include heading-h3();
       color: $midnight;
       margin: 0 0 10px;
     }
-    h5 {
+    p {
       font-size: $font-size-xs;
       font-weight: 500;
       line-height: 1.25rem;
@@ -126,10 +126,10 @@
         margin-bottom: 1.5rem;
         width: 644px;
       }
-      h3 {
+      .feature-title {
         margin: 0 0 0.75rem;
       }
-      h5 {
+      p {
         font-size: 1rem;
         line-height: 1.5rem;
       }

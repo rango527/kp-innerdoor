@@ -28,9 +28,9 @@
           each data, index in welcomeModalData
             div(id=`welcome-modal-data-${index}` style="display:none;")
               if data.image != ""
-                img.feature-img#feature-img(src=`${data.image}` alt="")
-              h3#feature-title #{data.title}
-              h5#feature-description #{data.description}
+                img.feature-img(src=`${data.image}` alt="")
+              p.feature-title #{data.title}
+              p #{data.description}
         .modal-footer
           .modal-footer-frame
             button(aria-label="optional CTA") Optional CTA
