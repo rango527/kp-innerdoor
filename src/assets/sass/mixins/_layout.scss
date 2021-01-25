@@ -23,15 +23,16 @@ $breakpoints: (
   }
 }
 
-body {
-  border-right: 3px solid red;
-  @include respond-to(tablet) {
-    border-right: 3px solid blue;
-  }
-  @include respond-to(desktop) {
-    border-right: 3px solid green;
-  }
-}
+// breakpoint test - uncomment to view
+// body {
+//   border-right: 3px solid red;
+//   @include respond-to(tablet) {
+//     border-right: 3px solid blue;
+//   }
+//   @include respond-to(desktop) {
+//     border-right: 3px solid green;
+//   }
+// }
 
 /*
 RESPONSIVE PADDING
