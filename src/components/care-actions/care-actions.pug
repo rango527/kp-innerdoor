@@ -45,6 +45,7 @@
     }
   ]
 
+p Care actions - view less example plus transition
 .care-display#care-display
   .care-actions
     .toggle-content.is-visible#care-actions
@@ -77,7 +78,7 @@
           each secondaryCard in secondaryCareActionCards
             li
               a.care-actions-secondary-list-button(href="#") #{secondaryCard.buttonText}
-        button.view-toggle(aria-expanded="false" type="button") View all care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
+        button.view-toggle(aria-expanded="false" type="button") View less care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
   include ../primary-card-content/primary-card-content.pug
   script.
     var careDisplay = document.getElementById("care-display");
