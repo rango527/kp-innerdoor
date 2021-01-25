@@ -11,7 +11,7 @@
     margin-left: $desktop-space-size-2;
     margin-right: $desktop-space-size-2-minus; // (50vw - 640px + 2rem) * 2
   }
-  @media only screen and (max-width: 833px) {
+  @media only screen and (max-width: 767px) {
     animation: backgroundColorAnimation 800ms both;
     height: 100vh;
     overflow: auto; /* Enable scroll if needed */
@@ -38,21 +38,14 @@
     display: flex;
     justify-content: space-between;
   }
-
-  h3 {
-    font-family: $font-family-heavy;
-    font-size: 1.25rem;
-    font-weight: 500;
-    line-height: 2rem;
+  .-header {
     margin-bottom: 1.5rem;
     margin-top: 2rem;
     @include respond-to(tablet) {
-      font-size: 1.25rem;
       margin-bottom: 1.25rem;
       margin-top: 1.25rem;
     }
     @include respond-to(desktop) {
-      font-size: 1.625rem;
       margin-bottom: 1.5rem;
       margin-top: 1.5rem;
     }
@@ -65,19 +58,25 @@
   &__title {
     align-items: center;
     display: flex;
-    .-title {
+    h4 {
       color: $midnight;
+      font-family: $font-family-heavy;
+      font-size: 1.25rem;
+      font-weight: 500;
+      line-height: 32px;
       margin-bottom: 0;
       margin-right: 0.5rem;
       margin-top: 0;
       @include respond-to(tablet) {
+        font-size: 1.25rem;
         margin-right: 0.625rem;
       }
       @include respond-to(desktop) {
+        font-size: 1.625rem;
         margin-right: 1rem;
       }
     }
-    h6 {
+    span {
       color: $contrast-blue;
       font-family: $font-family-heavy;
       font-size: 15px;
@@ -86,7 +85,7 @@
       margin: 0 0 0 6px;
     }
   }
-  h5 {
+  p {
     font-family: $font-family-light;
     font-size: 0.875rem;
     font-weight: 500;
@@ -149,6 +148,7 @@
     }
     &:hover {
       background-color: $kp-blue;
+      text-decoration: underline;
       color: $white;
     }
   }
@@ -190,7 +190,7 @@
       margin-bottom: 1.5rem;
       margin-top: 1.5rem;
     }
-    h5 {
+    p {
       margin-bottom: 0;
       margin-top: 0;
     }
@@ -202,7 +202,7 @@
   width: 1.5rem;
 }
 
-@media only screen and (max-width: 833px) {
+@media only screen and (max-width: 767px) {
   .primary-card-content .columns-4,
   .primary-card-content .columns-6 {
     grid-column: span 12 !important;

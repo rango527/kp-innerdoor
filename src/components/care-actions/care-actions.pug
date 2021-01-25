@@ -1,4 +1,5 @@
 -
+  var TABLETMINWIDTH = "768";
   // Care actions json data
   const primaryCareActionCards = [
     {
@@ -46,8 +47,8 @@
   ]
 
 .care-display#care-display
-  .care-actions
-    .toggle-content.is-visible#care-actions
+  .care-actions#care-actions
+    .toggle-content.is-visible#care-actions-toggle
       include ../panel/panel.pug
         h3 Get Care
         if primaryCareActionCards.length > 0
@@ -81,7 +82,7 @@
   include ../primary-card-content/primary-card-content.pug
   script.
     var careDisplay = document.getElementById("care-display");
-    var careActions = document.getElementById("care-actions");
+    var careActions = document.getElementById("care-actions-toggle");
     var primaryContent = document.getElementById("primary-card-content");
     var primaryModal = document.getElementById("primary-card-modal");
     var container = document.getElementById("container");
@@ -89,12 +90,14 @@
     var primaryCards = document.querySelectorAll('.care-actions-primary-list--flex');
     primaryCards.forEach(function(card, i){
       card.addEventListener('click', function (e) {
+        document.getElementById("care-actions").setAttribute('aria-hidden', 'true');
+        primaryContent.setAttribute('aria-hidden', 'false');
         cardIndex(e, i);
       });
     })
 
     function cardIndex(e, index) {
-      if(window.innerWidth >= 834) {
+      if(window.innerWidth >= #{TABLETMINWIDTH}) {
         careDisplay.classList.add("care-display-animation-in");
         careDisplay.classList.remove("care-display-animation-out");
 
