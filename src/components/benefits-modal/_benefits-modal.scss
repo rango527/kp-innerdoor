@@ -52,15 +52,13 @@
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
-      margin: 238px auto 0;
+      margin: 160px auto 0;
       padding: 0;
       width: 343px;
       @include respond-to(tablet) {
-        margin-top: 305px;
         width: 520px;
       }
       @include respond-to(desktop) {
-        margin-top: 160px;
         width: 692px;
       }
       p {
@@ -90,7 +88,6 @@
   }
 }
 
-// TODO: scope to benefits button
 .modal-button {
   @include heading-h6($midnight);
   @include respond-to(desktop) {
