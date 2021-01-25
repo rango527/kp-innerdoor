@@ -73,7 +73,7 @@
                       .care-actions-primary-list--item-content
                         .care-actions-primary-list--item-title #{primaryCard.title}
                         .care-actions-primary-list--item-description #{primaryCard.subTitle}
-        ul.care-actions-secondary-list#hidden-group-0
+        ul.care-actions-secondary-list
           each secondaryCard in secondaryCareActionCards
             li
               a.care-actions-secondary-list-button(href="#") #{secondaryCard.buttonText}
@@ -85,7 +85,7 @@
     var primaryContent = document.getElementById("primary-card-content");
     var primaryModal = document.getElementById("primary-card-modal");
     var container = document.getElementById("container");
-    
+
     var primaryCards = document.querySelectorAll('.care-actions-primary-list--flex');
     primaryCards.forEach(function(card, i){
       card.addEventListener('click', function (e) {
