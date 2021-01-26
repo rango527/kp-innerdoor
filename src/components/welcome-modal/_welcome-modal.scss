@@ -222,24 +222,24 @@
       justify-content: flex-end;
       margin-bottom: 1rem;
       .previous-btn {
-        background-image: url('/assets/images/icon-chevron-back.svg');
+        background-image: url($localImagePath + 'icon-chevron-back.svg');
         background-position: 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
         padding: 1px 0.7rem 1px 2.5rem;
         &:hover {
-          background-image: url('/assets/images/icon-chevron-back-hover.svg');
+          background-image: url($localImagePath + 'icon-chevron-back-hover.svg');
           background-color: $contrast-blue;
           color: $white;
         }
         &-none {
-          background-image: url('/assets/images/icon-chevron-back-none.svg');
+          background-image: url($localImagePath + 'icon-chevron-back-none.svg');
           background-color: transparent;
           border: 1px solid transparent;
           color: $dolphin;
           cursor: not-allowed;
           &:hover {
-            background-image: url('/assets/images/icon-chevron-back-none.svg');
+            background-image: url($localImagePath + 'icon-chevron-back-none.svg');
             background-color: transparent;
             border: 1px solid transparent;
             color: $dolphin;
@@ -247,24 +247,24 @@
         }
       }
       .next-btn {
-        background-image: url('/assets/images/icon-chevron-forward.svg');
+        background-image: url($localImagePath + 'icon-chevron-forward.svg');
         background-position: right 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
         padding: 1px 2.5rem 1px 0.7rem;
         &:hover {
-          background-image: url('/assets/images/icon-chevron-forward-hover.svg');
+          background-image: url($localImagePath + 'icon-chevron-forward-hover.svg');
           background-color: $contrast-blue;
           color: $white;
         }
         &-none {
-          background-image: url('/assets/images/icon-chevron-forward-none.svg');
+          background-image: url($localImagePath + 'icon-chevron-forward-none.svg');
           background-color: transparent;
           border: 1px solid transparent;
           color: $dolphin;
           cursor: not-allowed;
           &:hover {
-            background-image: url('/assets/images/icon-chevron-forward-none.svg');
+            background-image: url($localImagePath + 'icon-chevron-forward-none.svg');
             background-color: transparent;
             border: 1px solid transparent;
             color: $dolphin;

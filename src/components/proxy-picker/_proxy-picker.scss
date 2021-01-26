@@ -58,7 +58,7 @@
         a {
           @include heading-h6($midnight);
           align-items: center;
-          background-image: url('/assets/images/icon-user-profile-solid.svg');
+          background-image: url($localImagePath + 'icon-user-profile-solid.svg');
           background-position: 1rem center;
           background-repeat: no-repeat;
           box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
@@ -70,7 +70,7 @@
           }
           &:hover {
             background-color: $midnight;
-            background-image: url('/assets/images/icon-user-profile-solid-white.svg');
+            background-image: url($localImagePath + 'icon-user-profile-solid-white.svg');
             color: $white;
           }
         }

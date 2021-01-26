@@ -6,7 +6,7 @@
   &-btn {
     background: transparent;
     background-color: $pale-blue;
-    background-image: url('/assets/images/plus.png');
+    background-image: url($localImagePath + 'plus.png');
     background-position: 1rem center;
     background-repeat: no-repeat;
     border: 1px solid #006ba6;
@@ -20,7 +20,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
       background-color: $midnight;
-      background-image: url('/assets/images/plus-hover.png');
+      background-image: url($localImagePath + 'plus-hover.png');
       color: $white;
     }
   }

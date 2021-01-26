@@ -95,7 +95,7 @@
   .view-toggle-static {
     align-items: center;
     background: transparent;
-    background-image: url('/assets/images/minus.png');
+    background-image: url($localImagePath + 'minus.png');
     background-position: 0.25rem center;
     background-repeat: no-repeat;
     border: none;
@@ -108,15 +108,15 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
       background-color: $inky-blue;
-      background-image: url('/assets/images/minus-hover.png');
+      background-image: url($localImagePath + 'minus-hover.png');
       color: $white;
     }
   }
 
   .view-toggle-static {
-    background-image: url('/assets/images/plus.png');
+    background-image: url($localImagePath + 'plus.png');
     &:hover {
-      background-image: url('/assets/images/plus-hover.png');
+      background-image: url($localImagePath + 'plus-hover.png');
     }
   }
 }

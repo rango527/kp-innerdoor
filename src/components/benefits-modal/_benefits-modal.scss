@@ -94,7 +94,7 @@
     font-size: 0.8125rem; // 13px
   }
   align-items: center;
-  background-image: url('/assets/images/icon-id-card.svg');
+  background-image: url($localImagePath + 'icon-id-card.svg');
   background-position: 1rem center;
   background-repeat: no-repeat;
   display: flex;
@@ -102,6 +102,6 @@
   &:hover,
   &:active,
   &:focus {
-    background-image: url('/assets/images/icon-id-card-white.svg');
+    background-image: url($localImagePath + 'icon-id-card-white.svg');
   }
 }
