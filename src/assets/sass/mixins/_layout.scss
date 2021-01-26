@@ -3,13 +3,13 @@ RESPONSIVE BREAKPOINTS
 */
 $breakpoints: (
   'mobile': (
-    min-width: 600px,
+    max-width: 767px,
   ),
   'tablet': (
     min-width: 768px,
   ),
   'desktop': (
-    min-width: 1280px,
+    min-width: 1152px,
   ),
 ) !default;
 
@@ -22,6 +22,17 @@ $breakpoints: (
     @warn "Breakpoint mixin supports: mobile, tablet, desktop";
   }
 }
+
+// breakpoint test - uncomment to view
+// body {
+//   border-right: 3px solid red;
+//   @include respond-to(tablet) {
+//     border-right: 3px solid blue;
+//   }
+//   @include respond-to(desktop) {
+//     border-right: 3px solid green;
+//   }
+// }
 
 /*
 RESPONSIVE PADDING
