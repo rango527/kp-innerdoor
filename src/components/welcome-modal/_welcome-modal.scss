@@ -152,36 +152,36 @@
           color: $white;
         }
       }
-      
+
       /* Hide the input by default */
-      input[type="checkbox"] {
+      input[type='checkbox'] {
         display: none;
       }
-      
+
       label {
         position: relative;
         display: inline-block;
-        
+
         /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
         padding-left: 27px;
       }
-      
+
       label::before,
       label::after {
         position: absolute;
-        content: "";
+        content: '';
         display: inline-block;
       }
-      
+
       /* Outer box of the fake checkbox */
-      label::before{
+      label::before {
         height: 18px;
         width: 18px;
         border: 2px solid $contrast-blue;
         border-radius: 4px;
         left: 0px;
       }
-      
+
       /* Checkmark of the fake checkbox */
       label::after {
         height: 5px;
@@ -192,17 +192,17 @@
         left: 4px;
         top: 5px;
       }
-      
+
       /* Hide the checkmark by default */
-      input[type="checkbox"] + label::after {
+      input[type='checkbox'] + label::after {
         content: none;
       }
-      
+
       /*Unhide on the checked state*/
-      input[type="checkbox"]:checked + label::after {
-        content: "";
+      input[type='checkbox']:checked + label::after {
+        content: '';
       }
-      
+
       label {
         cursor: pointer;
         color: $contrast-blue;
@@ -222,24 +222,24 @@
       justify-content: flex-end;
       margin-bottom: 1rem;
       .previous-btn {
-        background-image: url('/assets/images/chevron-back.svg');
+        background-image: url('/assets/images/icon-chevron-back.svg');
         background-position: 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
         padding: 1px 0.7rem 1px 2.5rem;
         &:hover {
-          background-image: url('/assets/images/chevron-back-hover.svg');
+          background-image: url('/assets/images/icon-chevron-back-hover.svg');
           background-color: $contrast-blue;
           color: $white;
         }
         &-none {
-          background-image: url('/assets/images/chevron-back-none.svg');
+          background-image: url('/assets/images/icon-chevron-back-none.svg');
           background-color: transparent;
           border: 1px solid transparent;
           color: $dolphin;
           cursor: not-allowed;
           &:hover {
-            background-image: url('/assets/images/chevron-back-none.svg');
+            background-image: url('/assets/images/icon-chevron-back-none.svg');
             background-color: transparent;
             border: 1px solid transparent;
             color: $dolphin;
@@ -247,24 +247,24 @@
         }
       }
       .next-btn {
-        background-image: url('/assets/images/chevron-forward.svg');
+        background-image: url('/assets/images/icon-chevron-forward.svg');
         background-position: right 0.7rem center;
         background-repeat: no-repeat;
         margin-right: 1rem;
         padding: 1px 2.5rem 1px 0.7rem;
         &:hover {
-          background-image: url('/assets/images/chevron-forward-hover.svg');
+          background-image: url('/assets/images/icon-chevron-forward-hover.svg');
           background-color: $contrast-blue;
           color: $white;
         }
         &-none {
-          background-image: url('/assets/images/chevron-forward-none.svg');
+          background-image: url('/assets/images/icon-chevron-forward-none.svg');
           background-color: transparent;
           border: 1px solid transparent;
           color: $dolphin;
           cursor: not-allowed;
           &:hover {
-            background-image: url('/assets/images/chevron-forward-none.svg');
+            background-image: url('/assets/images/icon-chevron-forward-none.svg');
             background-color: transparent;
             border: 1px solid transparent;
             color: $dolphin;

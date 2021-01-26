@@ -13,7 +13,12 @@ $font-path: '../../../node_modules/styleguide/lib/modern/assets/fonts/';
 
 // YML generated styles - includes variables and components
 // NOTE: These must be imported *after* all KP / Styleguide scaffolding
-@import 'yml';
+
+// Global, utilities, mixins, variables
+@import 'global';
+
+// Component specific styles
+@import 'components';
 
 // Demo layout - For internal YML use only
 // NOTE: KP devs disregard
