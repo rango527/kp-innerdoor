@@ -1,7 +1,7 @@
 .container-bg {
   overflow: hidden;
   background: $pale-blue;
-  box-shadow: inset 0px 2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
 }
 
@@ -96,9 +96,9 @@
 }
 
 .psa .newGrid_container .columns-6 {
-  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0px -2px 0 rgba(0, 0, 0, 0.05);
   @include respond-to(tablet) {
-    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.025);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.025);
     margin: 0 -100vw;
     padding-right: 100vw;
     padding-left: 100vw;
@@ -120,9 +120,9 @@
 }
 
 .psa .newGrid_container .columns-4 {
-  box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
   @include respond-to(tablet) {
-    box-shadow: inset 0px -2px 0px rgba(0, 0, 0, 0.017);
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.017);
     margin: 0 -100vw;
     padding-right: 100vw;
     padding-left: 100vw;
