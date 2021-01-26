@@ -46,6 +46,7 @@
     }
   ]
 
+p Care actions - view less example plus transition
 .care-display#care-display
   .care-actions#care-actions
     .toggle-content.is-visible#care-actions-toggle
@@ -74,11 +75,11 @@
                       .care-actions-primary-list--item-content
                         .care-actions-primary-list--item-title #{primaryCard.title}
                         .care-actions-primary-list--item-description #{primaryCard.subTitle}
-        ul.care-actions-secondary-list#hidden-group-0
+        ul.care-actions-secondary-list
           each secondaryCard in secondaryCareActionCards
             li
               a.care-actions-secondary-list-button(href="#") #{secondaryCard.buttonText}
-        button.view-toggle(aria-expanded="false" type="button") View all care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
+        button.view-toggle(aria-expanded="false" type="button") View less care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
   include ../primary-card-content/primary-card-content.pug
   script.
     var careDisplay = document.getElementById("care-display");
@@ -86,7 +87,7 @@
     var primaryContent = document.getElementById("primary-card-content");
     var primaryModal = document.getElementById("primary-card-modal");
     var container = document.getElementById("container");
-    
+
     var primaryCards = document.querySelectorAll('.care-actions-primary-list--flex');
     primaryCards.forEach(function(card, i){
       card.addEventListener('click', function (e) {

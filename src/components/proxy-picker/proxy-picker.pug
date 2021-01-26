@@ -1,3 +1,4 @@
+- var names = ['Elena Martinez','Hector Martinez', 'Matteo-Rogelio Solano Villanuevo', 'Jane Villanuevo' ];
 .navigational-picker.proxy-picker
   .proxyPicker
     button.navigational-select-dropdown(aria-expanded="false" aria-haspopup="listbox")
@@ -6,19 +7,6 @@
       span.proxy-select-dropdown-value Elena Martinez
       i.icon-chevron-down(aria-hidden="true")
     ul.navigational-select-dropdown__list(data-analytics-location="Proxy Picker" role="listbox")
-      li.navigational-select-value.proxy-select-value(aria-selected="false" data-value="Elena Martinez" role="option" tabindex="-1")
-        a(data-analytics-click="Proxy picker selection" data-analytics-type="link" href="#")
-          img(src="assets/images/icon-user-profile-solid.svg" alt="")
-          | Elena Martinez
-      li.navigational-select-value.proxy-select-value(aria-selected="false" data-value="Hector Martinez" role="option" tabindex="-1")
-        a(data-analytics-click="Proxy picker selection" data-analytics-type="link" href="#")
-          img(src="assets/images/icon-user-profile-solid.svg" alt="")
-          | Hector Martinez
-      li.navigational-select-value.proxy-select-value(aria-selected="false" data-value="Matteo-Rogelio Solano Villanuevo" role="option" tabindex="-1")
-        a(data-analytics-click="Proxy picker selection" data-analytics-type="link" href="#")
-          img(src="assets/images/icon-user-profile-solid.svg" alt="")
-          | Matteo-Rogelio Solano Villanuevo
-      li.navigational-select-value.proxy-select-value(aria-selected="false" data-value="Jane Villanuevo" role="option" tabindex="-1")
-        a(data-analytics-click="Proxy picker selection" data-analytics-type="link" href="#")
-          img(src="assets/images/icon-user-profile-solid.svg" alt="")
-          | Jane Villanuevo
+      each name in names
+        li.navigational-select-value.proxy-select-value(aria-selected="false" data-value=name role="option" tabindex="-1")
+          a(data-analytics-click="Proxy picker selection" data-analytics-type="link" href="#") #{name}

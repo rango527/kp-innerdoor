@@ -52,15 +52,13 @@
       border-radius: 1rem;
       display: flex;
       flex-direction: column;
-      margin: 238px auto 0;
+      margin: 160px auto 0;
       padding: 0;
       width: 343px;
       @include respond-to(tablet) {
-        margin-top: 305px;
         width: 520px;
       }
       @include respond-to(desktop) {
-        margin-top: 160px;
         width: 692px;
       }
       p {
@@ -90,14 +88,13 @@
   }
 }
 
-// TODO: scope to benefits button
 .modal-button {
   @include heading-h6($midnight);
   @include respond-to(desktop) {
     font-size: 0.8125rem; // 13px
   }
   align-items: center;
-  background-image: url('/assets/images/icon-id-card.svg');
+  background-image: url($localImagePath + 'icon-id-card.svg');
   background-position: 1rem center;
   background-repeat: no-repeat;
   display: flex;
@@ -105,6 +102,6 @@
   &:hover,
   &:active,
   &:focus {
-    background-image: url('/assets/images/icon-id-card-white.svg');
+    background-image: url($localImagePath + 'icon-id-card-white.svg');
   }
 }
