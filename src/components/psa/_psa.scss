@@ -97,7 +97,7 @@
 
 .psa .newGrid_container .columns-6 {
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  @media only screen and (min-width: 769px) {
+  @include respond-to(tablet) {
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.025);
     margin: 0 -100vw;
     padding-left: 100vw;
@@ -121,7 +121,7 @@
 
 .psa .newGrid_container .columns-4 {
   box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  @media only screen and (min-width: 769px) {
+  @include respond-to(tablet) {
     box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.017);
     margin: 0 -100vw;
     padding-left: 100vw;
@@ -158,7 +158,7 @@
     padding-bottom: 3rem;
     padding-top: 3rem;
   }
-  @media only screen and (max-width: 768px) {
+  @include respond-to(mobile) {
     grid-column: span 12 !important;
   }
 }

@@ -29,7 +29,7 @@
                 .columns-6
                   .content
                     h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
-                    h5.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
+                    p.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
                     .content-footer(data-analytics-location="button-container")
                       button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
                       a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more
@@ -38,7 +38,7 @@
                 .columns-4
                   .content
                     h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
-                    h5.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
+                    p.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
                     .content-footer(data-analytics-location="button-container")
                       button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
                       a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more
