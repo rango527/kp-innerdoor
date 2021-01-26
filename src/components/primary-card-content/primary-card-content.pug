@@ -108,7 +108,7 @@
     },
   ]
 
-div.primary-card-content#primary-card-content(aria-hidden="true")
+.primary-card-content#primary-card-content(aria-hidden="true")
   h1.greeting.greeting-mobile#greeting-mobile What kind of care do you need?
   .primary-card-content-modal#primary-card-modal
     each content, cardIndex in primaryCardContentData
@@ -158,7 +158,10 @@ div.primary-card-content#primary-card-content(aria-hidden="true")
                         .primary-card-content__divider.primary-card-content__divider-mobile
             .primary-card-content__divider.primary-card-content__divider-tablet
             .primary-card-content__footer
-              p <b>Do not attempt to access emergency care through this website.</b><br>If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
+              p
+                strong Do not attempt to access emergency care through this website.
+                br
+                | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
             
   script.
     var closePrimaryContents = document.querySelectorAll('.close-primary-content');
