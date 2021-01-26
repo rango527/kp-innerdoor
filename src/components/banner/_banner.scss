@@ -7,7 +7,7 @@
     border: 1px solid $inky-blue;
     border-radius: $button-radius;
     font-size: 1rem;
-    margin-right: 1rem;
+    margin: 0 1rem 1rem 0;
     padding: 1rem;
     transition: background-color 0.2s ease, color 0.2s ease,
       border-color 0.2s ease;
@@ -15,6 +15,9 @@
       background-color: $inky-blue;
       color: $white;
       text-decoration: underline;
+    }
+    @include respond-to(tablet) {
+      margin-bottom: 0;
     }
   }
 
@@ -27,15 +30,6 @@
     &:hover {
       background-color: $inky-blue;
       color: $white;
-    }
-  }
-}
-
-// TODO: clean up to use mixins
-@media screen and (min-width: 230px) {
-  .banner {
-    button {
-      margin-bottom: 1rem;
     }
   }
 }
