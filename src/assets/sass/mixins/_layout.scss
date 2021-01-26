@@ -37,6 +37,8 @@ $breakpoints: (
 /*
 RESPONSIVE PADDING
 */
+
+// NOTE: for responsive container padding all sides
 @mixin padding-responsive($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
   padding: $mobile;
   @include respond-to(tablet) {
@@ -46,3 +48,6 @@ RESPONSIVE PADDING
     padding: $desktop;
   }
 }
+
+// TODO: create Left/right only padding option
+// TODO: create Bottom/Top only padding option

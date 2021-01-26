@@ -16,6 +16,15 @@
       buttonText: "View resources"
     }
   ]
+
+mixin content(title, description, text)
+  .content
+    h2.content-title= title
+    p.content-description= description
+    .content-footer
+      a.button(href="/")= text
+      a(href="/") Learn more
+
 .container-bg
   .psa
     .newGrid_container
@@ -27,18 +36,8 @@
               when 2
               when 4
                 .columns-6
-                  .content
-                    h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
-                    p.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
-                    .content-footer(data-analytics-location="button-container")
-                      button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
-                      a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more
+                  +content(`${content.title}`, `${content.description}`, `${content.buttonText}`)
               when 3
               default
                 .columns-4
-                  .content
-                    h2.content-title(data-analytics-location=`title:${content.title}`) #{content.title}
-                    p.content-description(data-analytics-location=`description:${content.description}`) #{content.description}
-                    .content-footer(data-analytics-location="button-container")
-                      button.content-footer--button(data-analytics-location=`cta:${index}` href="/" data-analytics-click=`${content.buttonText}` target="_self" data-analytics-type="content-footer--button") #{content.buttonText}
-                      a.content-footer--link(data-analytics-location=`cta:${index}` href="/" data-analytics-click="Learn more" target="_self" data-analytics-type="content-footer--link") Learn more
+                  +content(`${content.title}`, `${content.description}`, `${content.buttonText}`)
