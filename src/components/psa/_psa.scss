@@ -18,7 +18,7 @@
       padding: 0 1rem;
     }
     &-title {
-      @include heading-h2($midnight);
+      @include heading-h2();
       margin: 0 0 1rem;
       @include respond-to(tablet) {
         margin: 0 0 20px;
