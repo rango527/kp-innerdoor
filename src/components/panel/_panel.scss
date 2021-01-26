@@ -29,13 +29,19 @@
   &-footer {
     margin: 0;
     &--link {
+      align-items: center;
       display: flex;
       img {
-        margin-right: 1rem;
+        height: 24px;
+        width: 24px;
       }
       a {
-        color: $inky-blue;
+        color: $midnight;
         font-family: $font-family-heavy;
+        padding: 0.5rem;
+        &:hover {
+          color: $white;
+        }
       }
     }
   }
