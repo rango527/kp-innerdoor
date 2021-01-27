@@ -16,6 +16,12 @@ image: node:15.4.0
 pipelines:
   default:
     - step:
+        name: Testing
+        script:
+          - npm --version
+        artifacts:
+          - public/*
+    - step:
         name: Deployment
         deployment: test
         trigger: automatic
