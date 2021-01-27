@@ -42,6 +42,7 @@ HEADING LEVELS
 // Desktop: Header / H2;
 @mixin heading-h2($color: $midnight, $textAlign: left) {
   @include font-base($font-family-heavy, normal, 500);
+  color: $color;
   font-size: 1.625rem; // 26px
   letter-spacing: -0.01em;
   line-height: 32px;
