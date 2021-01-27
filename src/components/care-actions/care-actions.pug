@@ -111,6 +111,10 @@ p Care actions - view less example plus transition
         window.setTimeout(function () {
           careActions.classList.remove('is-visible');
         }, 400);
+      } else {
+        // when mobile size
+        document.getElementById("greeting-mobile").classList.remove("greeting-mobile--opacity-animation-out");
+        document.body.classList.add("kp-modal-disable-scroll");
       }
 
       primaryContent.style.display = "block";
@@ -118,7 +122,4 @@ p Care actions - view less example plus transition
       var clickCard = document.getElementById(`primary-card-content-${index}`);
       clickCard.classList.remove("display-none");
       primaryModal.classList.remove("primary-card-content-modal-out");
-      // when mobile size
-      document.getElementById("greeting-mobile").classList.remove("greeting-mobile--opacity-animation-out");
-      document.body.classList.add("kp-modal-disable-scroll");
     }
