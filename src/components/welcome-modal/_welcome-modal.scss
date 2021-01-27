@@ -67,14 +67,15 @@
   .modal-inner .modal-content {
     @include body-text();
     @include padding-responsive();
-    .modal-feature{
+    .modal-feature {
       display: block;
       overflow-x: hidden;
       overflow-y: auto;
       max-height: 379px;
       margin-bottom: 1rem;
       margin-right: -1rem;
-      .feature-img, p {
+      .feature-img,
+      p {
         width: 311px;
         @include respond-to(tablet) {
           width: 480px;
@@ -142,37 +143,37 @@
             color: $white;
           }
         }
-  
+
         /* Hide the input by default */
         input[type='checkbox'] {
           display: none;
         }
-  
+
         label {
           position: relative;
           display: inline-block;
-  
+
           /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
           padding-left: 27px;
         }
-  
+
         label::before,
         label::after {
           position: absolute;
           content: '';
           display: inline-block;
         }
-  
+
         /* Outer box of the fake checkbox */
         label::before {
           background-image: url($localImagePath + 'checkbox.svg');
           background-repeat: no-repeat;
           height: 18px;
-          left: 0px;
+          left: 0;
           width: 18px;
           top: 6px;
         }
-  
+
         /* Checkmark of the fake checkbox */
         label::after {
           background-image: url($localImagePath + 'checkbox-checked.svg');
@@ -182,17 +183,17 @@
           width: 18px;
           top: 6px;
         }
-  
+
         /* Hide the checkmark by default */
         input[type='checkbox'] + label::after {
           content: none;
         }
-  
+
         /*Unhide on the checked state*/
         input[type='checkbox']:checked + label::after {
           content: '';
         }
-  
+
         label {
           cursor: pointer;
           color: $contrast-blue;

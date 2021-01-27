@@ -18,8 +18,8 @@
     &:hover,
     &:active,
     &:focus {
-      color: $white;
       background-image: url($localImagePath + 'icon-plus-hover.svg');
+      color: $white;
     }
   }
 }
