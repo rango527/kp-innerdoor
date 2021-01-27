@@ -26,24 +26,24 @@
           p#modal-title-1.modal-title What’s New
         .modal-content
           each data, index in welcomeModalData
-            div(id=`welcome-modal-data-${index}` style="display:none;")
+            .modal-feature(id=`welcome-modal-data-${index}` style="display:none;")
               if data.image != ""
                 img.feature-img(src=`${data.image}` alt="")
               p.feature-title #{data.title}
               p #{data.description}
-        .modal-footer
-          .modal-footer-frame
-            button(aria-label="optional CTA") Optional CTA
-            input#do-not-show(type="checkbox")
-            label(for="do-not-show") Don't show again
-          .modal-footer-divider
-          .modal-footer-paging
-            button.previous-btn.previous-btn-none#previous-btn(aria-label="previous tip") Previous tip
-            if welcomeModalData.length > 1
-              button.next-btn#next-btn(aria-label="next tip") Next tip
-            else
-              button.next-btn.next-btn-none#next-btn(aria-label="next tip") Next tip
-            p#pagination(aria-live="polite" aria-atomic="true") 1 of #{welcomeModalData.length}
+          .welcome-modal-footer
+            .welcome-modal-footer-frame
+              button(aria-label="optional CTA") Optional CTA
+              input#do-not-show(type="checkbox")
+              label(for="do-not-show") Don't show again
+            .welcome-modal-footer-divider
+            .welcome-modal-footer-paging
+              button.previous-btn.previous-btn-none#previous-btn(aria-label="previous tip") Previous tip
+              if welcomeModalData.length > 1
+                button.next-btn#next-btn(aria-label="next tip") Next tip
+              else
+                button.next-btn.next-btn-none#next-btn(aria-label="next tip") Next tip
+              p#pagination(aria-live="polite" aria-atomic="true") 1 of #{welcomeModalData.length}
       .modal-fade-screen
 .rows
   .columns-3.welcome-rows
