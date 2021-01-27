@@ -10,82 +10,26 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 0 1rem;
-    @include respond-to(mobile) {
-      padding: 0 1.5rem;
-    }
+    padding: 0 1.5rem;
     @include respond-to(tablet) {
       padding: 0 1rem;
     }
     &-title {
       @include heading-h2();
-      margin: 0 0 1rem;
-      @include respond-to(tablet) {
-        margin: 0 0 20px;
-      }
-      @include respond-to(desktop) {
-        margin: 0 0 1.5rem;
-      }
     }
     &-description {
-      color: $inky-blue;
-      font-family: $font-family-light;
-      font-size: 14px;
-      font-style: normal;
-      font-weight: 500;
-      letter-spacing: -0.01em;
-      line-height: 20px;
-      margin: 0 0 1rem;
-      text-align: left;
-      // NOTE: mobile and tablet sizes are the same in Figma
-      @include respond-to(tablet) {
-        margin: 0 0 20px;
-      }
-      @include respond-to(desktop) {
-        font-size: 1rem;
-        line-height: 24px;
-        margin: 0 0 24px;
-      }
+      @include body-text();
     }
     &-footer {
       align-items: center;
       display: inline-flex;
       flex-wrap: wrap;
       margin-top: auto;
-      &--button {
-        background-color: $pale-blue;
-        border: 1px solid $contrast-blue;
-        border-radius: $button-radius;
-        color: $midnight;
-        display: inline-block;
-        font-size: $font-size-xs;
-        line-height: 2rem;
-        margin-right: 0.5rem;
-        padding: 2px 1rem;
-        text-decoration: none;
-        transition: background-color 0.2s ease, color 0.2s ease,
-          border-color 0.2s ease;
-        @include respond-to(tablet) {
-          margin-right: 10px;
-        }
-        @include respond-to(desktop) {
-          font-size: 15px;
-          line-height: 3rem;
-          margin-right: 1rem;
-        }
-        &:hover {
-          background-color: $contrast-blue;
-          color: $white;
-        }
+      a {
+        @include link();
       }
-      &--link {
-        color: $contrast-blue;
-        font-size: $font-size-xs;
-        line-height: 2rem;
-        &:hover {
-          background-color: $contrast-blue;
-          color: $white;
-        }
+      .button {
+        @include button();
       }
     }
   }
