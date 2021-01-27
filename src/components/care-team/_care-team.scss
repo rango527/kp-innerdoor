@@ -63,8 +63,11 @@
     &-link {
       color: $link-color;
       font-size: $font-size-xs;
-      // margin: 0;
       margin-top: auto;
+      &:hover {
+        background-color: transparent;
+        color: $link-color;
+      }
     }
   }
 }

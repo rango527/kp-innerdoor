@@ -12,11 +12,11 @@
   .view-toggle {
     align-items: center;
     background: transparent;
-    background-image: url($localImagePath + 'minus.png');
+    background-image: url($localImagePath + 'icon-minus.svg');
     background-position: 0.25rem center;
     background-repeat: no-repeat;
     border: none;
-    color: $midnight;
+    color: $contrast-blue;
     display: flex;
     font-family: $font-family-heavy;
     font-weight: 500;
@@ -25,7 +25,7 @@
     transition: background-color 0.2s ease, color 0.2s ease;
     &:hover {
       background-color: $kp-blue;
-      background-image: url($localImagePath + 'minus-hover.png');
+      background-image: url($localImagePath + 'icon-minus-hover.svg');
       color: $white;
     }
   }
@@ -98,11 +98,13 @@
     display: flex;
     margin: 0 0 1rem;
     padding: $padding-md;
+    transition: opacity 0.3s;
     &.is-hidden {
+      opacity: 0;
       display: none;
     }
     &.is-visible {
-      // tbd
+      opacity: 1;
     }
     @include respond-to(tablet) {
       flex: 0 0 calc(33.3333% - 1rem);
