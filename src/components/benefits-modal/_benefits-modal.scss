@@ -79,7 +79,7 @@
         }
       }
       .button {
-        @include body-text();
+        @include button();
         &:hover {
           text-decoration: underline;
         }
