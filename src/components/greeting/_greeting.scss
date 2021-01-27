@@ -7,10 +7,9 @@
     @include respond-to(mobile) {
       animation: opacityAnimation 800ms both;
       color: $white;
-      // visibility: visible;
       display: block;
-      margin-top: 2rem;
-      padding: 0 1rem;
+      margin: 0 !important;
+      padding: 1rem;
     }
     &--opacity-animation-out {
       animation: opacityAnimationOut 800ms both;
