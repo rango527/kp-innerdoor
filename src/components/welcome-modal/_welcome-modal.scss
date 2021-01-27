@@ -165,23 +165,22 @@
   
         /* Outer box of the fake checkbox */
         label::before {
+          background-image: url($localImagePath + 'checkbox.svg');
+          background-repeat: no-repeat;
           height: 18px;
-          width: 18px;
-          border: 2px solid $contrast-blue;
-          border-radius: 4px;
           left: 0px;
-          top: 2px;
+          width: 18px;
+          top: 6px;
         }
   
         /* Checkmark of the fake checkbox */
         label::after {
-          height: 5px;
-          width: 10px;
-          border-left: 2px solid;
-          border-bottom: 2px solid;
-          transform: rotate(-45deg);
-          left: 4px;
-          top: 5px;
+          background-image: url($localImagePath + 'checkbox-checked.svg');
+          background-repeat: no-repeat;
+          height: 18px;
+          left: 0;
+          width: 18px;
+          top: 6px;
         }
   
         /* Hide the checkmark by default */
@@ -198,6 +197,7 @@
           cursor: pointer;
           color: $contrast-blue;
           font-size: $font-size-xs;
+          line-height: 32px;
         }
       }
       &-divider {
