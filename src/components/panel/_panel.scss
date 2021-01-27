@@ -36,11 +36,15 @@
         width: 24px;
       }
       a {
-        color: $midnight;
+        color: $contrast-blue;
         font-family: $font-family-heavy;
-        padding: 0.5rem;
+        padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+        background-image: url($localImagePath + 'icon-search.svg');
+        background-repeat: no-repeat;
+        background-position: 0.5rem center;
         &:hover {
           color: $white;
+          background-image: url($localImagePath + 'icon-search-hover.svg');
         }
       }
     }

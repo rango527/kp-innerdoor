@@ -3,25 +3,23 @@
   @include respond-to(tablet) {
     margin: 1.5rem 0;
   }
-  &-btn {
-    background: transparent;
-    background-color: $pale-blue;
-    background-image: url($localImagePath + 'plus.png');
+  .button {
+    // NOTE: Inherits from .button class and only overrides necessities
+    @include heading-h6($midnight);
+    @include respond-to(desktop) {
+      font-size: 0.8125rem; // 13px
+    }
+    align-items: center;
+    background-image: url($localImagePath + 'icon-plus-midnight.svg');
     background-position: 1rem center;
     background-repeat: no-repeat;
-    border: 1px solid #006ba6;
-    border-radius: 40px;
-    box-shadow: $box-shadow;
-    color: $midnight;
-    font-size: $font-size-xs;
-    font-weight: bolder;
-    line-height: 1.25rem;
+    display: flex;
     padding: 0.5rem 1rem 0.5rem 3rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
-    &:hover {
-      background-color: $midnight;
-      background-image: url($localImagePath + 'plus-hover.png');
+    &:hover,
+    &:active,
+    &:focus {
       color: $white;
+      background-image: url($localImagePath + 'icon-plus-hover.svg');
     }
   }
 }

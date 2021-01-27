@@ -89,6 +89,7 @@
 }
 
 .modal-button {
+  // NOTE: Inherits from .button (sg) class and only overrides necessities
   @include heading-h6($midnight);
   @include respond-to(desktop) {
     font-size: 0.8125rem; // 13px
