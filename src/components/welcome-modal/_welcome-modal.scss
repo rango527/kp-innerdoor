@@ -165,7 +165,7 @@
         }
 
         /* Outer box of the fake checkbox */
-        label::before {
+        label[aria-checked="false"]::before {
           background-image: url($localImagePath + 'checkbox.svg');
           background-repeat: no-repeat;
           height: 18px;
@@ -175,23 +175,13 @@
         }
 
         /* Checkmark of the fake checkbox */
-        label::after {
+        label[aria-checked="true"]::before {
           background-image: url($localImagePath + 'checkbox-checked.svg');
           background-repeat: no-repeat;
           height: 18px;
           left: 0;
           width: 18px;
           top: 6px;
-        }
-
-        /* Hide the checkmark by default */
-        input[type='checkbox'] + label::after {
-          content: none;
-        }
-
-        /*Unhide on the checked state*/
-        input[type='checkbox']:checked + label::after {
-          content: '';
         }
 
         label {

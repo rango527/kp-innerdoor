@@ -15,7 +15,7 @@
     }
   ]
 
-#welcome-modal.welcome-modal.modal-pattern(aria-hidden="false" data-analytics-location="modal-welcome-modals")
+#welcome-modal.welcome-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-welcome-modals")
   div
     .modal-container
       .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
@@ -35,7 +35,7 @@
             .welcome-modal-footer-frame
               button(aria-label="optional CTA") Optional CTA
               input#do-not-show(type="checkbox")
-              label(for="do-not-show") Don't show again
+              label#do-not-show-checkbox(for="do-not-show" tabindex="0" aria-checked="false") Don't show again
             .welcome-modal-footer-divider
             .welcome-modal-footer-paging
               button.previous-btn.previous-btn-none#previous-btn(aria-label="previous tip") Previous tip
@@ -62,7 +62,7 @@ script.
 
   var index = 0;
   document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-  
+
   nextBtn.onclick = function () {
     if (index < #{welcomeModalData.length - 1}) {
       document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
