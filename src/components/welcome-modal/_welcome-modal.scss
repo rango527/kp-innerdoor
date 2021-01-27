@@ -9,7 +9,7 @@
     .modal-header {
       @include padding-responsive();
       background-color: $pebble;
-      border: 2px solid #e9ebee;
+      border: 2px solid $graphite;
       border-radius: 1rem 1rem 0 0;
       display: flex;
     }
