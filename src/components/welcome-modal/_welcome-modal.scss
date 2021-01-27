@@ -138,6 +138,7 @@
           }
           &:hover {
             background-color: $kp-blue;
+            text-decoration: underline;
             color: $white;
           }
         }
@@ -218,6 +219,7 @@
           &:hover {
             background-image: url($localImagePath + 'icon-chevron-back-hover.svg');
             background-color: $contrast-blue;
+            text-decoration: underline;
             color: $white;
           }
           &-none {
@@ -230,6 +232,7 @@
               background-image: url($localImagePath + 'icon-chevron-back-none.svg');
               background-color: transparent;
               border: 1px solid transparent;
+              text-decoration: none;
               color: $dolphin;
             }
           }
@@ -243,6 +246,7 @@
           &:hover {
             background-image: url($localImagePath + 'icon-chevron-forward-hover.svg');
             background-color: $contrast-blue;
+            text-decoration: underline;
             color: $white;
           }
           &-none {
@@ -255,6 +259,7 @@
               background-image: url($localImagePath + 'icon-chevron-forward-none.svg');
               background-color: transparent;
               border: 1px solid transparent;
+              text-decoration: none;
               color: $dolphin;
             }
           }
