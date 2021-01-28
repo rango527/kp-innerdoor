@@ -21,6 +21,18 @@ function addEvent(element, evnt, funct) {
   else return element.addEventListener(evnt, funct, false);
 }
 
+// Generic checkbox click handler
+function changeCheckboxChecked(element) {
+  switch(element.getAttribute("aria-checked")) {
+      case "true":
+          element.setAttribute("aria-checked", "false");
+          break;
+      case "false":
+          element.setAttribute("aria-checked", "true");
+          break;
+  }
+}
+
 // Care reminders - view more/less
 addEvent(document.getElementById('my-button'), 'click', function () {
   let hiddenList = Array.from(document.getElementsByClassName('is-hidden'));
@@ -41,4 +53,13 @@ addEvent(document.getElementById('my-button'), 'click', function () {
       el.classList.remove('is-visible');
     });
   }
+});
+
+// Welcome modal - Don't show again checkbox
+var notShowCheckbox = document.getElementById("do-not-show-checkbox");
+notShowCheckbox.onclick = function () {
+  changeCheckboxChecked(notShowCheckbox);
+}
+notShowCheckbox.addEventListener('keypress', function (e) {
+  changeCheckboxChecked(notShowCheckbox);
 });
