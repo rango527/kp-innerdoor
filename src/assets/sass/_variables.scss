@@ -95,4 +95,4 @@ $desktop-space-size-2: calc(100vw - 1280px + 4rem);
 $desktop-space-size-2-minus: calc(-100vw + 1280px - 4rem);
 $desktop-right-size-2: calc(100% + 100vw - 1280px + 4rem);
 
-$localImagePath: '/assets/images/';
+$localImagePath: '/assets/images/' !default;
