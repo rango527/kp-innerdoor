@@ -138,7 +138,7 @@
                           ul
                             each cardbody in card.body
                               li #{cardbody}
-                        button.primary-card-content__btn(role="link") #{card.buttonText}
+                        a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="#") #{card.buttonText}
                         .primary-card-content__divider.primary-card-content__divider-mobile
                     when 3
                     default
@@ -154,7 +154,7 @@
                           ul
                             each cardbody in card.body
                               li #{cardbody}
-                        button.primary-card-content__btn(role="link") #{card.buttonText}
+                        a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="#") #{card.buttonText}
                         .primary-card-content__divider.primary-card-content__divider-mobile
             .primary-card-content__divider.primary-card-content__divider-tablet
             .primary-card-content__footer
