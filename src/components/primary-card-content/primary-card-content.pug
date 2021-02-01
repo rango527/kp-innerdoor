@@ -117,7 +117,7 @@
           .newGrid_container
             .primary-card-content__header
               h3.-header #{content.header}
-              button.close-primary-content
+              button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
                 img(src="assets/images/icon-close-circle.svg" alt="")
             if content.data.length > 0
               .rows
@@ -164,7 +164,7 @@
                 | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
             
   script.
-    var closePrimaryContents = document.querySelectorAll('.close-primary-content');
+    var closePrimaryContents = document.querySelectorAll('.-close--small');
     closePrimaryContents.forEach(function(content, i){
       content.addEventListener('click', function (e) {
         document.getElementById("care-actions").setAttribute('aria-hidden', 'false');
