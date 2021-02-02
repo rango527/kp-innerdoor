@@ -13,8 +13,8 @@
   }
   @include respond-to(mobile) {
     animation: backgroundColorAnimation 800ms both;
-    height: 100vh;
-    overflow: auto; /* Enable scroll if needed */
+    height: 100%;
+    overflow-y: scroll; /* Enable scroll if needed */
     position: fixed; /* Stay in place */
     top: 0;
     width: 100vw; /* Full width */
@@ -170,7 +170,7 @@
     }
   }
   &__footer {
-    margin-bottom: 1rem;
+    margin-bottom: 3rem;
     margin-top: 1rem;
     @include respond-to(tablet) {
       margin-bottom: 1.25rem;
