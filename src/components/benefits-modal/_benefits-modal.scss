@@ -1,107 +1,48 @@
-.modal-innerdoor {
-  &.modal-pattern {
-    height: auto;
-    .modal-container {
-      padding: 0;
+#benefits-modal {
+  .modal-content {
+    padding: 1.25rem;
+  }
+  .modal-content-body {
+    margin: 0;
+  }
+  .content-body-container {
+    display: flex;
+    flex-direction: column;
+    @include respond-to(tablet) {
+      flex-direction: row;
     }
-    .modal-header {
-      @include padding-responsive();
-      background-color: $pebble;
-      border: 2px solid #e9ebee;
-      border-radius: 1rem 1rem 0 0;
-      display: flex;
+  }
+
+  .content {
+    margin-right: 1rem;
+    &:first-of-type {
+      margin-bottom: 1rem;
     }
-
-    .modal-content {
-      @include body-text();
-      @include padding-responsive();
-
-      h3 {
-        @include heading-h6(); // ADA recommendation
-        margin: 0 0 0.5rem;
-      }
+    @include respond-to(tablet) {
+      width: 50%;
     }
-
-    .content-body-container {
-      display: flex;
-      flex-direction: column;
-      @include respond-to(tablet) {
-        flex-direction: row;
-      }
-    }
-
-    .content {
-      margin-right: 1rem;
-      &:first-of-type {
-        margin-bottom: 1rem;
-      }
-      @include respond-to(tablet) {
-        width: 50%;
-      }
-    }
-
-    .modal-icons-enabled {
-      .modal-content {
-        .modal-content-body {
-          margin: 0;
-        }
-      }
-    }
-
-    .modal-inner {
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      margin: 160px auto 0;
-      padding: 0;
-      width: 343px;
-      @include respond-to(tablet) {
-        width: 520px;
-      }
-      @include respond-to(desktop) {
-        width: 692px;
-      }
-      p {
-        margin: 0 0 1rem;
-      }
-      .-close--small {
-        @include heading-h6($contrast-blue);
-        @include padding-responsive(0.5rem, 1rem, 1.25rem);
-        align-items: center;
-        background: transparent;
-        border: transparent;
-        display: flex;
-        flex-direction: column;
-        img {
-          height: 24px;
-          width: 24px;
-        }
-      }
-      .button {
-        @include button();
-        &:hover {
-          text-decoration: underline;
-        }
-      }
+    .button {
+      @include button();
     }
   }
 }
-
-.modal-button {
-  // NOTE: Inherits from .button (sg) class and only overrides necessities
-  @include heading-h6($midnight);
-  @include respond-to(desktop) {
-    font-size: 0.8125rem; // 13px
-  }
+.benefits-modal-button {
   align-items: center;
+  background-image: url($localImagePath + 'icon-plus-midnight.svg');
   background-image: url($localImagePath + 'icon-id-card.svg');
   background-position: 1rem center;
   background-repeat: no-repeat;
   display: flex;
+  margin-bottom: 1rem;
   padding: 0.5rem 1rem 0.5rem 3rem;
+  @include heading-h6($midnight);
+  @include respond-to(desktop) {
+    font-size: 0.8125rem; // 13px
+  }
   &:hover,
   &:active,
   &:focus {
     background-image: url($localImagePath + 'icon-id-card-white.svg');
+    color: $white;
   }
 }

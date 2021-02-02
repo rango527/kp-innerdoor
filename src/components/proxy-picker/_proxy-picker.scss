@@ -9,6 +9,7 @@
       border: 1px solid $contrast-blue;
       border-radius: 40px;
       display: flex;
+      margin-bottom: 1rem;
       padding: 0.5rem 1rem;
       @include heading-h6($midnight);
       @include respond-to(desktop) {

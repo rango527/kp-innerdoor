@@ -23,13 +23,13 @@ function addEvent(element, evnt, funct) {
 
 // Generic checkbox click handler
 function changeCheckboxChecked(element) {
-  switch(element.getAttribute("aria-checked")) {
-      case "true":
-          element.setAttribute("aria-checked", "false");
-          break;
-      case "false":
-          element.setAttribute("aria-checked", "true");
-          break;
+  switch (element.getAttribute('aria-checked')) {
+    case 'true':
+      element.setAttribute('aria-checked', 'false');
+      break;
+    case 'false':
+      element.setAttribute('aria-checked', 'true');
+      break;
   }
 }
 
@@ -56,10 +56,10 @@ addEvent(document.getElementById('my-button'), 'click', function () {
 });
 
 // Welcome modal - Don't show again checkbox
-var notShowCheckbox = document.getElementById("do-not-show-checkbox");
+var notShowCheckbox = document.getElementById('do-not-show-checkbox');
 notShowCheckbox.onclick = function () {
   changeCheckboxChecked(notShowCheckbox);
-}
+};
 notShowCheckbox.addEventListener('keypress', function (e) {
   changeCheckboxChecked(notShowCheckbox);
 });

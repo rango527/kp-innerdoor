@@ -1,315 +1,89 @@
-.welcome-modal {
-  bottom: 0;
-  overflow-y: auto;
-  &.modal-pattern {
-    height: auto;
-    .modal-container {
-      padding: 0;
-    }
-    .modal-header {
-      @include padding-responsive();
-      background-color: $pebble;
-      border: 2px solid $graphite;
-      border-radius: 1rem 1rem 0 0;
-      display: flex;
-    }
-
-    .modal-icons-enabled {
-      .modal-content {
-        .modal-content-body {
-          margin: 0;
-        }
-      }
-    }
-
-    .modal-inner {
-      border-radius: 1rem;
-      display: flex;
-      flex-direction: column;
-      margin: 40px auto 0;
-      padding: 0;
-      max-height: 595px;
-      width: 343px;
-      overflow: hidden;
-      @include respond-to(tablet) {
-        margin-top: 200px;
-        max-height: 650px;
-        width: 520px;
-      }
-      @include respond-to(desktop) {
-        margin-top: 66px;
-        max-height: 894px;
-        width: 692px;
-      }
-      .-close--small {
-        @include heading-h6($contrast-blue);
-        @include padding-responsive(0.5rem, 1rem, 1.25rem);
-        align-items: center;
-        background: transparent;
-        border: transparent;
-        display: flex;
-        flex-direction: column;
-        // padding: 0.5rem;
-        img {
-          height: 24px;
-          width: 24px;
-        }
-      }
-      .button {
-        @include body-text();
-        &:hover {
-          text-decoration: underline;
-        }
-      }
-    }
+#welcome-modal {
+  .modal-content {
+    padding: 1.25rem;
   }
-
-  .modal-inner .modal-content {
-    @include body-text();
-    @include padding-responsive();
-    .modal-feature {
-      display: block;
-      overflow-x: hidden;
-      overflow-y: auto;
-      max-height: 379px;
-      margin-bottom: 1rem;
-      margin-right: -1rem;
-      .feature-img,
-      p {
-        width: 311px;
-        @include respond-to(tablet) {
-          width: 480px;
-        }
-        @include respond-to(desktop) {
-          width: 644px;
-        }
-      }
-      .feature-img {
-        border: $panel-border;
-        border-radius: 14px;
-        display: block;
-        margin-bottom: 1rem;
-      }
-      .feature-title {
-        @include heading-h3();
-        color: $midnight;
-        margin: 0 0 10px;
-      }
-      p {
-        font-size: $font-size-xs;
-        font-weight: 500;
-        line-height: 1.25rem;
-        margin: 0;
-      }
-      @include respond-to(tablet) {
-        margin-bottom: 1.25rem;
-        margin-right: -1.25rem;
-        max-height: 400px;
-        .feature-img {
-          margin-bottom: 1.25rem;
-        }
-      }
-      @include respond-to(desktop) {
-        margin-bottom: 1.5rem;
-        margin-right: -1.5rem;
-        max-height: 600px;
-        .feature-img {
-          margin-bottom: 1.5rem;
-        }
-        .feature-title {
-          margin: 0 0 0.75rem;
-        }
-        p {
-          font-size: 1rem;
-          line-height: 1.5rem;
-        }
-      }
-    }
-
-    .welcome-modal-footer {
-      &-frame {
-        align-items: center;
-        display: flex;
-        button {
-          margin-right: 1rem;
-          padding: 1px 1rem;
-          @include respond-to(desktop) {
-            font-size: 1rem;
-            line-height: 3rem;
-          }
-          &:hover {
-            background-color: $kp-blue;
-            text-decoration: underline;
-            color: $white;
-          }
-        }
-
-        /* Hide the input by default */
-        input[type='checkbox'] {
-          display: none;
-        }
-
-        label {
-          position: relative;
-          display: inline-block;
-
-          /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
-          padding-left: 27px;
-        }
-
-        label::before,
-        label::after {
-          position: absolute;
-          content: '';
-          display: inline-block;
-        }
-
-        /* Outer box of the fake checkbox */
-        label[aria-checked="false"]::before {
-          background-image: url($localImagePath + 'checkbox.svg');
-          background-repeat: no-repeat;
-          height: 18px;
-          left: 0;
-          width: 18px;
-          top: 6px;
-        }
-
-        /* Checkmark of the fake checkbox */
-        label[aria-checked="true"]::before {
-          background-image: url($localImagePath + 'checkbox-checked.svg');
-          background-repeat: no-repeat;
-          height: 18px;
-          left: 0;
-          width: 18px;
-          top: 6px;
-        }
-
-        label {
-          cursor: pointer;
-          color: $contrast-blue;
-          font-size: $font-size-xs;
-          line-height: 32px;
-        }
-      }
-      &-divider {
-        background: $pebble;
-        flex: 0 0 100%;
-        height: 0.25rem;
-        margin: 1rem 0;
-      }
-      &-paging {
-        align-items: center;
-        display: flex;
-        justify-content: flex-end;
-        .previous-btn {
-          background-image: url($localImagePath + 'icon-chevron-back.svg');
-          background-position: 0.7rem center;
-          background-repeat: no-repeat;
-          margin-right: 1rem;
-          padding: 1px 0.7rem 1px 2.5rem;
-          &:hover {
-            background-image: url($localImagePath + 'icon-chevron-back-hover.svg');
-            background-color: $contrast-blue;
-            text-decoration: underline;
-            color: $white;
-          }
-          &-none {
-            background-image: url($localImagePath + 'icon-chevron-back-none.svg');
-            background-color: transparent;
-            border: 1px solid transparent;
-            color: $dolphin;
-            cursor: not-allowed;
-            &:hover {
-              background-image: url($localImagePath + 'icon-chevron-back-none.svg');
-              background-color: transparent;
-              border: 1px solid transparent;
-              text-decoration: none;
-              color: $dolphin;
-            }
-          }
-        }
-        .next-btn {
-          background-image: url($localImagePath + 'icon-chevron-forward.svg');
-          background-position: right 0.7rem center;
-          background-repeat: no-repeat;
-          margin-right: 1rem;
-          padding: 1px 2.5rem 1px 0.7rem;
-          &:hover {
-            background-image: url($localImagePath + 'icon-chevron-forward-hover.svg');
-            background-color: $contrast-blue;
-            text-decoration: underline;
-            color: $white;
-          }
-          &-none {
-            background-image: url($localImagePath + 'icon-chevron-forward-none.svg');
-            background-color: transparent;
-            border: 1px solid transparent;
-            color: $dolphin;
-            cursor: not-allowed;
-            &:hover {
-              background-image: url($localImagePath + 'icon-chevron-forward-none.svg');
-              background-color: transparent;
-              border: 1px solid transparent;
-              text-decoration: none;
-              color: $dolphin;
-            }
-          }
-        }
-        p {
-          color: $dolphin;
-          font-size: $font-size-xs;
-          font-weight: 500;
-          line-height: 32px;
-          margin: 0;
-        }
-      }
-      @include respond-to(tablet) {
-        &-divider {
-          margin: 1.25rem 0;
-        }
-      }
-      @include respond-to(desktop) {
-        &-divider {
-          margin: 1.5rem 0;
-        }
-      }
-    }
+  .modal-content-body {
+    margin: 0;
   }
 }
 
-@keyframes showWelcomeModal {
-  0% {
-    background-color: rgba(0, 0, 0, 0);
-    opacity: 0;
-    pointer-events: none;
-  }
-  100% {
-    background-color: rgba(0, 0, 0, 0.8);
-    opacity: 1;
-    pointer-events: auto;
-  }
-}
-
-.welcome-modal button {
-  background-color: $pale-blue;
-  border: 1px solid $contrast-blue;
-  border-radius: $button-radius;
+.welcome-modal-title {
+  @include heading-h3();
   color: $midnight;
-  font-size: $font-size-xs;
-  font-weight: 500;
-  line-height: 2rem;
+  margin: 0 0 10px;
 }
 
-.modal-showing .modal-fade-screen {
-  background: rgba(0, 0, 0, 0.8);
+.welcome-modal-img {
+  border: $panel-border;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 1rem;
+  max-width: 100%;
 }
 
-// TODO: scope to weclome modal button
-.welcome-rows {
-  width: 0 !important;
-  height: 0 !important;
+.welcome-modal-footer {
+  /* Hide the input by default */
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+
+    /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
+    padding-left: 27px;
+    position: relative;
+  }
+
+  label::before,
+  label::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+  }
+
+  /* Outer box of the fake checkbox */
+  label[aria-checked='false']::before {
+    background-image: url($localImagePath + 'checkbox.svg');
+    background-repeat: no-repeat;
+    height: 18px;
+    left: 0;
+    top: 6px;
+    width: 18px;
+  }
+
+  /* Checkmark of the fake checkbox */
+  label[aria-checked='true']::before {
+    background-image: url($localImagePath + 'checkbox-checked.svg');
+    background-repeat: no-repeat;
+    height: 18px;
+    left: 0;
+    top: 6px;
+    width: 18px;
+  }
+
+  label {
+    color: $contrast-blue;
+    cursor: pointer;
+    font-size: $font-size-xs;
+    line-height: 32px;
+  }
+
+  button {
+    float: right;
+  }
 }
 
 .welcome-modal-button {
-  opacity: 0 !important;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  @include heading-h6($midnight);
+  @include respond-to(desktop) {
+    font-size: 0.8125rem; // 13px
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
 }
