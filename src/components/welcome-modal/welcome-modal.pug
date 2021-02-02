@@ -1,90 +1,24 @@
--
-  var SHOWWELCOMEMODAL = "true";
-  var DELAYTIME = "3000";   // default time is 3s
-
-  const welcomeModalData = [
-    {
-      image: "assets/images/welcome-modal-img-1.svg",
-      title: "Stay on top of your health with timely reminders",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam. Lorem ipsum dolor sit amet, consectetur adipiscing."
-    },
-    {
-      image: "",
-      title: "Stay on top of your health with timely reminders-2",
-      description: "Get a personalized cost estimate for most prescriptions based on your health plan with our new drug pricing tool."
-    }
-  ]
-
-#welcome-modal.welcome-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-welcome-modals")
-  div
-    .modal-container
-      .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
-        button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-          img(src="assets/images/icon-close.svg" alt="")
-          | Close
-        .modal-header
-          p#modal-title-1.modal-title What’s New
-        .modal-content
-          each data, index in welcomeModalData
-            .modal-feature(id=`welcome-modal-data-${index}` style="display:none;")
-              if data.image != ""
-                img.feature-img(src=`${data.image}` alt="")
-              p.feature-title #{data.title}
-              p #{data.description}
+#welcome-modal.modal-innerdoor.modal-pattern(aria-hidden="true" data-analytics-location="modal-welcome-modal")
+  .modal-container
+    .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
+      button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
+        img(src="assets/images/icon-close.svg" alt="")
+        | Close
+      .modal-header
+        p#modal-title-1.modal-title What's new
+      .modal-content
+        .modal-content-body
+          img.welcome-modal-img(src='assets/images/welcome-modal-img-1.svg')
+          p.welcome-modal-title Stay on top of your health with timely reminders</p>
+          p Get a personalized cost estimate for most prescriptions based on your health plan with our new drug pricing tool.
           .welcome-modal-footer
             .welcome-modal-footer-frame
-              button(aria-label="optional CTA") Optional CTA
               input#do-not-show(type="checkbox")
               label#do-not-show-checkbox(for="do-not-show" tabindex="0" aria-checked="false") Don't show again
-            .welcome-modal-footer-divider
-            .welcome-modal-footer-paging
-              button.previous-btn.previous-btn-none#previous-btn(aria-label="previous tip") Previous tip
-              if welcomeModalData.length > 1
-                button.next-btn#next-btn(aria-label="next tip") Next tip
-              else
-                button.next-btn.next-btn-none#next-btn(aria-label="next tip") Next tip
-              p#pagination(aria-live="polite" aria-atomic="true") 1 of #{welcomeModalData.length}
-      .modal-fade-screen
+            button.button(type="button") Close
+    .modal-fade-screen
+
+//- Trigger to be placed in markup
 .rows
-  .columns-3.welcome-rows
-    button.modal-button.welcome-modal-button#welcome-modal-button(data-modal-trigger="welcome-modal") Welcome modal
-    
-script.
-  if (#{SHOWWELCOMEMODAL} == true) {
-    window.setTimeout(function () {
-      document.getElementById("welcome-modal-button").click();
-    }, #{DELAYTIME});
-  }
-
-  var previousBtn = document.getElementById("previous-btn");
-  var nextBtn = document.getElementById("next-btn");
-  var pagination = document.getElementById("pagination");
-
-  var index = 0;
-  document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-
-  nextBtn.onclick = function () {
-    if (index < #{welcomeModalData.length - 1}) {
-      document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
-      index += 1;
-      document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-      pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
-      previousBtn.classList.remove("previous-btn-none");
-      if (#{welcomeModalData.length - 1} == index) {
-        nextBtn.classList.add("next-btn-none");
-      }
-    }
-  };
-
-  previousBtn.onclick = function () {
-    if (index > 0) {
-      document.getElementById(`welcome-modal-data-${index}`).style.display = "none";
-      index -= 1;
-      document.getElementById(`welcome-modal-data-${index}`).style.display = "block";
-      pagination.textContent = `${index+1} of #{welcomeModalData.length}`;
-      nextBtn.classList.remove("next-btn-none");
-      if (index == 0) {
-        previousBtn.classList.add("previous-btn-none");
-      }
-    }
-  };
+  .columns-3
+    button.button.modal-button.welcome-modal-button(data-modal-trigger="welcome-modal") Welcome Modal

@@ -1,0 +1,55 @@
+// Global Modal styles
+.modal-pattern {
+  height: auto;
+  .modal-container {
+    padding: 0;
+  }
+  .modal-header {
+    @include padding-responsive();
+    background-color: $pebble;
+    border: 2px solid $graphite;
+    border-radius: 1rem 1rem 0 0;
+    display: flex;
+  }
+
+  .modal-content {
+    @include body-text();
+    @include padding-responsive();
+
+    h3 {
+      @include heading-h6(); // ADA recommendation
+      margin: 0 0 0.5rem;
+    }
+  }
+
+  .modal-inner {
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    margin: 160px auto 0;
+    padding: 0;
+    width: 343px;
+    @include respond-to(tablet) {
+      width: 520px;
+    }
+    @include respond-to(desktop) {
+      width: 692px;
+    }
+    p {
+      margin: 0 0 1rem;
+    }
+    .-close--small {
+      @include heading-h6($contrast-blue);
+      @include padding-responsive(0.5rem, 1rem, 1.25rem);
+      align-items: center;
+      background: transparent;
+      border: transparent;
+      display: flex;
+      flex-direction: column;
+      img {
+        height: 24px;
+        width: 24px;
+      }
+    }
+  }
+}

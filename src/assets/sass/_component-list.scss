@@ -1,14 +1,15 @@
 // Components
 
+@import '../../components/add-new-member/add-new-member';
 @import '../../components/banner/banner';
 @import '../../components/benefits-modal/benefits-modal';
-@import '../../components/greeting/greeting';
 @import '../../components/care-team/care-team';
 @import '../../components/care-reminders/care-reminders';
 @import '../../components/care-actions/care-actions';
-@import '../../components/primary-card-content/primary-card-content';
+@import '../../components/greeting/greeting';
+@import '../../components/modal/modal';
 @import '../../components/panel/panel';
-@import '../../components/proxy-picker/proxy-picker';
-@import '../../components/add-new-member/add-new-member';
-@import '../../components/welcome-modal/welcome-modal';
+@import '../../components/primary-card-content/primary-card-content';
 @import '../../components/psa/psa';
+@import '../../components/proxy-picker/proxy-picker';
+@import '../../components/welcome-modal/welcome-modal';
