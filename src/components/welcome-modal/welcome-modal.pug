@@ -5,17 +5,21 @@
         img(src="assets/images/icon-close.svg" alt="")
         | Close
       .modal-header
-        p#modal-title-1.modal-title What's new
+        p.modal-title What's new
       .modal-content
         .modal-content-body
           img.welcome-modal-img(src='assets/images/welcome-modal-img-1.svg')
           p.welcome-modal-title Stay on top of your health with timely reminders</p>
           p Get a personalized cost estimate for most prescriptions based on your health plan with our new drug pricing tool.
-          .welcome-modal-footer
-            .welcome-modal-footer-frame
-              input#do-not-show(type="checkbox")
-              label#do-not-show-checkbox(for="do-not-show" tabindex="0" aria-checked="false") Don't show again
-            button.button(type="button") Close
+          .modal-actions
+            .modal-checkboxes
+              input#welcome-modal-chkbx.modal-checkbox.check-box.form-control(action-id='dontShowAgain' type='checkbox')
+              label(for='welcome-modal-chkbx')
+                span(aria-hidden='true')
+                | Don't show again
+            .modal-buttons.-right
+              button.button.primary.modal-dont-show-again-btn(data-analytics-click='Close' data-analytics-type='button' data-success='saveandclose') Close
+
     .modal-fade-screen
 
 //- Trigger to be placed in markup
