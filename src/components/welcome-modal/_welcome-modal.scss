@@ -1,12 +1,3 @@
-#welcome-modal {
-  .modal-content {
-    padding: 1.25rem;
-  }
-  .modal-content-body {
-    margin: 0;
-  }
-}
-
 .welcome-modal-title {
   @include heading-h3();
   color: $midnight;
