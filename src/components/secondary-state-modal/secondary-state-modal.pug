@@ -1,0 +1,156 @@
+-
+  // care actions secondary state modal json data
+  const secondaryStateModalData = [
+    {
+      header: "Connect with a doctor",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/icon-speed.svg",
+              alt: ""
+            }
+          ],
+          body: [
+            "Get online care and prescriptions from a doctor, usually within an hour.",
+          ],
+          buttonText: "Schedule an e-visit",
+        },
+        {
+          title: "Phone or video appt",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "E-mail",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: [
+            "Problems with a bladder infection",
+            "Urinary incontinance",
+            "Vaginal Yeast Infections"
+            ],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+      ]
+    },
+    {
+      header: "Call for Care",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/icon-speed.svg",
+              alt: ""
+            }
+          ],
+          body: ["Get online care and prescriptions from a doctor, usually within an hour."],
+          buttonText: "Schedule an e-visit",
+        },
+        {
+          title: "Phone or video appt",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+        {
+          title: "E-mail",
+          titleProperty: [],
+          body: ["Message your clinician’s office with nonurgent questions anytime."],
+          buttonText: "E-mail your doctor now",
+        },
+        {
+          title: "Title",
+          titleProperty: [],
+          body: ["Schedule a face-to-face visit with a clinician by video for the same high-quality care as an in-person visit"],
+          buttonText: "Schedule a video visit",
+        },
+      ]
+    },
+    {
+      header: "In-Person Care",
+      data: [
+        {
+          title: "E-visit",
+          titleProperty: [
+            {
+              text: "Fastest",
+              iconSrc: "assets/images/icon-speed.svg",
+              alt: ""
+            }
+          ],
+          body: ["Get online care and prescriptions from a doctor, usually within an hour."],
+          buttonText: "Schedule an e-visit",
+        },
+      ]
+    },
+  ]
+
+mixin content(content)
+  .content
+    .content__title
+      h3.-title= content.title
+      each titleProperty in content.titleProperty
+        img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+        span= titleProperty.text
+    if content.body.length == 1
+      p= content.body
+    else
+      ul
+        each cardbody in content.body
+          li= cardbody
+    a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="#")= content.buttonText
+    .content__divider.content__divider-mobile
+
+each modal, index in secondaryStateModalData
+  .secondary-state-modal.modal-innerdoor.modal-pattern(id=`secondary-state-modal-${index}` aria-hidden="true" data-analytics-location="modal-secondary-state-modal")
+    .modal-container
+      .modal-inner.modal-icons-enabled(aria-label="Secondary state" role="dialog" tabindex="-1")
+        button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
+          img(src="assets/images/icon-close.svg" alt="")
+          | Close
+        .modal-header
+          p#modal-title-1.modal-title #{modal.header}
+        .modal-content
+          .modal-content-body
+            if modal.data.length > 0
+              .rows
+                each content in modal.data
+                  case modal.data.length
+                    when 1
+                    when 2
+                    when 4
+                      .columns-6
+                        +content(content)
+                    when 3
+                    default
+                      .columns-4
+                        +content(content)
+            .content__divider.content__divider-tablet
+            .content__footer
+              p Do not attempt to access emergency care through this website.
+                br
+                | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
+      .modal-fade-screen
