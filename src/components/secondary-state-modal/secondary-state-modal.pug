@@ -112,7 +112,7 @@ mixin content(content)
   .content__title
     h3.-title= content.title
     each titleProperty in content.titleProperty
-      img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
+      img.secondary-state-modal-img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
       div= titleProperty.text
   if content.body.length == 1
     p= content.body
