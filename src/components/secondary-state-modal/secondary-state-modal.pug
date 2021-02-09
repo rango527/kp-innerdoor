@@ -113,7 +113,7 @@ mixin content(content)
     h3.-title= content.title
     each titleProperty in content.titleProperty
       img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
-      span= titleProperty.text
+      div= titleProperty.text
   if content.body.length == 1
     p= content.body
   else
@@ -121,36 +121,38 @@ mixin content(content)
       each cardbody in content.body
         li= cardbody
   a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="#")= content.buttonText
-  .content__divider.content__divider-mobile
+  .horizontal-rule
+    hr.-variation-3
 
-each modal, index in secondaryStateModalData
-  .secondary-state-modal.modal-innerdoor.modal-pattern(id=`secondary-state-modal-${index}` aria-hidden="true" data-analytics-location="modal-secondary-state-modal")
-    .modal-container
-      .modal-inner.modal-icons-enabled(aria-label="Secondary state" role="dialog" aria-modal="true" tabindex="-1")
-        button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-          img(src="assets/images/icon-close.svg" alt="")
-          | Close
-        .modal-header
-          p.modal-title #{modal.header}
-        .modal-content
-          .modal-content-body
-            .content
-              if modal.data.length > 0
-                .rows
-                  each content in modal.data
-                    case modal.data.length
-                      when 1
-                      when 2
-                      when 4
-                        .columns-6
-                          +content(content)
-                      when 3
-                      default
-                        .columns-4
-                          +content(content)
-              .content__divider.content__divider-tablet
-              .content__footer
-                p Do not attempt to access emergency care through this website.
-                  br
-                  | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
-      .modal-fade-screen
+#secondary-state-modal
+  each modal, index in secondaryStateModalData
+    .modal-pattern(id=`secondary-state-modal-${index}` aria-hidden="true" data-analytics-location="modal-secondary-state-modal")
+      .modal-container
+        .modal-inner.modal-icons-enabled(aria-label="Secondary-state" role="dialog" tabindex="-1")
+          button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
+            img(src="assets/images/icon-close.svg" alt="")
+            | Close
+          .modal-header
+            p.modal-title #{modal.header}
+          .modal-content
+            .modal-content-body
+              .content
+                if modal.data.length > 0
+                  .rows
+                    each content in modal.data
+                      case modal.data.length
+                        when 1
+                        when 2
+                        when 4
+                          .columns-6
+                            +content(content)
+                        when 3
+                        default
+                          .columns-4
+                            +content(content)
+                .content__divider
+                .content__footer
+                  p Do not attempt to access emergency care through this website.
+                    br
+                    | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
+        .modal-fade-screen
