@@ -197,7 +197,9 @@
     font-size: $font-size-xs;
     margin: 0;
   }
-  &:hover {
+  &:hover,
+  &:active,
+  &:focus {
     background-color: $contrast-blue;
     color: $white;
     text-decoration: underline;
