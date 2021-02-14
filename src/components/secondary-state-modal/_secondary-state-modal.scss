@@ -12,11 +12,15 @@
       width: auto;
       height: auto;
       margin: 0 1rem;
-      max-height: 90%;
+      max-height: 700px;
       padding: 0;
       overflow: hidden;
       @include respond-to(tablet) {
         margin: 0 1.25rem;
+        max-height: 612px;
+      }
+      @include respond-to(desktop) {
+        max-height: 688px;
       }
       .-close--small {
         padding: 0.75rem;
