@@ -10,7 +10,10 @@
   padding: $padding-md;
 
   @include respond-to(tablet) {
-    padding: $padding-lg;
+    padding: 1.25rem;
+  }
+  @include respond-to(desktop) {
+    padding: 1.5rem;
   }
 
   &.info {
