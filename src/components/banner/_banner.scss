@@ -20,6 +20,9 @@
     a {
       @include link($inky-blue, $inky-blue, $inky-blue);
       line-height: 1.25rem;
+      @include respond-to(desktop) {
+        line-height: 3rem;
+      }
     }
   }
 }
