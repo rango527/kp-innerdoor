@@ -1,3 +1,5 @@
+include ../../mixins/mixins.pug
+
 -
   const doctors = [
     {
@@ -44,10 +46,10 @@
             .care-team-list--item-content
               p.care-team-list--item-title #{doctor.title}
               p.care-team-list--item-description #{doctor.name}
-              a.care-team-list--item-link(href="/" aria-label=`View more details about ${doctor.name}`) View more details
+              +link("View more details")(class="care-team-list--item-link" aria-label=`View more details about ${doctor.name}`)
       .panel-footer
         .panel-footer--link
-          a(href="/") Find a doctor or location
+          +link("Find a doctor or location")
     else
       .care-team-no-results
         //- TODO: hide icon from screen reader
@@ -56,4 +58,4 @@
         p Complete your account, find a doctor and build your personal care team.
           | Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit.
         button Find a doctor
-        a(href="/") Learn more
+        +link("Learn more")
