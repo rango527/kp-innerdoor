@@ -1,0 +1,145 @@
+#secondary-state-modal {
+  .modal-pattern {
+    height: 100%;
+  }
+  .modal-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+    .modal-inner {
+      width: auto;
+      height: auto;
+      margin: 0 1rem;
+      max-height: 90%;
+      padding: 0;
+      overflow: hidden;
+      @include respond-to(tablet) {
+        margin: 0 1.25rem;
+      }
+      .-close--small {
+        padding: 0.75rem;
+      }
+      .modal-header {
+        padding: 1rem 0 1rem 1.5rem;
+        .modal-title {
+          font-size: 20px;
+          line-height: 28px;
+        }
+      }
+      .modal-content {
+        overflow-y: auto;
+        padding: 1rem;
+        @include respond-to(tablet) {
+          padding: 30px 1.25rem 1.25rem 1.25rem;
+        }
+        @include respond-to(desktop) {
+          padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+        }
+      }
+      .modal-content-body {
+        margin: 0 !important;
+      }
+    }
+
+    .content {
+      font-size: 0.875rem;
+      @include respond-to(desktop) {
+        font-size: $font-size-md;
+      }
+      &__title {
+        align-items: center;
+        display: flex;
+        margin-bottom: 1rem;
+        @include respond-to(tablet) {
+          margin-bottom: 1.25rem;
+        }
+        @include respond-to(desktop) {
+          margin-bottom: 1.5rem;
+        }
+        h3 {
+          @include heading-h3($midnight);
+          margin: 0 0.5rem 0 0;
+          @include respond-to(tablet) {
+            margin: 0 0.625rem 0 0;
+          }
+          @include respond-to(desktop) {
+            margin: 0 1rem 0 0;
+          }
+        }
+        .secondary-state-modal-img {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      .content__title p {
+        color: $contrast-blue;
+        font-family: $font-family-heavy;
+        font-size: 15px;
+        font-style: italic;
+        font-weight: 500;
+        margin: 0 0 0 6px;
+      }
+      p {
+        margin-bottom: 1rem;
+        @include respond-to(tablet) {
+          margin-bottom: 1.25rem;
+        }
+        @include respond-to(desktop) {
+          margin-bottom: 1.5rem;
+        }
+      }
+      ul {
+        margin: 1rem 0;
+        padding-left: 1.25rem;
+        @include respond-to(tablet) {
+          margin: 1.25rem 0;
+        }
+        @include respond-to(desktop) {
+          margin: 1.5rem 0;
+        }
+      }
+      .button {
+        @include button();
+        margin-bottom: 1rem;
+        @include respond-to(tablet) {
+          margin-bottom: 1.875rem;
+        }
+        @include respond-to(desktop) {
+          margin-bottom: 2.25rem;
+        }
+      }
+      .horizontal-rule {
+        display: block;
+        @include respond-to(tablet) {
+          display: none;
+        }
+      }
+      &__divider {
+        display: none;
+        border: 2px solid rgba(0, 0, 0, 0.08);
+        flex: 0 0 100%;
+        height: 0;
+        margin-bottom: 1rem;
+        @include respond-to(tablet) {
+          display: block;
+          margin-bottom: 1.875rem;
+        }
+        @include respond-to(desktop) {
+          margin-bottom: 2.25rem;
+        }
+      }
+      &__footer p {
+        margin: 0 !important;
+      }
+    }
+    
+    @include respond-to(mobile) {
+      .modal-content-body .columns-4,
+      .modal-content-body .columns-6 {
+        grid-column: span 12 !important;
+      }
+    }
+  }
+}

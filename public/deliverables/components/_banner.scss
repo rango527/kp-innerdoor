@@ -1,0 +1,12 @@
+.banner {
+  p {
+    margin: 0 0 2rem;
+  }
+
+  a {
+    @include link($inky-blue, $inky-blue, $inky-blue);
+    &.button {
+      @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
+    }
+  }
+}

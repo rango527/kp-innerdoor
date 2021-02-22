@@ -1,0 +1,34 @@
+/*
+KP styles / assets
+*/
+
+// assets
+$assetImgPath: '../../../node_modules/styleguide/lib/modern/assets/images/';
+$font-path: '../../../node_modules/styleguide/lib/modern/assets/fonts/';
+@import '~styleguide/lib/modern/stylesheets/kp-icons';
+
+// Styleguide
+@import '~styleguide/styleguide-base';
+@import '~styleguide/styleguide-ds2';
+
+// Dependencies
+@import 'modal-pattern/modal';
+@import 'navigational-picker-pattern/navigational-picker';
+
+/*
+YML styles / assets
+NOTE: These must be imported *after* all KP / Styleguide scaffolding
+*/
+
+// Utilities, mixins, variables
+@import 'global';
+
+// Individual component styles
+@import 'component-list';
+
+/*
+LOCAL DEV
+NOTE: For internal YML use only, KP devs disregard
+*/
+
+@import 'layout';
