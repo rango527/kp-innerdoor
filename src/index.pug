@@ -1,7 +1,7 @@
 extends layout/layout.pug
 
 block content
-  #container.container
+  #container.grid-container
     include components/proxy-picker/proxy-picker.pug
     include components/secondary-state-modal/secondary-state-modal.pug
     include components/welcome-modal/welcome-modal.pug
@@ -20,3 +20,5 @@ block content
 
   //- intentionally outside of container
   include components/psa/psa.pug
+  block script
+    script(src='index.js')

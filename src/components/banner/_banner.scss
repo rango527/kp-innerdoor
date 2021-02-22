@@ -2,11 +2,11 @@
   p {
     margin: 0 0 2rem;
   }
-  button {
-    @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
-  }
 
   a {
     @include link($inky-blue, $inky-blue, $inky-blue);
+    &.button {
+      @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
+    }
   }
 }

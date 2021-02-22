@@ -5,12 +5,13 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug --public-url .",
+    "build": "parcel build src/index.pug --public-url . --no-minify",
     "export:components": "pug src/components -P --out dist/deliverables/components",
     "export:scss": "cp src/components/**/*.scss dist/deliverables/components",
     "export:assets": "cp -r src/assets dist/deliverables",
     "export": "rm -rf dist && npm run export:components && npm run export:scss && npm run export:assets",
     "lint:styles": "stylelint src/assets/sass/*.scss src/components/**/*.scss --fix",
+    "publish": "npm run export && npm run build && cp -R dist/ public/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
