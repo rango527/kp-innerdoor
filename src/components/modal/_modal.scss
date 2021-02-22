@@ -38,6 +38,7 @@
       border: transparent;
       display: flex;
       flex-direction: column;
+      font-size: 0.875rem !important;
       img {
         height: 24px;
         width: 24px;
@@ -49,6 +50,12 @@
       border: 2px solid $graphite;
       border-radius: 1rem 1rem 0 0;
       display: flex;
+      .modal-title {
+        @include heading-h3();
+        font-family: $font-family-medium;
+        font-size: 1.25rem !important; // 20px
+        margin-bottom: 0 !important;
+      }
     }
 
     .modal-content {
