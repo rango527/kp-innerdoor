@@ -1,0 +1,25 @@
+.add-new-member {
+  margin: 1rem 0;
+  @include respond-to(tablet) {
+    margin: 0 0 1.5rem;
+  }
+  .button {
+    // NOTE: Inherits from .button class and only overrides necessities
+    @include heading-h6($midnight);
+    @include respond-to(desktop) {
+      font-size: 0.8125rem; // 13px
+    }
+    align-items: center;
+    background-image: url($localImagePath + 'icon-plus-midnight.svg');
+    background-position: 1rem center;
+    background-repeat: no-repeat;
+    display: flex;
+    padding: 0.5rem 1rem 0.5rem 3rem;
+    &:hover,
+    &:active,
+    &:focus {
+      background-image: url($localImagePath + 'icon-plus-hover.svg');
+      color: $white;
+    }
+  }
+}

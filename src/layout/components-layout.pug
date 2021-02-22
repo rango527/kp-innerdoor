@@ -1,0 +1,26 @@
+include ../mixins/mixins.pug
+include header.pug
+
+.grid-container.components-lib
+  .rows
+    .columns-3
+      nav
+        +link("Buttons","buttons.pug")
+        +link("Typography","typography.pug")
+        +link("Proxy Picker","proxy-picker.pug")
+        +link("Welcome Modal","welcome-modal.pug")
+        +link("Benefits Modal","benefits-modal.pug")
+        +link("Add New Member","add-new-member.pug")
+        +link("Greeting","greeting.pug")
+        +link("Banner","banner.pug")
+        +link("Care Team","care-team.pug")
+        +link("Care Reminders","care-reminders.pug")
+        +link("Care Actions","care-actions.pug")
+        +link("PSA","psa.pug")
+    .columns-9
+      block component-content
+
+
+include footer.pug
+
+block script

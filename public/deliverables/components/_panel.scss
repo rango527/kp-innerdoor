@@ -1,0 +1,52 @@
+// TODO: change values to sass vars
+.panel {
+  background-color: $white;
+  border: $panel-border;
+  border-radius: $border-radius;
+  box-shadow: $box-shadow;
+  color: $inky-blue;
+  margin-bottom: 3rem;
+  max-width: 100%;
+  padding: $padding-md;
+
+  @include respond-to(tablet) {
+    padding: $padding-lg;
+  }
+
+  &.info {
+    background-color: $motion-blue;
+  }
+  &.grid {
+    padding: 0;
+    @include respond-to(mobile) {
+      border-radius: 2rem 2rem 0 0;
+      margin-bottom: 0;
+    }
+  }
+  h3 {
+    @include heading-h3();
+  }
+  &-footer {
+    margin: 0;
+    &--link {
+      align-items: center;
+      display: flex;
+      img {
+        height: 24px;
+        width: 24px;
+      }
+      a {
+        background-image: url($localImagePath + 'icon-search.svg');
+        background-position: 0.5rem center;
+        background-repeat: no-repeat;
+        color: $contrast-blue;
+        font-family: $font-family-heavy;
+        padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+        &:hover {
+          background-image: url($localImagePath + 'icon-search-hover.svg');
+          color: $white;
+        }
+      }
+    }
+  }
+}

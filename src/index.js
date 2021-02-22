@@ -56,10 +56,10 @@ addEvent(document.getElementById('my-button'), 'click', function () {
 });
 
 // Welcome modal - Don't show again checkbox
-var notShowCheckbox = document.getElementById('do-not-show-checkbox');
-notShowCheckbox.onclick = function () {
-  changeCheckboxChecked(notShowCheckbox);
-};
-notShowCheckbox.addEventListener('keypress', function (e) {
-  changeCheckboxChecked(notShowCheckbox);
-});
+// var notShowCheckbox = document.getElementById('do-not-show-checkbox');
+// notShowCheckbox.onclick = function () {
+//   changeCheckboxChecked(notShowCheckbox);
+// };
+// notShowCheckbox.addEventListener('keypress', function (e) {
+//   changeCheckboxChecked(notShowCheckbox);
+// });

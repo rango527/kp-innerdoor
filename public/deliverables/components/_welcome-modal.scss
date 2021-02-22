@@ -1,0 +1,80 @@
+.welcome-modal-title {
+  @include heading-h3();
+  color: $midnight;
+  margin: 0 0 10px;
+}
+
+.welcome-modal-img {
+  border: $panel-border;
+  border-radius: 14px;
+  display: block;
+  margin-bottom: 1rem;
+  max-width: 100%;
+}
+
+.welcome-modal-footer {
+  /* Hide the input by default */
+  input[type='checkbox'] {
+    display: none;
+  }
+
+  label {
+    display: inline-block;
+
+    /* 18px width of fake checkbox + 9px distance between fake checkbox and text */
+    padding-left: 27px;
+    position: relative;
+  }
+
+  label::before,
+  label::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+  }
+
+  /* Outer box of the fake checkbox */
+  label[aria-checked='false']::before {
+    background-image: url($localImagePath + 'checkbox.svg');
+    background-repeat: no-repeat;
+    height: 18px;
+    left: 0;
+    top: 6px;
+    width: 18px;
+  }
+
+  /* Checkmark of the fake checkbox */
+  label[aria-checked='true']::before {
+    background-image: url($localImagePath + 'checkbox-checked.svg');
+    background-repeat: no-repeat;
+    height: 18px;
+    left: 0;
+    top: 6px;
+    width: 18px;
+  }
+
+  label {
+    color: $contrast-blue;
+    cursor: pointer;
+    font-size: $font-size-xs;
+    line-height: 32px;
+  }
+
+  button {
+    float: right;
+  }
+}
+
+.welcome-modal-button {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  @include heading-h6($midnight);
+  @include respond-to(desktop) {
+    font-size: 0.8125rem; // 13px
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    color: $white;
+  }
+}

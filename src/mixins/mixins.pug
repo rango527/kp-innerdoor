@@ -1,0 +1,10 @@
+//- NOTE: First property will always be the text or title of an element when
+//- applicable, ie. button name, link name...
+
+//- Buttons
+mixin button(text, type="button")
+  button.button(type=type)&attributes(attributes)= text
+
+//- Links
+mixin link(text, url="#")
+  a(href=url)&attributes(attributes)= text

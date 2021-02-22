@@ -1,14 +1,15 @@
+include ../../mixins/mixins.pug
 #welcome-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-welcome-modal")
   .modal-container
     .modal-inner.modal-icons-enabled(aria-label="Welcome" role="dialog" tabindex="-1")
       button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-        img(src="assets/images/icon-close.svg" alt="")
+        img(src="/assets/images/icon-close.svg" alt="")
         | Close
       .modal-header
         p.modal-title What's new
       .modal-content
         .modal-content-body
-          img.welcome-modal-img(src='assets/images/welcome-modal-img-1.svg')
+          img.welcome-modal-img(src='/assets/images/welcome-modal-img-1.svg')
           p.welcome-modal-title Stay on top of your health with timely reminders</p>
           p Get a personalized cost estimate for most prescriptions based on your health plan with our new drug pricing tool.
           .modal-actions
@@ -18,11 +19,12 @@
                 span(aria-hidden='true')
                 | Don't show again
             .modal-buttons.-right
-              button.button.primary.modal-dont-show-again-btn(data-analytics-click='Close' data-analytics-type='button' data-success='saveandclose') Close
+              //- TODO: remove primary class, it is not doing anything, but ask KP
+              +button("Close")(class="primary modal-dont-show-again-btn" data-analytics-click='Close' data-analytics-type='button' data-success='saveandclose')
 
     .modal-fade-screen
 
 //- Trigger to be placed in markup
 .rows
   .columns-3
-    button.button.modal-button.welcome-modal-button(data-modal-trigger="welcome-modal") Welcome Modal
+    +button("Welcome Modal")(class="modal-button welcome-modal-button" data-modal-trigger="welcome-modal")

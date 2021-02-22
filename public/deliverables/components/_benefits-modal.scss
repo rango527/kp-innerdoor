@@ -1,0 +1,42 @@
+#benefits-modal {
+  .content-body-container {
+    display: flex;
+    flex-direction: column;
+    @include respond-to(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  .content {
+    margin-right: 1rem;
+    &:first-of-type {
+      margin-bottom: 1rem;
+    }
+    @include respond-to(tablet) {
+      width: 50%;
+    }
+    .button {
+      @include button();
+    }
+  }
+}
+.benefits-modal-button {
+  align-items: center;
+  background-image: url($localImagePath + 'icon-plus-midnight.svg');
+  background-image: url($localImagePath + 'icon-id-card.svg');
+  background-position: 1rem center;
+  background-repeat: no-repeat;
+  display: flex;
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem 0.5rem 3rem;
+  @include heading-h6($midnight);
+  @include respond-to(desktop) {
+    font-size: 0.8125rem; // 13px
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    background-image: url($localImagePath + 'icon-id-card-white.svg');
+    color: $white;
+  }
+}

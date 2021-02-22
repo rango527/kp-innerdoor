@@ -1,12 +1,14 @@
+include ../../mixins/mixins.pug
 .banner
   include ../panel/panel-info.pug
     h3 Get care for COVID-19 24/7
     p Request a COVID-19 test from the comfort of your home, talk to a Kaiser Permanente provider about your symptoms or get the latest up to date information and resources.
     .banner-footer#banner-footer
-      button(role="link") E-visit
-      button(role="link") Phone or video visit
-      a(href="#") View resources
+      +link("E-visit")(class="button")
+      +link("Phone or video visit")(class="button")
+      +link("View resources")
 
+//- TODO: fix without script
 script.
   var grid = document.getElementById("banner-footer").children;
   var baseOffset = grid[0].offsetTop;

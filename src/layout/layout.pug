@@ -1,14 +1,7 @@
-doctype html
-html(lang="en")
-  head
-    meta(charset='UTF-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    link(rel='stylesheet' href='assets/sass/index.scss')
-    title YML Template System - Inner Door
-  body.kp-theme-ds2
-  include header.pug
+include header.pug
 
-  block content
+block content
 
-  include footer.pug
-  script(src='index.js')
+include footer.pug
+
+block script
