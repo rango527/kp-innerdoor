@@ -8,7 +8,10 @@
   }
 
   .modal-container {
-    padding: 0;
+    padding: 0 1rem;
+    @include respond-to(tablet) {
+      padding: 0;
+    }
   }
 
   .modal-inner {
@@ -17,7 +20,7 @@
     flex-direction: column;
     margin: 160px auto 0;
     padding: 0;
-    width: 343px;
+    // width: 343px;
     @include respond-to(tablet) {
       width: 520px;
     }

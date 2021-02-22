@@ -1,3 +1,4 @@
+include ../../mixins/mixins.pug
 #benefits-modal.modal-pattern(aria-hidden="true" data-analytics-location="modal-benefits-modal")
   .modal-container
     .modal-inner.modal-icons-enabled(aria-label="Benefits" role="dialog" tabindex="-1")
@@ -13,15 +14,15 @@
             .content
               h3 Your plan and ID number
               p Find your ID number and plan type.
-              a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door") View profile & preferences
+              +link("View profile & preferences")(class="button" data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door")
             .content
               h3 Your coverage details
               p
                 | View progress toward your deductible, out of pocket maximum, and other plan details.
-              a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door") View coverage & costs
+              +link("View coverage & costs")(class="button" data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="https://healthy.kaiserpermanente.org/colorado/front-door")
     .modal-fade-screen
 
 //- Trigger to be placed in markup
 .rows
   .columns-3
-    button.button.modal-button.benefits-modal-button(data-modal-trigger="benefits-modal") Benefits
+    +button("Benefits")(class="modal-button benefits-modal-button" data-modal-trigger="benefits-modal")
