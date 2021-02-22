@@ -9,12 +9,6 @@
     }
   }
 
-  // a {
-  //   @include link($inky-blue, $inky-blue, $inky-blue);
-  //   &.button {
-  //     @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
-  //   }
-
   &-footer {
     display: flex;
     flex-wrap: wrap;
@@ -26,6 +20,9 @@
     a {
       @include link($inky-blue, $inky-blue, $inky-blue);
       line-height: 1.25rem;
+      &.button {
+        @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
+      }
       @include respond-to(desktop) {
         line-height: 3rem;
       }
@@ -34,8 +31,8 @@
 }
 
 .flex-column {
-  flex-direction: column;
   align-items: flex-start;
+  flex-direction: column;
 
   button {
     margin-bottom: 0.5rem;
