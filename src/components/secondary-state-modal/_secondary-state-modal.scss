@@ -9,6 +9,7 @@
     justify-content: center;
     min-height: 100%;
     overflow-y: auto;
+
     .modal-inner {
       height: auto;
       margin: 0 1rem;
@@ -133,7 +134,7 @@
         margin: 0 !important;
       }
     }
-    
+
     @include respond-to(mobile) {
       .modal-content-body .columns-4,
       .modal-content-body .columns-6 {
