@@ -19,8 +19,8 @@
     display: flex;
     flex-direction: column;
     margin: 160px auto 0;
+    overflow-y: visible;
     padding: 0;
-    // width: 343px;
     @include respond-to(tablet) {
       width: 520px;
     }
