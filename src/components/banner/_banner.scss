@@ -11,10 +11,10 @@
 
   &-footer {
     display: flex;
-    flex-wrap: wrap;
-
-    button {
-      @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
+    flex-direction: column;
+    @include respond-to(tablet) {
+      flex-direction: row;
+      align-items: center;
     }
 
     a {
@@ -22,9 +22,10 @@
       line-height: 1.25rem;
       &.button {
         @include button($inky-blue, $motion-blue, $inky-blue, $inky-blue);
-      }
-      @include respond-to(desktop) {
-        line-height: 3rem;
+        margin-bottom: 0.5rem;
+        @include respond-to(tablet) {
+          margin-bottom: 0;
+        }
       }
     }
   }

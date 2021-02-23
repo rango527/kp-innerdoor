@@ -7,12 +7,3 @@ include ../../mixins/mixins.pug
       +link("E-visit")(class="button")
       +link("Phone or video visit")(class="button")
       +link("View resources")
-
-//- TODO: fix without script
-script.
-  var grid = document.getElementById("banner-footer").children;
-  var baseOffset = grid[0].offsetTop;
-  var lastOffset = grid[grid.length - 1].offsetTop;
-  if (lastOffset > baseOffset) {
-    document.getElementById("banner-footer").classList.add('flex-column');
-  }
