@@ -1,3 +1,4 @@
+include ../../mixins/mixins.pug
 -
   const psaContentData = [
     {
@@ -22,8 +23,8 @@ mixin content(title, description, text)
     h2.content-title= title
     p.content-description= description
     .content-footer
-      a.button(href="/")= text
-      a(href="/") Learn more
+      +link(`${text}`)(class="button")
+      +link("Learn more")
 
 .container-bg
   .psa

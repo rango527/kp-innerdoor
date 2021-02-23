@@ -6545,7 +6545,7 @@ NOTE: can be used with either <button> or <a> elements
   color: #003b71;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
@@ -6562,6 +6562,7 @@ NOTE: can be used with either <button> or <a> elements
   .button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
 }
 
@@ -6606,9 +6607,29 @@ NOTE: can be used with either <button> or <a> elements
 }
 
 .banner p {
-  margin: 0 0 2rem;
+  margin: 0 0 1rem;
 }
-.banner a {
+@media (min-width: 768px) {
+  .banner p {
+    margin: 0 0 1.25rem;
+  }
+}
+@media (min-width: 1152px) {
+  .banner p {
+    margin: 0 0 1.5rem;
+  }
+}
+.banner-footer {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 768px) {
+  .banner-footer {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+.banner-footer a {
   font-family: "Gotham 4r";
   font-style: normal;
   font-weight: 400;
@@ -6618,22 +6639,23 @@ NOTE: can be used with either <button> or <a> elements
   line-height: 2rem;
   padding: 0.5rem 0;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  line-height: 1.25rem;
 }
-.banner a:hover {
+.banner-footer a:hover {
   background-color: #0d1c3d;
   color: #fff;
   text-decoration: underline;
 }
-.banner a:active {
+.banner-footer a:active {
   background-color: #0d1c3d;
   color: #fff;
 }
 @media (min-width: 1152px) {
-  .banner a {
+  .banner-footer a {
     font-size: 1rem;
   }
 }
-.banner a.button {
+.banner-footer a.button {
   font-family: "Gotham 4r";
   font-style: normal;
   font-weight: 400;
@@ -6644,24 +6666,42 @@ NOTE: can be used with either <button> or <a> elements
   color: #0d1c3d;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  margin-bottom: 0.5rem;
 }
-.banner a.button:hover {
+.banner-footer a.button:hover {
   background-color: #0d1c3d;
   color: #fff;
   text-decoration: underline;
 }
-.banner a.button:active {
+.banner-footer a.button:active {
   background-color: #0d1c3d;
   color: #fff;
 }
 @media (min-width: 1152px) {
-  .banner a.button {
+  .banner-footer a.button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
+}
+@media (min-width: 768px) {
+  .banner-footer a.button {
+    margin-bottom: 0;
+  }
+}
+
+.flex-column {
+  align-items: flex-start;
+  flex-direction: column;
+}
+.flex-column button {
+  margin-bottom: 0.5rem;
+}
+.flex-column a {
+  padding: 0;
 }
 
 #benefits-modal .content-body-container {
@@ -6695,7 +6735,7 @@ NOTE: can be used with either <button> or <a> elements
   color: #003b71;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
@@ -6712,6 +6752,7 @@ NOTE: can be used with either <button> or <a> elements
   #benefits-modal .content .button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
 }
 
@@ -6778,20 +6819,20 @@ NOTE: can be used with either <button> or <a> elements
   text-decoration: underline;
 }
 
-.care-team-list {
+.care-team .care-team-list {
   display: flex;
   flex-direction: column;
   list-style: none;
-  margin: 0 0 2rem;
+  margin: 0;
   padding: 0;
 }
 @media (min-width: 768px) {
-  .care-team-list {
+  .care-team .care-team-list {
     flex-direction: row;
     flex-wrap: wrap;
   }
 }
-.care-team-list--item {
+.care-team .care-team-list--item {
   background-color: #fff;
   border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: 1rem;
@@ -6799,41 +6840,41 @@ NOTE: can be used with either <button> or <a> elements
   margin: 0 0 1rem;
   padding: 1rem;
 }
-.care-team-list--item:hover {
+.care-team .care-team-list--item:hover {
   background-color: #f0f7fa;
   border: 1px solid #006ba6;
 }
 @media (min-width: 768px) {
-  .care-team-list--item {
+  .care-team .care-team-list--item {
     flex: 0 0 calc(33.3333% - 0.6666rem);
   }
-  .care-team-list--item:nth-child(3n-1) {
+  .care-team .care-team-list--item:nth-child(3n-1) {
     margin: 0 1rem 1rem;
   }
 }
-.care-team-list--item-image {
+.care-team .care-team-list--item-image {
   margin-right: 1rem;
 }
-.care-team-list--item-content {
+.care-team .care-team-list--item-content {
   display: flex;
   flex-direction: column;
 }
-.care-team-list--item-title {
+.care-team .care-team-list--item-title {
   color: #0d1c3d;
   font-family: "Gotham 5r";
   line-height: 1.5rem;
   margin: 0;
 }
-.care-team-list--item-description {
+.care-team .care-team-list--item-description {
   font-size: 0.8125rem;
   margin: 0 0 1rem;
 }
-.care-team-list--item-link {
+.care-team .care-team-list--item-link {
   color: #006ba6;
   font-size: 0.8125rem;
   margin-top: auto;
 }
-.care-team-list--item-link:hover {
+.care-team .care-team-list--item-link:hover {
   background-color: transparent;
   color: #006ba6;
 }
@@ -6983,14 +7024,21 @@ NOTE: can be used with either <button> or <a> elements
   display: flex;
   margin: 0 0 1rem;
   padding: 1rem;
-  transition: opacity 0.3s;
 }
 .care-reminder-list--item.is-hidden {
   display: none;
   opacity: 0;
 }
 .care-reminder-list--item.is-visible {
-  opacity: 1;
+  animation: fadeInAnimation 0.6s both;
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 @media (min-width: 768px) {
   .care-reminder-list--item {
@@ -7241,8 +7289,8 @@ NOTE: can be used with either <button> or <a> elements
 }
 .care-actions-primary-list .care-actions-primary-list--item-image img {
   height: 3rem;
-  width: 3rem;
   padding: 0;
+  width: 3rem;
 }
 .care-actions-primary-list .care-actions-primary-list--item-content {
   color: #fff;
@@ -7304,7 +7352,7 @@ NOTE: can be used with either <button> or <a> elements
   color: #003b71;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   display: inline-block;
@@ -7324,6 +7372,7 @@ NOTE: can be used with either <button> or <a> elements
   .care-actions-secondary-list-button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
 }
 
@@ -7435,15 +7484,20 @@ NOTE: can be used with either <button> or <a> elements
   overflow-y: auto;
 }
 .modal-pattern .modal-container {
-  padding: 0;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .modal-pattern .modal-container {
+    padding: 0;
+  }
 }
 .modal-pattern .modal-inner {
   border-radius: 1rem;
   display: flex;
   flex-direction: column;
-  margin: 160px auto 0;
+  margin: 1rem auto 0;
+  overflow-y: visible;
   padding: 0;
-  width: 343px;
 }
 @media (min-width: 768px) {
   .modal-pattern .modal-inner {
@@ -7474,6 +7528,7 @@ NOTE: can be used with either <button> or <a> elements
   border: transparent;
   display: flex;
   flex-direction: column;
+  font-size: 0.875rem !important;
 }
 @media (min-width: 1152px) {
   .modal-pattern .modal-inner .-close--small {
@@ -7509,6 +7564,28 @@ NOTE: can be used with either <button> or <a> elements
 @media (min-width: 1152px) {
   .modal-pattern .modal-inner .modal-header {
     padding: 1.5rem;
+  }
+}
+.modal-pattern .modal-inner .modal-header .modal-title {
+  font-family: "Gotham 5r";
+  font-style: normal;
+  font-weight: 500;
+  margin-top: 0;
+  color: #0d1c3d;
+  font-size: 1.25rem;
+  letter-spacing: -0.01em;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 1rem;
+  font-family: "Gotham 4r";
+  font-size: 1.25rem !important;
+  margin-bottom: 0 !important;
+}
+@media (min-width: 1152px) {
+  .modal-pattern .modal-inner .modal-header .modal-title {
+    font-size: 1.625rem;
+    line-height: 32px;
+    margin-bottom: 1.5rem;
   }
 }
 .modal-pattern .modal-inner .modal-content {
@@ -7564,8 +7641,8 @@ NOTE: can be used with either <button> or <a> elements
   margin: 0 !important;
 }
 .modal-pattern .modal-inner .modal-content .modal-actions .modal-checkboxes {
-  display: flex;
   align-items: center;
+  display: flex;
   padding: 0;
 }
 .modal-pattern .modal-inner .modal-content .modal-actions .modal-checkboxes input {
@@ -7584,7 +7661,12 @@ NOTE: can be used with either <button> or <a> elements
 }
 @media (min-width: 768px) {
   .panel {
-    padding: 2rem;
+    padding: 1.25rem;
+  }
+}
+@media (min-width: 1152px) {
+  .panel {
+    padding: 1.5rem;
   }
 }
 .panel.info {
@@ -7952,22 +8034,28 @@ NOTE: can be used with either <button> or <a> elements
   height: 100%;
 }
 #secondary-state-modal .modal-container {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  height: 100%;
   justify-content: center;
 }
 #secondary-state-modal .modal-container .modal-inner {
-  width: auto;
   height: auto;
   margin: 0 1rem;
-  max-height: 90%;
-  padding: 0;
+  max-height: 700px;
   overflow: hidden;
+  padding: 0;
+  width: auto;
 }
 @media (min-width: 768px) {
   #secondary-state-modal .modal-container .modal-inner {
     margin: 0 1.25rem;
+    max-height: 612px;
+  }
+}
+@media (min-width: 1152px) {
+  #secondary-state-modal .modal-container .modal-inner {
+    max-height: 688px;
   }
 }
 #secondary-state-modal .modal-container .modal-inner .-close--small {
@@ -7986,12 +8074,12 @@ NOTE: can be used with either <button> or <a> elements
 }
 @media (min-width: 768px) {
   #secondary-state-modal .modal-container .modal-inner .modal-content {
-    padding: 30px 1.25rem 1.25rem 1.25rem;
+    padding: 30px 1.25rem 1.25rem;
   }
 }
 @media (min-width: 1152px) {
   #secondary-state-modal .modal-container .modal-inner .modal-content {
-    padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+    padding: 2.25rem 1.5rem 1.5rem;
   }
 }
 #secondary-state-modal .modal-container .modal-inner .modal-content-body {
@@ -8051,8 +8139,8 @@ NOTE: can be used with either <button> or <a> elements
   }
 }
 #secondary-state-modal .modal-container .content__title .secondary-state-modal-img {
-  width: 24px;
   height: 24px;
+  width: 24px;
 }
 #secondary-state-modal .modal-container .content .content__title p {
   color: #006ba6;
@@ -8100,7 +8188,7 @@ NOTE: can be used with either <button> or <a> elements
   color: #003b71;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
   margin-bottom: 1rem;
@@ -8118,6 +8206,7 @@ NOTE: can be used with either <button> or <a> elements
   #secondary-state-modal .modal-container .content .button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
 }
 @media (min-width: 768px) {
@@ -8139,8 +8228,8 @@ NOTE: can be used with either <button> or <a> elements
   }
 }
 #secondary-state-modal .modal-container .content__divider {
-  display: none;
   border: 2px solid rgba(0, 0, 0, 0.08);
+  display: none;
   flex: 0 0 100%;
   height: 0;
   margin-bottom: 1rem;
@@ -8264,7 +8353,7 @@ NOTE: can be used with either <button> or <a> elements
   color: #003b71;
   font-size: 0.8125rem;
   line-height: 2rem;
-  margin-right: 1rem;
+  margin-right: 0.625rem;
   padding: 0.125rem 1rem;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
 }
@@ -8281,6 +8370,7 @@ NOTE: can be used with either <button> or <a> elements
   .psa .content-footer .button {
     font-size: 1rem;
     line-height: 3rem;
+    margin-right: 1rem;
   }
 }
 
@@ -8602,4 +8692,4 @@ footer {
   height: 2rem;
 }
 
-/*# sourceMappingURL=sass.352f8414.css.map */
+/*# sourceMappingURL=sass.573f2b99.css.map */

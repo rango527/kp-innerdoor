@@ -122,4 +122,5 @@
           p.care-reminder-list--item-title #{card.title}
           a.care-reminder-list--item-link(tabindex="0") #{card.action}
   if careReminderCards.length > 5
+    //- TODO: button mixin should allow for non "button" class
     button#my-button.view-toggle(aria-expanded="true" type="button") View all care reminders
