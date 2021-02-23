@@ -110,10 +110,10 @@
 
 mixin content(content)
   .content__title
-    h3.-title= content.title
+    p.-title= content.title
     each titleProperty in content.titleProperty
       img.secondary-state-modal-img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
-      p= titleProperty.text
+      p.-title-property= titleProperty.text
   if content.body.length == 1
     p= content.body
   else
@@ -133,7 +133,7 @@ mixin content(content)
             img(src="assets/images/icon-close.svg" alt="")
             | Close
           .modal-header
-            h1.modal-title #{modal.header}
+            p.modal-title #{modal.header}
           .modal-content
             .modal-content-body
               .content
