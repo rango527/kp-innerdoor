@@ -23,12 +23,14 @@
         max-height: 688px;
       }
       .-close--small {
-        padding: 0.75rem;
+        @include padding-responsive(0.5rem, 0.5rem, 0.5rem);
+        right: 0;
       }
       .modal-header {
         padding: 1rem 0 1rem 1.5rem;
         .modal-title {
           font-size: 20px;
+          font-weight: normal;
           line-height: 28px;
         }
       }
