@@ -3,7 +3,10 @@
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
-  padding: 2.5rem 0;
+  padding: 2rem 0;
+  @include respond-to(tablet) {
+    padding: 2.5rem 0;
+  }
   @include respond-to(desktop) {
     padding: 3rem 0;
   }
@@ -39,7 +42,10 @@
   }
   .columns-4 {
     grid-column: span 6;
-    padding: 2.5rem 0;
+    padding: 2rem 0;
+    @include respond-to(tablet) {
+      padding: 2.5rem 0;
+    }
     @include respond-to(desktop) {
       grid-column: span 4;
       padding: 0 1rem;

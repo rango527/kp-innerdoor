@@ -8,4 +8,7 @@
 
 .button {
   @include button();
+  &:hover {
+    text-decoration: underline !important;
+  }
 }
