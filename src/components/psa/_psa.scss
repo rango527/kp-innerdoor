@@ -1,7 +1,7 @@
 .container-bg {
   background: $pale-blue;
-  border-top: 1px solid rgba(0, 0, 0, 0.05);
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
   padding: 2rem 0;
   @include respond-to(tablet) {
@@ -51,13 +51,13 @@
       padding: 0 1rem;
     }
     &:not(:first-child):not(:last-child) {
-      border-top: 1px solid rgba(0, 0, 0, 0.05);
       border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
       // padding: 0 1rem;
       @include respond-to(desktop) {
         border: 0;
-        border-right: 1px solid rgba(0, 0, 0, 0.05);
         border-left: 1px solid rgba(0, 0, 0, 0.05);
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
       }
     }
     &:first-child {
