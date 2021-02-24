@@ -1,8 +1,12 @@
 .container-bg {
   background: $pale-blue;
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
-  overflow: hidden;
+  padding: 2.5rem 0;
+  @include respond-to(desktop) {
+    padding: 3rem 0;
+  }
 }
 
 .psa {
@@ -10,9 +14,9 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 0 1.5rem;
-    @include respond-to(tablet) {
-      padding: 0 1rem;
+    padding: 2.5rem 0;
+    @include respond-to(desktop) {
+      padding: 0;
     }
     &-title {
       @include heading-h2();
@@ -21,89 +25,43 @@
       @include body-text();
     }
     &-footer {
-      align-items: center;
-      display: inline-flex;
-      flex-wrap: wrap;
       margin-top: auto;
       a {
-        @include link();
-        padding: 0;
-      }
-      .button {
-        @include button();
+        display: inline-flex;
       }
     }
   }
-}
-
-.psa .newGrid_container {
-  padding: 0;
-}
-
-.psa .newGrid_container .columns-6 {
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  @include respond-to(tablet) {
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.025);
-    margin: 0 -100vw;
-    padding-left: 100vw;
-    padding-right: 100vw;
-    &:nth-child(2n) {
-      padding-right: calc(100vw + 20px);
-      .content {
-        box-shadow: none !important;
-      }
-    }
-    &:nth-child(2n-1) {
-      padding-left: calc(100vw + 20px);
+  .rows {
+    grid-template-columns: repeat(6, 1fr);
+    @include respond-to(desktop) {
+      grid-template-columns: repeat(12, 1fr);
     }
   }
-  &:nth-child(2n - 1) {
+  .columns-4 {
+    grid-column: span 6;
+    padding: 2.5rem 0;
+    @include respond-to(desktop) {
+      grid-column: span 4;
+      padding: 0 1rem;
+    }
+    &:not(:first-child):not(:last-child) {
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      // padding: 0 1rem;
+      @include respond-to(desktop) {
+        border: 0;
+        border-right: 1px solid rgba(0, 0, 0, 0.05);
+        border-left: 1px solid rgba(0, 0, 0, 0.05);
+      }
+    }
+    &:first-child {
+      padding-top: 0;
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
     .content {
-      box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.05);
+      padding: 0 1rem;
     }
-  }
-}
-
-.psa .newGrid_container .columns-4 {
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-  @include respond-to(tablet) {
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.017);
-    margin: 0 -100vw;
-    padding-left: 100vw;
-    padding-right: 100vw;
-    &:nth-child(3n) {
-      padding-right: calc(100vw + 20px);
-      .content {
-        box-shadow: none !important;
-      }
-    }
-    &:nth-child(3n-2) {
-      padding-left: calc(100vw + 20px);
-    }
-  }
-  .content {
-    box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.05);
-  }
-  &:nth-child(3n) {
-    .content {
-      box-shadow: none !important;
-    }
-  }
-}
-
-.psa .newGrid_container .columns-4,
-.psa .newGrid_container .columns-6 {
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-  @include respond-to(tablet) {
-    padding-bottom: 40px;
-    padding-top: 40px;
-  }
-  @include respond-to(desktop) {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
-  }
-  @include respond-to(mobile) {
-    grid-column: span 12 !important;
   }
 }
