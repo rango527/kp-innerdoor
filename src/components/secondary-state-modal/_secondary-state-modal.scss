@@ -20,7 +20,8 @@
         margin: 0 1.25rem;
       }
       .-close--small {
-        padding: 0.75rem;
+        @include padding-responsive(0.5rem, 0.5rem, 0.5rem);
+        right: 0;
       }
       .modal-header {
         padding: 1rem 0 1rem 1.5rem;
@@ -58,7 +59,7 @@
         @include respond-to(desktop) {
           margin-bottom: 1.5rem;
         }
-        h3 {
+        .-title {
           @include heading-h3($midnight);
           margin: 0 0.5rem 0 0;
           @include respond-to(tablet) {
@@ -72,14 +73,14 @@
           height: 24px;
           width: 24px;
         }
-      }
-      .content__title p {
-        color: $contrast-blue;
-        font-family: $font-family-heavy;
-        font-size: 15px;
-        font-style: italic;
-        font-weight: 500;
-        margin: 0 0 0 6px;
+        .-title-property {
+          color: $contrast-blue;
+          font-family: $font-family-heavy;
+          font-size: 15px;
+          font-style: italic;
+          font-weight: 500;
+          margin: 0 0 0 6px;
+        }
       }
       p {
         margin-bottom: 1rem;

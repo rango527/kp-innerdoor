@@ -110,10 +110,10 @@
 
 mixin content(content)
   .content__title
-    h3.-title= content.title
+    p.-title= content.title
     each titleProperty in content.titleProperty
       img.secondary-state-modal-img(src=`${titleProperty.iconSrc}` alt=`${titleProperty.alt}`)
-      p= titleProperty.text
+      p.-title-property= titleProperty.text
   if content.body.length == 1
     p= content.body
   else
