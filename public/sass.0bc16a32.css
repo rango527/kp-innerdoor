@@ -6565,6 +6565,9 @@ NOTE: can be used with either <button> or <a> elements
     margin-right: 1rem;
   }
 }
+.button:hover {
+  text-decoration: underline !important;
+}
 
 .add-new-member {
   margin: 1rem 0;
@@ -6625,8 +6628,8 @@ NOTE: can be used with either <button> or <a> elements
 }
 @media (min-width: 768px) {
   .banner-footer {
-    flex-direction: row;
     align-items: center;
+    flex-direction: row;
   }
 }
 .banner-footer a {
@@ -7336,44 +7339,19 @@ NOTE: can be used with either <button> or <a> elements
 
 .care-actions-secondary-list {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
   margin: 0 0 0.75rem;
   padding: 0;
 }
-.care-actions-secondary-list-button {
-  font-family: "Gotham 4r";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 0;
-  background-color: #f0f7fa;
-  border: 1px solid #006ba6;
-  border-radius: 100px;
-  color: #003b71;
-  font-size: 0.8125rem;
-  line-height: 2rem;
-  margin-right: 0.625rem;
-  padding: 0.125rem 1rem;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  display: inline-block;
-  margin: 0 0.625rem 0.625rem 0;
-  text-decoration: none;
-}
-.care-actions-secondary-list-button:hover {
-  background-color: #006ba6;
-  color: #fff;
-  text-decoration: underline;
-}
-.care-actions-secondary-list-button:active {
-  background-color: #003b71;
-  color: #fff;
-}
-@media (min-width: 1152px) {
-  .care-actions-secondary-list-button {
-    font-size: 1rem;
-    line-height: 3rem;
-    margin-right: 1rem;
+@media (min-width: 768px) {
+  .care-actions-secondary-list {
+    flex-direction: row;
   }
+}
+.care-actions-secondary-list .button {
+  margin-bottom: 0.625rem;
 }
 
 .care-actions-footer {
@@ -8036,13 +8014,14 @@ NOTE: can be used with either <button> or <a> elements
 #secondary-state-modal .modal-container {
   display: flex;
   flex-direction: column;
-  height: 100%;
-  justify-content: center;
+  height: auto;
+  margin-top: 1rem;
+  min-height: 100%;
+  overflow-y: auto;
 }
 #secondary-state-modal .modal-container .modal-inner {
   height: auto;
   margin: 0 1rem;
-  max-height: 700px;
   overflow: hidden;
   padding: 0;
   width: auto;
@@ -8050,16 +8029,21 @@ NOTE: can be used with either <button> or <a> elements
 @media (min-width: 768px) {
   #secondary-state-modal .modal-container .modal-inner {
     margin: 0 1.25rem;
-    max-height: 612px;
-  }
-}
-@media (min-width: 1152px) {
-  #secondary-state-modal .modal-container .modal-inner {
-    max-height: 688px;
   }
 }
 #secondary-state-modal .modal-container .modal-inner .-close--small {
-  padding: 0.75rem;
+  padding: 0.5rem;
+  right: 0;
+}
+@media (min-width: 768px) {
+  #secondary-state-modal .modal-container .modal-inner .-close--small {
+    padding: 0.5rem;
+  }
+}
+@media (min-width: 1152px) {
+  #secondary-state-modal .modal-container .modal-inner .-close--small {
+    padding: 0.5rem;
+  }
 }
 #secondary-state-modal .modal-container .modal-inner .modal-header {
   padding: 1rem 0 1rem 1.5rem;
@@ -8069,7 +8053,6 @@ NOTE: can be used with either <button> or <a> elements
   line-height: 28px;
 }
 #secondary-state-modal .modal-container .modal-inner .modal-content {
-  overflow-y: auto;
   padding: 1rem;
 }
 @media (min-width: 768px) {
@@ -8108,7 +8091,7 @@ NOTE: can be used with either <button> or <a> elements
     margin-bottom: 1.5rem;
   }
 }
-#secondary-state-modal .modal-container .content__title h3 {
+#secondary-state-modal .modal-container .content__title .-title {
   font-family: "Gotham 5r";
   font-style: normal;
   font-weight: 500;
@@ -8122,19 +8105,19 @@ NOTE: can be used with either <button> or <a> elements
   margin: 0 0.5rem 0 0;
 }
 @media (min-width: 1152px) {
-  #secondary-state-modal .modal-container .content__title h3 {
+  #secondary-state-modal .modal-container .content__title .-title {
     font-size: 1.625rem;
     line-height: 32px;
     margin-bottom: 1.5rem;
   }
 }
 @media (min-width: 768px) {
-  #secondary-state-modal .modal-container .content__title h3 {
+  #secondary-state-modal .modal-container .content__title .-title {
     margin: 0 0.625rem 0 0;
   }
 }
 @media (min-width: 1152px) {
-  #secondary-state-modal .modal-container .content__title h3 {
+  #secondary-state-modal .modal-container .content__title .-title {
     margin: 0 1rem 0 0;
   }
 }
@@ -8142,7 +8125,7 @@ NOTE: can be used with either <button> or <a> elements
   height: 24px;
   width: 24px;
 }
-#secondary-state-modal .modal-container .content .content__title p {
+#secondary-state-modal .modal-container .content__title .-title-property {
   color: #006ba6;
   font-family: "Gotham 5r";
   font-size: 15px;
@@ -8257,20 +8240,31 @@ NOTE: can be used with either <button> or <a> elements
 
 .container-bg {
   background: #f0f7fa;
-  box-shadow: inset 0 2px 0 rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
-  overflow: hidden;
+  padding: 2rem 0;
+}
+@media (min-width: 768px) {
+  .container-bg {
+    padding: 2.5rem 0;
+  }
+}
+@media (min-width: 1152px) {
+  .container-bg {
+    padding: 3rem 0;
+  }
 }
 
 .psa .content {
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 0 1.5rem;
+  padding: 2.5rem 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 1152px) {
   .psa .content {
-    padding: 0 1rem;
+    padding: 0;
   }
 }
 .psa .content-title {
@@ -8311,148 +8305,53 @@ NOTE: can be used with either <button> or <a> elements
   }
 }
 .psa .content-footer {
-  align-items: center;
-  display: inline-flex;
-  flex-wrap: wrap;
   margin-top: auto;
 }
 .psa .content-footer a {
-  font-family: "Gotham 4r";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 0;
-  color: #006ba6;
-  font-size: 0.8125rem;
-  line-height: 2rem;
-  padding: 0.5rem 0;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  padding: 0;
+  display: inline-flex;
 }
-.psa .content-footer a:hover {
-  background-color: #0078b3;
-  color: #fff;
-  text-decoration: underline;
-}
-.psa .content-footer a:active {
-  background-color: #003b71;
-  color: #fff;
+.psa .rows {
+  grid-template-columns: repeat(6, 1fr);
 }
 @media (min-width: 1152px) {
-  .psa .content-footer a {
-    font-size: 1rem;
+  .psa .rows {
+    grid-template-columns: repeat(12, 1fr);
   }
 }
-.psa .content-footer .button {
-  font-family: "Gotham 4r";
-  font-style: normal;
-  font-weight: 400;
-  margin-top: 0;
-  background-color: #f0f7fa;
-  border: 1px solid #006ba6;
-  border-radius: 100px;
-  color: #003b71;
-  font-size: 0.8125rem;
-  line-height: 2rem;
-  margin-right: 0.625rem;
-  padding: 0.125rem 1rem;
-  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-}
-.psa .content-footer .button:hover {
-  background-color: #006ba6;
-  color: #fff;
-  text-decoration: underline;
-}
-.psa .content-footer .button:active {
-  background-color: #003b71;
-  color: #fff;
-}
-@media (min-width: 1152px) {
-  .psa .content-footer .button {
-    font-size: 1rem;
-    line-height: 3rem;
-    margin-right: 1rem;
-  }
-}
-
-.psa .newGrid_container {
-  padding: 0;
-}
-
-.psa .newGrid_container .columns-6 {
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
+.psa .columns-4 {
+  grid-column: span 6;
+  padding: 2rem 0;
 }
 @media (min-width: 768px) {
-  .psa .newGrid_container .columns-6 {
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.025);
-    margin: 0 -100vw;
-    padding-left: 100vw;
-    padding-right: 100vw;
-  }
-  .psa .newGrid_container .columns-6:nth-child(2n) {
-    padding-right: calc(100vw + 20px);
-  }
-  .psa .newGrid_container .columns-6:nth-child(2n) .content {
-    box-shadow: none !important;
-  }
-  .psa .newGrid_container .columns-6:nth-child(2n-1) {
-    padding-left: calc(100vw + 20px);
-  }
-}
-.psa .newGrid_container .columns-6:nth-child(2n-1) .content {
-  box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.05);
-}
-
-.psa .newGrid_container .columns-4 {
-  box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.05);
-}
-@media (min-width: 768px) {
-  .psa .newGrid_container .columns-4 {
-    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.017);
-    margin: 0 -100vw;
-    padding-left: 100vw;
-    padding-right: 100vw;
-  }
-  .psa .newGrid_container .columns-4:nth-child(3n) {
-    padding-right: calc(100vw + 20px);
-  }
-  .psa .newGrid_container .columns-4:nth-child(3n) .content {
-    box-shadow: none !important;
-  }
-  .psa .newGrid_container .columns-4:nth-child(3n-2) {
-    padding-left: calc(100vw + 20px);
-  }
-}
-.psa .newGrid_container .columns-4 .content {
-  box-shadow: inset -2px 0 0 rgba(0, 0, 0, 0.05);
-}
-.psa .newGrid_container .columns-4:nth-child(3n) .content {
-  box-shadow: none !important;
-}
-
-.psa .newGrid_container .columns-4,
-.psa .newGrid_container .columns-6 {
-  padding-bottom: 2rem;
-  padding-top: 2rem;
-}
-@media (min-width: 768px) {
-  .psa .newGrid_container .columns-4,
-.psa .newGrid_container .columns-6 {
-    padding-bottom: 40px;
-    padding-top: 40px;
+  .psa .columns-4 {
+    padding: 2.5rem 0;
   }
 }
 @media (min-width: 1152px) {
-  .psa .newGrid_container .columns-4,
-.psa .newGrid_container .columns-6 {
-    padding-bottom: 3rem;
-    padding-top: 3rem;
+  .psa .columns-4 {
+    grid-column: span 4;
+    padding: 0 1rem;
   }
 }
-@media (max-width: 767px) {
-  .psa .newGrid_container .columns-4,
-.psa .newGrid_container .columns-6 {
-    grid-column: span 12 !important;
+.psa .columns-4:not(:first-child):not(:last-child) {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+@media (min-width: 1152px) {
+  .psa .columns-4:not(:first-child):not(:last-child) {
+    border: 0;
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
   }
+}
+.psa .columns-4:first-child {
+  padding-top: 0;
+}
+.psa .columns-4:last-child {
+  padding-bottom: 0;
+}
+.psa .columns-4 .content {
+  padding: 0 1rem;
 }
 
 .proxy-picker .proxyPicker .icon-chevron-down {
@@ -8692,4 +8591,4 @@ footer {
   height: 2rem;
 }
 
-/*# sourceMappingURL=sass.573f2b99.css.map */
+/*# sourceMappingURL=sass.0bc16a32.css.map */
