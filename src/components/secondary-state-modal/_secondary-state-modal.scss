@@ -25,10 +25,14 @@
         right: 0;
       }
       .modal-header {
-        padding: 1rem 0 1rem 1.5rem;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
         .modal-title {
           font-size: 20px;
           line-height: 28px;
+          padding-left: 1.5rem;
+          word-break: break-word;
         }
       }
       .modal-content {
