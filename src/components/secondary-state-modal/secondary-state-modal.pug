@@ -129,11 +129,11 @@ mixin content(content)
     .modal-pattern(id=`secondary-state-modal-${index}` aria-hidden="true" data-analytics-location="modal-secondary-state-modal")
       .modal-container
         .modal-inner.modal-icons-enabled(aria-label="Secondary-state" role="dialog" tabindex="-1")
-          button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
-            img(src="assets/images/icon-close.svg" alt="")
-            | Close
           .modal-header
             p.modal-title #{modal.header}
+            button.-close--small(aria-label="Close" data-analytics-click="Close [X] Modal" data-analytics-type="button" data-dismiss="x-close")
+              img(src="assets/images/icon-close.svg" alt="")
+              | Close
           .modal-content
             .modal-content-body
               .content
