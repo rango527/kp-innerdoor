@@ -152,8 +152,12 @@
   }
 }
 
-// Fix for secondary state padding
+// fixes specific to seconddary state
 div[id*='secondary-state-modal'] {
+  .modal-title {
+    // Covers up to 400%
+    max-width: 70%;
+  }
   .content {
     padding-right: 10px;
   }
