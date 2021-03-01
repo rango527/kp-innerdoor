@@ -7242,6 +7242,7 @@ NOTE: can be used with either <button> or <a> elements
   background-color: #0078b3;
   background-image: url("icon-minus-hover.b0e6230f.svg");
   color: #fff;
+  text-decoration: none;
 }
 .care-actions .view-toggle-static {
   background-image: url("icon-plus.35fa8a85.svg");
@@ -8231,6 +8232,13 @@ NOTE: can be used with either <button> or <a> elements
 #secondary-state-modal .modal-container .content__footer p {
   margin: 0 !important;
 }
+#secondary-state-modal .modal-container .content .columns-4 {
+  display: flex;
+  flex-direction: column;
+}
+#secondary-state-modal .modal-container .content .columns-4 .button {
+  margin-top: auto;
+}
 @media (max-width: 767px) {
   #secondary-state-modal .modal-container .modal-content-body .columns-4,
 #secondary-state-modal .modal-container .modal-content-body .columns-6 {
@@ -8591,4 +8599,4 @@ footer {
   height: 2rem;
 }
 
-/*# sourceMappingURL=sass.0bc16a32.css.map */
+/*# sourceMappingURL=sass.299ec9f7.css.map */
