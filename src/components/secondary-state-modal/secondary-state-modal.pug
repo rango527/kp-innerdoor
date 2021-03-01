@@ -136,23 +136,24 @@ mixin content(content)
             p.modal-title #{modal.header}
           .modal-content
             .modal-content-body
-              .content
-                if modal.data.length > 0
-                  .rows
-                    each content in modal.data
-                      case modal.data.length
-                        when 1
-                        when 2
-                        when 4
-                          .columns-6
+              if modal.data.length > 0
+                .rows
+                  each content in modal.data
+                    case modal.data.length
+                      when 1
+                      when 2
+                      when 4
+                        .columns-6
+                          .content
                             +content(content)
-                        when 3
-                        default
-                          .columns-4
+                      when 3
+                      default
+                        .columns-4
+                          .content
                             +content(content)
                 .content__divider
                 .content__footer
                   p Do not attempt to access emergency care through this website.
                     br
-                    | If you are having a medical health emergency, call 911 or go to the nearest emergency room.  
+                    | If you are having a medical health emergency, call 911 or go to the nearest emergency room.
         .modal-fade-screen

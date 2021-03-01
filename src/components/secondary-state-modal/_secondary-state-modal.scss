@@ -151,3 +151,10 @@
     }
   }
 }
+
+// Fix for secondary state padding
+div[id*='secondary-state-modal'] {
+  .content {
+    padding-right: 10px;
+  }
+}
