@@ -32,6 +32,7 @@
   "dependencies": {
     "modal-pattern": "~3.2.12",
     "navigational-picker-pattern": "^1.0.51",
-    "pug": "^3.0.0"
+    "pug": "^3.0.0",
+    "show-more-less-pattern": "^1.1.26"
   }
 }

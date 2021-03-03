@@ -1,0 +1,74 @@
+.feature-banner {
+  // TODO: cloud as second background layer / hides on mobile
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $white 100%),
+    $pale-blue;
+  padding: 2.5rem 0;
+
+  h2 {
+    @include heading-h2();
+  }
+  img {
+    height: auto;
+    padding: 0 2rem;
+    width: 180px;
+    @include respond-to(tablet) {
+      height: 213px;
+      width: auto;
+    }
+    @include respond-to(desktop) {
+      height: 297px;
+      width: auto;
+    }
+  }
+
+  .grid-container {
+    border-bottom: 5px solid $graphite;
+    display: flex;
+    flex-direction: column-reverse;
+    // TODO: change margin to variable from SG equal to padding
+    margin: 0 1.25rem;
+    padding: 0;
+    @include respond-to(tablet) {
+      flex-direction: row;
+    }
+  }
+
+  .content {
+    margin-bottom: 1rem;
+
+    @include respond-to(tablet) {
+      width: 60vw;
+    }
+  }
+
+  .design-element {
+    display: none;
+    height: 50px;
+    padding: 0;
+    width: auto;
+    @include respond-to(tablet) {
+      display: block;
+    }
+  }
+
+  .button {
+    margin-bottom: 0.75rem; // 12px
+    margin-right: 0.625rem; // 10px
+  }
+
+  .divider-small {
+    border: 0;
+  }
+
+  // KP Pattern should allow choice of element (link vs button)
+  .show-more-less-link {
+    @include view-toggle();
+    display: inline;
+  }
+
+  // KP Patterns need to be updated to toggle classes vs hard code display properties
+  .show-more-less-group {
+    // NOTE: this currently can't work because of the way the pattern is built
+    // display: inline;
+  }
+}
