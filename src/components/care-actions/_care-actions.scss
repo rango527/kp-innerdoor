@@ -27,24 +27,10 @@
   }
   100% {
     right: calc(100% + 2rem);
-  }
-}
-@include respond-to(tablet) {
-  @keyframes primaryCardAnimation {
-    0% {
-      right: 0;
-    }
-    100% {
+    @include respond-to(tablet) {
       right: calc(100% + 3.5rem);
     }
-  }
-}
-@include respond-to(desktop) {
-  @keyframes primaryCardAnimation {
-    0% {
-      right: 0;
-    }
-    100% {
+    @include respond-to(desktop) {
       right: $desktop-right-size-2;
     }
   }
@@ -57,29 +43,15 @@
 @keyframes primaryCardAnimationOut {
   0% {
     right: calc(100% + 2rem);
+    @include respond-to(tablet) {
+      right: calc(100% + 3.5rem);
+    }
+    @include respond-to(desktop) {
+      right: $desktop-right-size-2;
+    }
   }
   100% {
     right: 0;
-  }
-}
-@include respond-to(tablet) {
-  @keyframes primaryCardAnimationOut {
-    0% {
-      right: calc(100% + 3.5rem);
-    }
-    100% {
-      right: 0;
-    }
-  }
-}
-@include respond-to(desktop) {
-  @keyframes primaryCardAnimationOut {
-    0% {
-      right: $desktop-right-size-2;
-    }
-    100% {
-      right: 0;
-    }
   }
 }
 
@@ -111,7 +83,6 @@
       text-decoration: none;
     }
   }
-
   .view-toggle-static {
     background-image: url($localImagePath + 'icon-plus.svg');
     &:hover {
@@ -119,6 +90,7 @@
     }
   }
 }
+
 .care-actions-primary-list {
   display: flex;
   flex-wrap: wrap;
@@ -148,6 +120,7 @@
     }
   }
 }
+
 .care-actions-primary-list .care-actions-primary-list--item {
   background-color: $midnight;
   border: $border;
@@ -175,7 +148,7 @@
     }
     display: flex;
     font-family: $font-family-heavy;
-    font-size: 1rem;
+    font-size: $font-size-md;
     justify-content: left;
     letter-spacing: -0.01em;
     line-height: 1.5rem;
@@ -205,6 +178,7 @@
     text-decoration: underline;
   }
 }
+
 .care-actions-secondary-list {
   display: flex;
   flex-direction: column;

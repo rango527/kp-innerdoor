@@ -70,7 +70,7 @@
   padding: 0.5rem 1rem;
   @include heading-h6($midnight);
   @include respond-to(desktop) {
-    font-size: 0.8125rem; // 13px
+    font-size: $font-size-xs; // 13px
   }
   &:hover,
   &:active,

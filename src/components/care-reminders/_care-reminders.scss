@@ -5,6 +5,7 @@
     margin: 0 0 2rem;
   }
 }
+
 .care-reminders {
   margin-bottom: 2rem;
 
@@ -68,7 +69,7 @@
       border-radius: 50px;
       color: $white;
       display: flex;
-      font-size: 1rem;
+      font-size: $font-size-md;
       justify-content: center;
       line-height: 1;
       margin-right: 0.5rem;

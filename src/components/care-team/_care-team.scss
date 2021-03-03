@@ -80,9 +80,9 @@
     background-color: $pale-blue;
     border: 1px solid $contrast-blue;
     border-radius: $button-radius;
-    font-size: 1rem;
+    font-size: $font-size-md;
     margin-right: 1rem;
-    padding: 1rem;
+    padding: $padding-md;
     transition: background-color 0.2s ease, color 0.2s ease,
       border-color 0.2s ease;
     &:hover {
