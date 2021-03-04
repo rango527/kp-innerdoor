@@ -1,5 +1,4 @@
 .feature-banner {
-  // TODO: cloud as second background layer / hides on mobile
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, $white 100%),
     $pale-blue;
   padding: 2.5rem 0;
@@ -25,7 +24,6 @@
     border-bottom: 5px solid $graphite;
     display: flex;
     flex-direction: column-reverse;
-    // TODO: change margin to variable from SG equal to padding
     margin: 0 1.25rem;
     padding: 0;
     @include respond-to(tablet) {
@@ -60,13 +58,13 @@
     border: 0;
   }
 
-  // KP Pattern should allow choice of element (link vs button)
+  // Ideally, pattern would allow choice of element this attaches to (link vs button)
   .show-more-less-link {
     @include view-toggle();
     display: inline;
   }
 
-  // KP Patterns need to be updated to toggle classes vs hard code display properties
+  // KP Patterns should ideally be updated to toggle classes vs hard code display properties
   .show-more-less-group {
     // NOTE: this currently can't work because of the way the pattern is built
     // display: inline;
