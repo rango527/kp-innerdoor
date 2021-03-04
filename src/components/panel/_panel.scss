@@ -1,5 +1,6 @@
 // TODO: change values to sass vars
 .panel {
+  @include padding-responsive();
   background-color: $white;
   border: $panel-border;
   border-radius: $border-radius;
@@ -7,14 +8,6 @@
   color: $inky-blue;
   margin-bottom: 3rem;
   max-width: 100%;
-  padding: $padding-md;
-
-  @include respond-to(tablet) {
-    padding: 1.25rem;
-  }
-  @include respond-to(desktop) {
-    padding: 1.5rem;
-  }
 
   &.info {
     background-color: $motion-blue;
