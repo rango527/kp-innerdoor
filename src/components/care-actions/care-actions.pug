@@ -45,6 +45,14 @@
     }
   ]
 
+mixin primaryCard(primaryCard, index)
+  button.care-actions-primary-list--item.button.modal-button(data-modal-trigger=`secondary-state-modal-${index}`)
+    .care-actions-primary-list--item-image
+      img(src= primaryCard.iconSrc alt= primaryCard.alt)
+    .care-actions-primary-list--item-content
+      .care-actions-primary-list--item-title= primaryCard.title
+      .care-actions-primary-list--item-description= primaryCard.subTitle
+      
 p Care actions - view less example plus transition
 .care-actions#care-actions
   .toggle-content.is-visible#care-actions-toggle
@@ -58,21 +66,11 @@ p Care actions - view less example plus transition
               when 2
               when 4
                 li.care-actions-primary-list--flex.care-actions-primary-list--flex--50
-                  button.care-actions-primary-list--item.button.modal-button(data-modal-trigger=`secondary-state-modal-${index}`)
-                    .care-actions-primary-list--item-image
-                      img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
-                    .care-actions-primary-list--item-content
-                      .care-actions-primary-list--item-title #{primaryCard.title}
-                      .care-actions-primary-list--item-description #{primaryCard.subTitle}
+                  +primaryCard(primaryCard, index)
               when 3
               default
                 li.care-actions-primary-list--flex.care-actions-primary-list--flex--33
-                  button.care-actions-primary-list--item.button.modal-button(data-modal-trigger=`secondary-state-modal-${index}`)
-                    .care-actions-primary-list--item-image
-                      img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
-                    .care-actions-primary-list--item-content
-                      .care-actions-primary-list--item-title #{primaryCard.title}
-                      .care-actions-primary-list--item-description #{primaryCard.subTitle}
+                  +primaryCard(primaryCard, index)
       ul.care-actions-secondary-list
         each secondaryCard in secondaryCareActionCards
           li
