@@ -111,7 +111,7 @@
   .care-reminders-header
     h3
       span #{careReminderCards.length}
-      |  Care Reminders
+      | Care Reminders
   ul.care-reminder-list
     each card, index in careReminderCards
       li(class=`care-reminder-list--item care-reminder-list--item__border-${card.borderColor} ${index >= 5 ? 'is-hidden' : ''}`)
