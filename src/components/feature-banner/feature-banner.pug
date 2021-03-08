@@ -1,0 +1,29 @@
+include ../../mixins/mixins.pug
+.feature-banner
+  .grid-container
+    img(src="assets/images/banner-thrive.png" alt="")
+    .content
+      h2 Let's help you thrive
+      //- TODO: we need a way to control 'show-first' by viewport size
+      .show-more-less.js(data-show-first='7' data-more-label='View More' data-less-label='View Less' data-show-count='false' data-analytics-location='Show More/Less')
+        span.show-more-less-item
+          +link("Covid-19")(class="button")
+        span.show-more-less-item
+          +link("Healthcare 101")(class="button")
+        span.show-more-less-item
+          +link("Stress less")(class="button")
+        span.show-more-less-item
+          +link("Get fit")(class="button")
+        span.show-more-less-item
+          +link("Check symptoms")(class="button")
+        span.show-more-less-item
+          +link("Eat healthy")(class="button")
+        span.show-more-less-item
+          +link("Beat the flu")(class="button")
+        span.show-more-less-item
+          +link("Parenting")(class="button")
+        span.show-more-less-item
+          +link("Find a farmer's market")(class="button")
+        span.show-more-less-item
+          +link("Cancer care")(class="button")
+    img.design-element(src="assets/images/banner-cloud.png" alt="")

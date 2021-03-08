@@ -2,6 +2,7 @@
 import { modalInit } from 'modal-pattern/src/modal';
 import polyfillInit from 'navigational-picker-pattern/src/polyfills';
 import navigationalPickerInit from 'navigational-picker-pattern/src/navigational-picker';
+import showMoreLess from 'show-more-less-pattern/src/show-more-less';
 
 // KP component script
 document.onreadystatechange = function () {
@@ -9,6 +10,9 @@ document.onreadystatechange = function () {
     // Nav picker
     polyfillInit();
     navigationalPickerInit();
+
+    // Show more/less
+    showMoreLess();
 
     // Modal
     modalInit();
