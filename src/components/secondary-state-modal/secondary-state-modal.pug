@@ -1,3 +1,4 @@
+include ../../mixins/mixins.pug
 -
   // care actions secondary state modal json data
   const secondaryStateModalData = [
@@ -120,7 +121,7 @@ mixin content(content)
     ul
       each cardbody in content.body
         li= cardbody
-  a.button(data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1" href="#")= content.buttonText
+  +link(`${content.buttonText}`)(class="button" data-analytics-click="Primary Button" data-analytics-type="button" data-success="btn1")
   .horizontal-rule
     hr.-variation-3
 

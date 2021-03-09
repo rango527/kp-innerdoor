@@ -74,5 +74,5 @@ p Care actions - view less example plus transition
       ul.care-actions-secondary-list
         each secondaryCard in secondaryCareActionCards
           li
-            a.button(href="#") #{secondaryCard.buttonText}
+            +link(`${secondaryCard.buttonText}`)(class="button")
       button.view-toggle(aria-expanded="false" type="button") View less care actions (#{primaryCareActionCards.length + secondaryCareActionCards.length})
