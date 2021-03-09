@@ -31,7 +31,7 @@ mixin content(title, description, text)
     .grid-container
       .rows
         if psaContentData.length > 0
-          each content, index in psaContentData
+          each content in psaContentData
             case psaContentData.length
               when 1
               when 2

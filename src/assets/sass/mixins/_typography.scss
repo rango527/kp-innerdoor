@@ -28,11 +28,11 @@ HEADING LEVELS
   // margin-bottom: 1rem;
   text-align: $textAlign;
   @include respond-to(tablet) {
-    font-size: 2rem; // 32px
+    font-size: $font-size-xl; // 32px
     line-height: 40px;
   }
   @include respond-to(desktop) {
-    font-size: 3rem; // 48x
+    font-size: $font-size-h1; // 48x
     letter-spacing: -0.02em;
     line-height: 52px;
     // margin-bottom: 1.5rem;
@@ -52,7 +52,7 @@ HEADING LEVELS
   margin-bottom: 1rem;
   text-align: $textAlign;
   @include respond-to(desktop) {
-    font-size: 2rem; // 32px
+    font-size: $font-size-xl; // 32px
     letter-spacing: -0.02em;
     line-height: 40px;
     margin-bottom: 1.5rem;
@@ -83,12 +83,12 @@ HEADING LEVELS
 @mixin heading-h6($color: $inky-blue, $textAlign: left) {
   @include font-base($font-family-heavy, normal, 500);
   color: $color;
-  font-size: 0.8125rem; // 13px
+  font-size: $font-size-xs; // 13px
   letter-spacing: 0;
   line-height: 1.25rem;
   text-align: $textAlign;
   @include respond-to(desktop) {
-    font-size: 1rem;
+    font-size: $font-size-md;
   }
 }
 
@@ -104,12 +104,12 @@ BODY CONTENT
   @include font-base($font-family-medium, normal, 400);
   color: $color;
   // TODO: ask design about conflicts, in some places this is 14px
-  font-size: 0.8125rem; // 13px
+  font-size: $font-size-xs; // 13px
   letter-spacing: 0.01em;
   line-height: 20px;
   text-align: $textAlign;
   @include respond-to(desktop) {
-    font-size: 1rem; // 16px
+    font-size: $font-size-md; // 16px
     line-height: 24px;
   }
 }
