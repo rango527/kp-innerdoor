@@ -24,17 +24,17 @@ HEADING LEVELS
   color: $color;
   font-size: 1.625rem; // 26px
   letter-spacing: -0.01em;
-  line-height: 32px;
+  line-height: 2rem;
   // margin-bottom: 1rem;
   text-align: $textAlign;
   @include respond-to(tablet) {
     font-size: $font-size-xl; // 32px
-    line-height: 40px;
+    line-height: 2.5rem; // 40px
   }
   @include respond-to(desktop) {
-    font-size: $font-size-h1; // 48x
+    font-size: $font-size-h1; // 48px
     letter-spacing: -0.02em;
-    line-height: 52px;
+    line-height: 3.25rem; // 52px
     // margin-bottom: 1.5rem;
   }
 }
@@ -48,13 +48,13 @@ HEADING LEVELS
   color: $color;
   font-size: 1.625rem; // 26px
   letter-spacing: -0.01em;
-  line-height: 32px;
+  line-height: 2rem;
   margin-bottom: 1rem;
   text-align: $textAlign;
   @include respond-to(desktop) {
     font-size: $font-size-xl; // 32px
     letter-spacing: -0.02em;
-    line-height: 40px;
+    line-height: 2.5rem; // 40px
     margin-bottom: 1.5rem;
   }
 }
@@ -68,12 +68,12 @@ HEADING LEVELS
   color: $color;
   font-size: 1.25rem; // 20px
   letter-spacing: -0.01em;
-  line-height: 28px;
+  line-height: 1.75rem; // 28px
   text-align: $textAlign;
   margin-bottom: 1rem;
   @include respond-to(desktop) {
     font-size: 1.625rem; // 26px
-    line-height: 32px;
+    line-height: 2rem;
     margin-bottom: 1.5rem;
   }
 }
@@ -106,10 +106,10 @@ BODY CONTENT
   // TODO: ask design about conflicts, in some places this is 14px
   font-size: $font-size-xs; // 13px
   letter-spacing: 0.01em;
-  line-height: 20px;
+  line-height: 1.25rem;
   text-align: $textAlign;
   @include respond-to(desktop) {
     font-size: $font-size-md; // 16px
-    line-height: 24px;
+    line-height: 1.5rem;
   }
 }
