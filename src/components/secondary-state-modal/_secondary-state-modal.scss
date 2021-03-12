@@ -26,12 +26,12 @@
       .modal-header {
         padding: 1rem 0 1rem 1.5rem;
         .modal-title {
-          font-size: 20px;
-          line-height: 28px;
+          font-size: 1.25rem;
+          line-height: 1.75rem;
         }
       }
       .modal-content {
-        padding: 1rem;
+        padding: $padding-md;
         @include respond-to(tablet) {
           padding: 30px 1.25rem 1.25rem;
         }

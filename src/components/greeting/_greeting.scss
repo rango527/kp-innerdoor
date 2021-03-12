@@ -9,7 +9,7 @@
       color: $white;
       display: block;
       margin: 0 !important;
-      padding: 1rem;
+      padding: $padding-md;
     }
     &--opacity-animation-out {
       animation: opacityAnimationOut 800ms both;

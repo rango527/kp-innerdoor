@@ -9,7 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     a {
-      padding: 0.5rem;
+      padding: $padding-xs;
     }
   }
 }
@@ -20,7 +20,7 @@ header {
   display: flex;
   height: 2rem;
   margin-bottom: 1rem;
-  padding: 2rem;
+  padding: $padding-lg;
   a {
     color: $white;
     margin-right: 1rem;
