@@ -1,37 +1,59 @@
+-
+  // Care actions more json data
+  const primaryCardData = [
+    {
+      iconSrc: '/assets/images/online-care.svg',
+      title: "Connect with a doctor",
+      alt: "",
+      subTitle: "Get quality care faster."
+    },
+    {
+      iconSrc: '/assets/images/call-care.svg',
+      title: "Call for Care",
+      alt: "",
+      subTitle: "Talk with a licensed care provider by phone."
+    },
+    {
+      iconSrc: '/assets/images/person-care.svg',
+      title: "In-Person Care",
+      alt: "",
+      subTitle: "Make an appointment or find care locations."
+    }
+  ]
+
+  const secondaryCardData = [
+    {
+      buttonText: "COVID-19: Get Care & Testing"
+    },
+    {
+      buttonText: "Women’s Health"
+    },
+    {
+      buttonText: "Cold & Flu, Cough, Sore Throat, Sinus"
+    },
+    {
+      buttonText: "Skin Problems / Conditions"
+    },
+  ]
+
 p Care actions - view more static example / no transition
 .care-actions
   .toggle-content.is-visible
     .panel
       h3 Get Care
-      ul.care-actions-primary-list
-        li.care-actions-primary-list--flex-static.care-actions-primary-list--flex--33
-          button.care-actions-primary-list--item
-            .care-actions-primary-list--item-image
-              img(src="assets/images/online-care.svg" alt="")
-            .care-actions-primary-list--item-content
-              .care-actions-primary-list--item-title Online Care
-              .care-actions-primary-list--item-description Get quality care faster.
-        li.care-actions-primary-list--flex-static.care-actions-primary-list--flex--33
-          button.care-actions-primary-list--item
-            .care-actions-primary-list--item-image
-              img(src="assets/images/call-care.svg" alt="")
-            .care-actions-primary-list--item-content
-              .care-actions-primary-list--item-title Call for Care
-              .care-actions-primary-list--item-description Talk with a licensed care provider by phone.
-        li.care-actions-primary-list--flex-static.care-actions-primary-list--flex--33
-          button.care-actions-primary-list--item
-            .care-actions-primary-list--item-image
-              img(src="assets/images/person-care.svg" alt="")
-            .care-actions-primary-list--item-content
-              .care-actions-primary-list--item-title In-Person Care
-              .care-actions-primary-list--item-description Make an appointment or find care locations.
-      ul.care-actions-secondary-list
-        li
-          +link('COVID-19: Get Care & Testing')(class="button")
-        li
-          +link('Women’s Health')(class="button")
-        li
-          +link('Cold & Flu, Cough, Sore Throat, Sinus')(class="button")
-        li
-          +link('Skin Problems / Conditions')(class="button")
-      button.view-toggle-static(aria-expanded="false" type="button") View more care actions (7)
+      if primaryCardData.length > 0
+        ul.care-actions-primary-list
+          each primaryCard in primaryCardData
+            li.care-actions-primary-list--flex-static.care-actions-primary-list--flex--33
+              button.care-actions-primary-list--item
+                .care-actions-primary-list--item-image
+                  img(src=`${primaryCard.iconSrc}` alt=`${primaryCard.alt}`)
+                .care-actions-primary-list--item-content
+                  .care-actions-primary-list--item-title #{primaryCard.title}
+                  .care-actions-primary-list--item-description #{primaryCard.subTitle}
+      if secondaryCardData.length > 0  
+        ul.care-actions-secondary-list
+          each secondaryCard in secondaryCardData
+            li
+              +link(`${secondaryCard.buttonText}`)(class="button")
+        button.view-toggle-static(aria-expanded="false" type="button") View more care actions (7)
