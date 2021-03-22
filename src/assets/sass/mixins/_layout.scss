@@ -49,5 +49,24 @@ RESPONSIVE PADDING
   }
 }
 
-// TODO: create Left/right only padding option
+// TODO: create Left/Right only padding option
+@mixin padding-x($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
+  padding: 0 $mobile;
+  @include respond-to(tablet) {
+    padding: 0 $tablet;
+  }
+  @include respond-to(desktop) {
+    padding: 0 $desktop;
+  }
+}
+
 // TODO: create Bottom/Top only padding option
+@mixin padding-y($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
+  padding: $mobile 0;
+  @include respond-to(tablet) {
+    padding: $tablet 0;
+  }
+  @include respond-to(desktop) {
+    padding: $desktop 0;
+  }
+}

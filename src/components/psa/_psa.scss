@@ -3,13 +3,7 @@
   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   border-top: 1px solid rgba(0, 0, 0, 0.05);
   margin-bottom: 3rem;
-  padding: 2rem 0;
-  @include respond-to(tablet) {
-    padding: 2.5rem 0;
-  }
-  @include respond-to(desktop) {
-    padding: 3rem 0;
-  }
+  @include padding-y(2rem, 2.5rem, 3rem);
 }
 
 .psa {
@@ -17,10 +11,7 @@
     display: flex;
     flex-direction: column;
     height: 100%;
-    padding: 2.5rem 0;
-    @include respond-to(desktop) {
-      padding: 0;
-    }
+    @include padding-y(2.5rem, 0, 0);
     &-title {
       @include heading-h2();
     }
