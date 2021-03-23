@@ -56,4 +56,4 @@ p Care actions - view more static example / no transition
           each secondaryCard in secondaryCardData
             li
               +link(`${secondaryCard.buttonText}`)(class="button")
-        button.view-toggle-static(aria-expanded="false" type="button") View more care actions (7)
+        button.view-toggle-static(aria-expanded="false" type="button") View more care actions (#{primaryCardData.length + secondaryCardData.length})

@@ -63,8 +63,6 @@
   .view-toggle,
   .view-toggle-static {
     @include view-toggle();
-  }
-  .view-toggle-static {
     background-image: url($localImagePath + 'icon-plus.svg');
     &:hover {
       background-image: url($localImagePath + 'icon-plus-hover.svg');
@@ -139,17 +137,12 @@
   }
   &-description {
     display: flex;
-    font-size: $font-size-xs;
+    font-size: $font-size-xs; // 13px
     justify-content: left;
     line-height: 1.25rem;
     margin: 0;
     text-align: left;
     word-break: break-word;
-  }
-  &-link {
-    color: $link-color;
-    font-size: $font-size-xs;
-    margin: 0;
   }
   &:hover,
   &:active,
