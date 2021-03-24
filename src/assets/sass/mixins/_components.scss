@@ -50,7 +50,7 @@ NOTE: can be used with either <button> or <a> elements
   @include font-base($font-family-medium, normal, 400);
   background-color: $bg-color;
   border: 1px solid $bg-hover;
-  border-radius: 100px;
+  border-radius: $button-radius;
   color: $color;
   font-size: $font-size-xs;
   line-height: 2rem;
