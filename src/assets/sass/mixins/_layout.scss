@@ -70,3 +70,13 @@ RESPONSIVE PADDING
     padding: $desktop 0;
   }
 }
+
+@mixin margin-bottom($mobile: 1rem, $tablet: 1.25rem, $desktop: 1.5rem) {
+  margin-bottom: $mobile;
+  @include respond-to(tablet) {
+    margin-bottom: $tablet;
+  }
+  @include respond-to(desktop) {
+    margin-bottom: $desktop;
+  }
+}
