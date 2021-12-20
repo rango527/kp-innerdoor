@@ -21,18 +21,13 @@
     "parcel-bundler": "^1.12.4",
     "prettier": "^2.2.1",
     "sass": "^1.32.0",
-    "styleguide": "^5.0.23",
     "stylelint": "^13.9.0",
     "stylelint-config-prettier": "^8.0.2",
     "stylelint-config-sass-guidelines": "^7.1.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-prettier": "^1.1.2",
     "stylelint-scss": "^3.18.0"
   },
   "dependencies": {
-    "modal-pattern": "~3.2.12",
-    "navigational-picker-pattern": "^1.0.51",
-    "pug": "^3.0.0",
-    "show-more-less-pattern": "^1.1.26"
+    "pug": "^3.0.0"
   }
 }
